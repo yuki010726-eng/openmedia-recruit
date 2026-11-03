@@ -2,714 +2,732 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <title>오픈미디어 프리랜서 기자 모집</title>
-<meta name="description" content="오픈미디어에서 투잡으로 시작하는 프리랜서 기자. 받은 홍보비는 100% 본인 수익.">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<meta name="description" content="기업이 내는 언론 홍보 비용이 곧 나의 수익. 오픈미디어 프리랜서 기자를 모집합니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<script>
+// 피그마 390px 설계를 화면 폭에 맞춰 그대로 확대/축소 (모바일 꽉 차게, PC는 460px 컬럼)
+document.documentElement.classList.add('js');
+function fit(){const w=Math.min(document.documentElement.clientWidth,460),r=document.documentElement.style;r.setProperty('--z',w/390);r.setProperty('--zs',w/640)}
+fit();addEventListener('resize',fit);
+</script>
 <style>
-:root{
-  --red:#f4402c; --red-d:#d92c1a; --pink:#fff2f1; --pink-2:#ffe3e0;
-  --yellow:#ffc928; --ink:#1f2227; --ink-2:#2a2c30; --body:#555a63; --mute:#9a9ea6;
-  --gray:#f8f9fd; --line:#eceef3;
-}
+@font-face{font-family:'Paperlogy';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2') format('woff2');font-weight:900;font-display:swap}
+:root{--z:1;--zs:.609375;--red:#f4402c;--ink:#1f2227;--sub:#555a63;--mute:#9a9ea6}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:var(--ink);background:#fff;word-break:keep-all;-webkit-font-smoothing:antialiased;padding-bottom:clamp(65px,16.58vw,130px)}
-button,input,select{font:inherit;color:inherit}
-.in{max-width:824px;margin:0 auto;padding:0 20px;position:relative}
-section{padding:clamp(85px,21.68vw,170px) 0;overflow:hidden}
-.c{text-align:center}
+html{-webkit-text-size-adjust:100%}
+body{background:#ececef;font-family:'Noto Sans KR',sans-serif;color:var(--ink);word-break:keep-all;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.pg{width:390px;margin:0 auto;zoom:var(--z);background:#fff;overflow:hidden;box-shadow:0 0 40px rgba(0,0,0,.06)}
 .r{color:var(--red)}
-.y{color:var(--yellow)}
-.t-sub{font-size:clamp(19.84px,4.08vw,32px);color:var(--body);font-weight:400;line-height:1.5}
-.t-big{font-size:clamp(29px,7.4vw,58px);font-weight:800;line-height:1.25;letter-spacing:-.04em}
-.t-big .lt{font-weight:300}
-.cap{font-size:clamp(13px,1.91vw,15px);color:var(--mute);line-height:1.6;margin-top:clamp(11px,2.81vw,22px)}
-.fade{opacity:0;transform:translateY(50px);transition:opacity .8s ease,transform .8s ease}
-.fade.on{opacity:1;transform:none}
-.d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}.d4{transition-delay:.48s}
+.sec{display:flex;flex-direction:column;align-items:center;gap:15px;padding:70px 20px;text-align:center;position:relative}
+.h2{font-size:30px;font-weight:700;line-height:1.3;letter-spacing:-.9px;white-space:nowrap}
+.lead{font-size:17.6px;line-height:1.4;letter-spacing:-.352px;color:var(--sub);white-space:nowrap}
+.note{font-size:11px;line-height:1.4;letter-spacing:-.22px;color:var(--mute)}
+.ico80{width:80px;height:80px;object-fit:contain}
 
-/* 3D 이모지 (Microsoft Fluent 3D, MIT) */
-img{max-width:100%}
-.emo{display:block;width:clamp(90px,22.96vw,180px);height:auto;margin:0 auto clamp(17px,4.34vw,34px);filter:drop-shadow(0 clamp(9px,2.3vw,18px) clamp(10px,2.55vw,20px) rgba(0,0,0,.14))}
-.float{animation:float 3.2s ease-in-out infinite}
-@keyframes float{50%{transform:translateY(-12px)}}
+/* 스크롤 등장 (과하지 않게: 18px 위로 + 페이드) */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js .rv.on{opacity:1;transform:none}
 
-/* ---------- 01 HERO ---------- */
-.s1{background:linear-gradient(180deg,rgba(255,146,146,.4) 0%,rgba(255,146,146,0) 66%),var(--pink);padding:clamp(20px,5.1vw,40px) 0 clamp(60px,15.31vw,120px)}
-.logo{height:clamp(20px,5.1vw,40px);display:block}
-.hero{position:relative;min-height:clamp(350px,89.29vw,700px);padding-top:clamp(55px,14.03vw,110px)}
-.hero h1{font-size:clamp(39px,9.95vw,78px);line-height:1.3;font-weight:800;letter-spacing:-.05em;position:relative;z-index:2}
-.hero h1 .lt{font-weight:300}
-.hero h1 .box{background:var(--red);color:#fff;padding:0 clamp(6px,1.53vw,12px);border-radius:clamp(5px,1.28vw,10px);margin-right:clamp(3px,0.77vw,6px)}
-/* 기자증 랜야드 */
-.badge{position:absolute;right:clamp(-10px,-1.28vw,-5px);top:clamp(-40px,-5.1vw,-20px);width:clamp(180px,45.92vw,360px);height:clamp(340px,86.73vw,680px);z-index:1;animation:swing 4s ease-in-out infinite;transform-origin:50% 0}
-@keyframes swing{0%,100%{transform:rotate(4deg)}50%{transform:rotate(-3deg)}}
-.badge .strap{position:absolute;left:50%;top:0;width:clamp(110px,28.06vw,220px);height:clamp(115px,29.34vw,230px);margin-left:clamp(-110px,-14.03vw,-55px);border:clamp(3.5px,0.89vw,7px) solid var(--ink);border-top:0;border-radius:0 0 clamp(50px,12.76vw,100px) clamp(50px,12.76vw,100px)}
-.badge .strap:before{content:"";position:absolute;left:50%;bottom:clamp(-36px,-4.59vw,-18px);width:clamp(10px,2.55vw,20px);height:clamp(22px,5.61vw,44px);margin-left:clamp(-10px,-1.28vw,-5px);background:#cfd3da;border-radius:clamp(3px,0.77vw,6px)}
-.card-id{position:absolute;top:clamp(129px,32.91vw,258px);left:clamp(15px,3.83vw,30px);width:clamp(150px,38.27vw,300px);background:#fff;border-radius:clamp(12px,3.06vw,24px);padding:clamp(17px,4.34vw,34px) clamp(12px,3.06vw,24px) clamp(15px,3.83vw,30px);text-align:center;box-shadow:0 clamp(18px,4.59vw,36px) clamp(28px,7.14vw,56px) clamp(-16px,-2.04vw,-8px) rgba(160,40,30,.35)}
-.card-id:before{content:"";position:absolute;top:clamp(7px,1.79vw,14px);left:50%;width:clamp(27px,6.89vw,54px);height:clamp(5px,1.28vw,10px);margin-left:clamp(-27px,-3.44vw,-13.5px);border-radius:clamp(3px,0.77vw,6px);background:#e4e6eb}
-.card-id .press{display:inline-block;margin-top:clamp(4px,1.02vw,8px);font-size:clamp(8px,2.04vw,16px);font-weight:800;letter-spacing:.2em;color:#fff;background:var(--ink);border-radius:clamp(3px,0.77vw,6px);padding:clamp(2px,0.51vw,4px) clamp(6px,1.53vw,12px)}
-.card-id .ph{width:clamp(68px,17.35vw,136px);height:clamp(68px,17.35vw,136px);border-radius:50%;margin:clamp(10px,2.55vw,20px) auto clamp(8px,2.04vw,16px);background:radial-gradient(circle at 35% 30%,#ff7a63,var(--red) 60%,#d0281a);position:relative;overflow:hidden}
-.card-id .ph svg{position:absolute;left:50%;bottom:clamp(-6px,-0.77vw,-3px);width:clamp(52px,13.27vw,104px);margin-left:clamp(-52px,-6.63vw,-26px);fill:#1f2227}
-.card-id .ph b{position:absolute;left:0;right:0;top:clamp(28px,7.14vw,56px);font-size:clamp(17px,4.34vw,34px);font-weight:900;color:#ff5a45;line-height:1}
-.card-id small{display:block;font-size:clamp(9.5px,2.42vw,19px);color:var(--body)}
-.card-id strong{display:block;font-size:clamp(16.5px,4.21vw,33px);font-weight:800;color:var(--red);margin-top:clamp(2px,0.51vw,4px);letter-spacing:-.03em}
-.card-id .lens{position:absolute;right:clamp(-150px,-19.13vw,-75px);bottom:clamp(-170px,-21.68vw,-85px);width:clamp(105px,26.79vw,210px);transform:rotate(-8deg);filter:drop-shadow(0 clamp(10px,2.55vw,20px) clamp(10px,2.55vw,20px) rgba(120,20,10,.25))}
-/* 롤링 카드 */
-.roll{margin-top:clamp(15px,3.83vw,30px);height:clamp(85px,21.68vw,170px);position:relative}
-.roll .it{position:absolute;inset:0;background:#fff;border-radius:clamp(15px,3.83vw,30px);box-shadow:0 clamp(10px,2.55vw,20px) clamp(23px,5.87vw,46px) clamp(-18px,-2.3vw,-9px) rgba(160,40,30,.28);display:flex;align-items:center;gap:clamp(13px,3.32vw,26px);padding:0 clamp(20px,5.1vw,40px);opacity:0;transform:translateX(50px);transition:.6s}
-.roll .it.on{opacity:1;transform:none}
-.roll .it.out{opacity:0;transform:translateX(-50px)}
-.roll .av{width:clamp(50px,12.76vw,100px);height:clamp(50px,12.76vw,100px);border-radius:50%;background:var(--pink-2);display:grid;place-items:center;flex:none}
-.roll .av img{width:clamp(35px,8.93vw,70px)}
-.roll small{display:block;font-size:clamp(13px,2.17vw,17px);color:var(--mute)}
-.roll b{display:block;font-size:clamp(14.26px,2.93vw,23px);margin-top:clamp(2px,0.51vw,4px)}
-.roll strong{margin-left:auto;font-size:clamp(25px,6.38vw,50px);font-weight:800;color:var(--red);white-space:nowrap;letter-spacing:-.03em}
-.roll strong span{font-size:clamp(13px,3.32vw,26px);color:var(--ink);font-weight:600;margin-left:clamp(2px,0.51vw,4px)}
+/* 01 HERO */
+.hero{position:relative;height:317px;background:linear-gradient(180deg,rgba(255,146,146,.4),rgba(255,146,146,0)),#fff2f1}
+.hero .logo{position:absolute;left:23px;top:29px;width:83px;height:17.43px;z-index:2}
+.hero .hv{position:absolute;left:159.6px;top:0;width:230.7px;height:317px}
+.hero .hl{position:absolute;left:29px;top:176px;width:68px;height:43px;background:var(--red);z-index:1;transform-origin:left;transition:transform .6s cubic-bezier(.2,.7,.2,1) .55s}
+.js .hero .hl{transform:scaleX(0)}
+.js .hero.on .hl{transform:none}
+.hero h1{position:absolute;left:32px;top:89px;z-index:2;font-size:34px;font-weight:700;line-height:1.3;letter-spacing:-1.02px;white-space:nowrap}
+.hero h1 span{display:block}
+.hero h1 .l{font-size:30px;font-weight:300;letter-spacing:-.9px}
+.hero h1 .w{color:#fff}
+.js .hero h1 span,.js .hero .hv{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .hero .hv{transform:none;transition-duration:1s}
+.js .hero.on h1 span,.js .hero.on .hv{opacity:1;transform:none}
+.hero h1 span:nth-child(2){transition-delay:.08s}.hero h1 span:nth-child(3){transition-delay:.16s}.hero h1 span:nth-child(4){transition-delay:.24s}
 
-/* ---------- 02 WHAT ---------- */
-.s2{background:linear-gradient(180deg,var(--pink) 0%,#fff 100%);padding-top:clamp(40px,10.2vw,80px)}
-.pills{margin:clamp(35px,8.93vw,70px) auto 0;max-width:clamp(300px,76.53vw,600px);display:grid;gap:clamp(13px,3.32vw,26px)}
-.pill{display:flex;align-items:center;gap:clamp(10px,2.55vw,20px)}
-.pill:nth-child(even){flex-direction:row-reverse}
-.pill>span{flex:1;background:#fff;border-radius:clamp(10px,2.55vw,20px);padding:clamp(12px,3.06vw,24px) clamp(14px,3.57vw,28px);text-align:center;font-size:clamp(14px,3.57vw,28px);font-weight:600;box-shadow:0 clamp(6px,1.53vw,12px) clamp(14px,3.57vw,28px) clamp(-14px,-1.79vw,-7px) rgba(244,64,44,.3)}
-.pill i{width:clamp(29px,7.4vw,58px);height:clamp(29px,7.4vw,58px);border-radius:50%;background:var(--red);display:grid;place-items:center;flex:none;box-shadow:0 clamp(4px,1.02vw,8px) clamp(8px,2.04vw,16px) clamp(-6px,-0.77vw,-3px) rgba(244,64,44,.6)}
-.pill i svg{width:clamp(14px,3.57vw,28px);stroke:#fff;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.def{margin-top:clamp(50px,12.76vw,100px);font-size:clamp(19px,4.85vw,38px);line-height:1.5;text-align:center}
-.def b{font-weight:800}
-.def mark{background:var(--red);color:#fff;font-weight:800;padding:0 clamp(4px,1.02vw,8px)}
+/* 01-2 업계 비밀 */
+.secret{background:#fff2f1;padding:20px}
+.dk{background:#1a1c21;border-radius:15px;padding:48px 24px 44px;display:flex;flex-direction:column;align-items:center;text-align:center;color:#fff}
+.tag{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--red);border-radius:99px;padding:6px 14px 6px 12px;font-size:13px;font-weight:700;line-height:1.2;letter-spacing:-.26px;color:var(--red)}
+.tag i{width:6px;height:6px;border-radius:50%;background:var(--red);animation:live 1.6s ease-out infinite}
+@keyframes live{0%{box-shadow:0 0 0 0 rgba(244,64,44,.7)}80%,100%{box-shadow:0 0 0 5px rgba(244,64,44,0)}}
+.dk h2{margin-top:18px;font-size:30px;font-weight:700;line-height:1.35;letter-spacing:-.9px}
+.dk .p20{margin-top:28px;font-size:20px;font-weight:500;line-height:1.5;letter-spacing:-.4px}
+.pct{position:relative;display:inline-block;margin-bottom:9px;font-size:30px;font-weight:900;line-height:1.7;letter-spacing:-.6px;padding:0 7.5px;z-index:0}
+.pct::before{content:'';position:absolute;left:50%;top:3.5px;width:164px;height:44px;margin-left:-82px;background:var(--red);z-index:-1;transform-origin:left;transition:transform .6s cubic-bezier(.2,.7,.2,1) .2s}
+.js .pct::before{transform:scaleX(0)}
+.js .pct.on::before{transform:none}
+.dk .end{margin-top:36px;font-size:25px;font-weight:700;line-height:1.5;letter-spacing:-.5px}
 
-/* ---------- 03 100% + 폰 ---------- */
-.s3{background:#fff}
-.phone-wrap{position:relative;width:clamp(270px,68.88vw,540px);margin:clamp(40px,10.2vw,80px) auto 0}
-.phone{position:relative;height:clamp(380px,96.94vw,760px);background:#fff;border-radius:clamp(39px,9.95vw,78px) clamp(39px,9.95vw,78px) 0 0;padding:clamp(10px,2.55vw,20px) clamp(10px,2.55vw,20px) 0;
-  box-shadow:inset 0 0 0 clamp(1.5px,0.38vw,3px) #e3e5ea,0 0 0 clamp(6px,1.53vw,12px) #f3f4f7,0 0 0 clamp(7px,1.79vw,14px) #e3e5ea,0 clamp(20px,5.1vw,40px) clamp(40px,10.2vw,80px) clamp(-20px,-2.55vw,-10px) rgba(30,30,60,.25);text-align:left;overflow:hidden}
-.phone:after{content:"";position:absolute;left:0;right:0;bottom:0;height:clamp(120px,30.61vw,240px);background:linear-gradient(0deg,#fff 20%,rgba(255,255,255,0))}
-.phone .isl{width:clamp(75px,19.13vw,150px);height:clamp(20px,5.1vw,40px);border-radius:clamp(12px,3.06vw,24px);background:#111;margin:clamp(5px,1.28vw,10px) auto clamp(13px,3.32vw,26px)}
-.phone .scr{padding:0 clamp(13px,3.32vw,26px)}
-.phone .bar{display:flex;justify-content:space-between;align-items:center;font-size:clamp(11px,2.81vw,22px);font-weight:600;color:var(--ink);padding-bottom:clamp(10px,2.55vw,20px);border-bottom:1px solid var(--line)}
-.phone .bar img{height:clamp(13px,3.32vw,26px)}
-.phone .tag{display:inline-block;margin-top:clamp(13px,3.32vw,26px);font-size:clamp(9px,2.3vw,18px);font-weight:700;color:var(--red);background:var(--pink);border-radius:clamp(15px,3.83vw,30px);padding:clamp(3px,0.77vw,6px) clamp(8px,2.04vw,16px)}
-.phone h4{font-size:clamp(16px,4.08vw,32px);line-height:1.38;margin-top:clamp(7px,1.79vw,14px);letter-spacing:-.03em}
-.phone .by{font-size:clamp(9px,2.3vw,18px);color:var(--mute);margin-top:clamp(6px,1.53vw,12px)}
-.phone .thumb{height:clamp(110px,28.06vw,220px);border-radius:clamp(10px,2.55vw,20px);margin-top:clamp(11px,2.81vw,22px);background:url(img/hero.jpg) center 40%/cover}
-.phone .ln{height:clamp(7px,1.79vw,14px);border-radius:clamp(4px,1.02vw,8px);background:#eef0f4;margin-top:clamp(9px,2.3vw,18px)}
-.noti{position:absolute;right:clamp(-70px,-8.93vw,-35px);top:clamp(150px,38.27vw,300px);z-index:3;width:clamp(210px,53.57vw,420px);display:flex;align-items:center;gap:clamp(9px,2.3vw,18px);background:rgba(255,255,255,.96);border-radius:clamp(14px,3.57vw,28px);padding:clamp(11px,2.81vw,22px) clamp(13px,3.32vw,26px);text-align:left;
-  box-shadow:0 clamp(15px,3.83vw,30px) clamp(30px,7.65vw,60px) clamp(-16px,-2.04vw,-8px) rgba(160,40,30,.35);animation:float 3.4s ease-in-out infinite}
-.noti img{width:clamp(42px,10.71vw,84px);flex:none}
-.noti small{display:block;font-size:clamp(8.5px,2.17vw,17px);color:var(--mute)}
-.noti b{display:block;font-size:clamp(11px,2.81vw,22px);margin-top:clamp(1px,0.26vw,2px)}
-.noti strong{display:block;font-size:clamp(17px,4.34vw,34px);font-weight:900;color:var(--red);letter-spacing:-.03em}
+/* 02 프리랜서 기자란 */
+.what{background:linear-gradient(#fff2f1,#fff)}
+.what .h2{width:194px;height:92px}
+.def{display:flex;flex-direction:column;align-items:center;gap:3px;height:114px;font-size:20px;line-height:1.4;letter-spacing:-.4px;white-space:nowrap}
+.def b{font-weight:700}
+.def .row{display:flex;align-items:center;gap:4.5px;font-weight:700}
+.def .box{background:var(--red);color:#fff;font-weight:900;padding:0 5px 1px;position:relative}
+.pills{position:relative;width:242px;height:217px}
+.pills>div{position:absolute;display:flex}
+.pill{display:flex;align-items:center;gap:10px;padding:12px 18px 12px 15px;background:#fff;border-radius:999px;filter:drop-shadow(0 6px 9px rgba(160,40,30,.2));font-size:15px;font-weight:700;white-space:nowrap}
+.pill img{width:22px;height:22px}
 
-/* ---------- 04 Q&A 후기형 ---------- */
-.s4{background:var(--gray)}
-.qa{margin-top:clamp(40px,10.2vw,80px);display:grid;gap:clamp(18px,4.59vw,36px)}
-.qa article{background:#fff;border-radius:clamp(18px,4.59vw,36px);padding:clamp(30px,7.65vw,60px) clamp(25px,6.38vw,50px) clamp(27px,6.89vw,54px);text-align:center;box-shadow:0 clamp(7px,1.79vw,14px) clamp(20px,5.1vw,40px) clamp(-22px,-2.81vw,-11px) rgba(40,50,90,.25)}
-.qa .q{font-size:clamp(17px,4.34vw,34px);font-weight:800;line-height:1.45;color:#5a6cf0}
-.qa .q:before{content:"“"}.qa .q:after{content:"”"}
-.qa .av{width:clamp(90px,22.96vw,180px);height:clamp(90px,22.96vw,180px);border-radius:50%;margin:clamp(17px,4.34vw,34px) auto clamp(11px,2.81vw,22px);border:clamp(3.5px,0.89vw,7px) solid #c9cff8;background:linear-gradient(180deg,#fff,#eef0ff);display:grid;place-items:center}
-.qa .av img{width:clamp(62px,15.82vw,124px);filter:drop-shadow(0 clamp(5px,1.28vw,10px) clamp(6px,1.53vw,12px) rgba(40,50,120,.2))}
-.qa .who{font-size:clamp(13px,2.55vw,20px);color:#5a6cf0;font-weight:600}
-.qa .ans{font-size:clamp(14px,3.57vw,28px);font-weight:800;margin-top:clamp(3px,0.77vw,6px)}
-.qa p{font-size:clamp(13px,2.55vw,20px);color:var(--body);line-height:1.75;margin-top:clamp(10px,2.55vw,20px)}
-.qa p b{color:var(--ink)}
+/* 03 오픈미디어 신뢰 */
+.trust{background:linear-gradient(to top,#fff2f1,#fff)}
+.dots{position:absolute;left:192px;top:-25px;width:6px;height:50px;z-index:2}
+.dots i{position:absolute;left:0;width:6px;height:6px;border-radius:50%;background:var(--red);animation:blink 1.8s ease-in-out infinite}
+.dots i:nth-child(1){top:0;opacity:.8}.dots i:nth-child(2){top:22px;opacity:.5;animation-delay:.3s}.dots i:nth-child(3){top:44px;opacity:.1;animation-delay:.6s}
+@keyframes blink{50%{transform:scale(1.35)}}
+.trust .logo{width:185.7px;height:39px}
+.trust .h2{padding-top:9px}
+.trust .h2 .t{font-weight:400}
+.qcard{width:100%;margin-top:8px;background:#fff;border-radius:22px;padding:26px 22px;display:flex;flex-direction:column;align-items:center;gap:14px;filter:drop-shadow(0 6px 9px rgba(160,40,30,.2))}
+.qcard .q{font-size:18px;line-height:26.1px;letter-spacing:-.54px}
+.qcard .q b{color:var(--red)}
+.num{display:flex;align-items:flex-end;gap:7px;height:56px}
+.num strong{font-family:'Paperlogy','Noto Sans KR',sans-serif;font-weight:900;font-size:45px;line-height:56px;letter-spacing:-1px;color:var(--red);min-width:91px;text-align:right}
+.num span{font-size:18px;font-weight:700;padding-bottom:6px}
+.qcard .d{font-size:14px;line-height:1.4;color:var(--sub)}
+.awards{width:350px;display:flex;flex-direction:column;gap:15px;filter:drop-shadow(0 6px 9px rgba(160,40,30,.2));text-align:left}
+.aw{background:#fff;border-radius:18px;display:flex;align-items:center;gap:14px;padding:14px 16px 14px 14px}
+.aw .lg{width:102px;height:56.4px;border-radius:7.2px;background:#fff;position:relative;flex:none}
+.aw .lg img{position:absolute;left:4.2px;top:12.6px;width:94.7px;height:30.6px}
+.aw .tx{display:flex;flex-direction:column;gap:3px;line-height:1.45}
+.aw .k{font-size:11px;font-weight:700;color:var(--red);letter-spacing:-.22px}
+.aw .t{font-size:16px;font-weight:700;letter-spacing:-.32px}
+.aw .s{font-size:11px;color:var(--sub);letter-spacing:-.22px;width:190px}
+.aw .s b{color:var(--ink)}
+.aw2{height:109px;padding:0;position:relative;display:block}
+.aw2 .star{position:absolute;left:27px;top:15px;width:79px;height:79px;border-radius:5.56px}
+.aw2 .tx{position:absolute;left:129.2px;top:14.1px;width:206.8px}
+.aw2 .s{width:auto}
 
-/* ---------- 05 비교 ---------- */
-.s5{background:var(--pink)}
-.cmp{margin-top:clamp(45px,11.48vw,90px);display:grid;gap:clamp(28px,7.14vw,56px)}
-.cmp .box{position:relative;border-radius:0 clamp(16px,4.08vw,32px) clamp(16px,4.08vw,32px) clamp(16px,4.08vw,32px);padding:clamp(28px,7.14vw,56px) clamp(17px,4.34vw,34px) clamp(22px,5.61vw,44px);background:#eae6e6}
-.cmp .box.hot{background:#ffd9d4}
-.cmp .lb{position:absolute;left:0;top:clamp(-44px,-5.61vw,-22px);height:clamp(23px,5.87vw,46px);line-height:clamp(23px,5.87vw,46px);padding:0 clamp(20px,5.1vw,40px) 0 clamp(10px,2.55vw,20px);border-radius:clamp(7px,1.79vw,14px) 0 0 0;background:#d9d2d2;color:#fff;font-weight:700;font-size:clamp(10.5px,2.68vw,21px);clip-path:polygon(0 0,85% 0,100% 100%,0 100%)}
-.cmp .hot .lb{background:var(--red)}
-.cmp .flow{display:flex;align-items:center;justify-content:space-around;gap:clamp(4px,1.02vw,8px)}
-.cmp .node{text-align:center}
-.cmp .node .ci{width:clamp(80px,20.41vw,160px);height:clamp(80px,20.41vw,160px);border-radius:50%;background:#fff;margin:0 auto clamp(7px,1.79vw,14px);display:grid;place-items:center;box-shadow:0 clamp(7px,1.79vw,14px) clamp(15px,3.83vw,30px) clamp(-16px,-2.04vw,-8px) rgba(0,0,0,.2)}
-.cmp .node .ci img{width:clamp(56px,14.29vw,112px)}
-.cmp .box:not(.hot) .node .ci img{filter:opacity(.9)}
-.cmp .node em{font-style:normal;display:inline-block;font-size:clamp(9.5px,2.42vw,19px);font-weight:700;color:#fff;background:#a9a3a3;border-radius:clamp(15px,3.83vw,30px);padding:clamp(2px,0.51vw,4px) clamp(9px,2.3vw,18px)}
-.cmp .hot .node em{background:var(--ink)}
-.cmp .arr{font-size:clamp(17px,4.34vw,34px);color:#b5aeae;font-weight:700}
-.cmp .hot .arr{color:var(--red)}
-.cmp ul{list-style:none;margin-top:clamp(15px,3.83vw,30px);display:grid;gap:clamp(4px,1.02vw,8px);font-size:clamp(13.64px,2.81vw,22px);color:#7d7878;text-align:center}
-.cmp .hot ul{color:var(--ink);font-weight:600}
-.cmp-end{margin-top:clamp(30px,7.65vw,60px);text-align:center;font-size:clamp(17px,4.34vw,34px);line-height:1.5}
-.cmp-end b{color:var(--red);font-weight:800}
+/* 05 기존 직장 vs 프리랜서 */
+.vs{background:linear-gradient(to top,#fff2f1,#fff)}
+.vs .wl{width:82px;height:81px;object-fit:contain}
+.vs .p18{font-size:18px;line-height:1.4;letter-spacing:-.36px;color:var(--sub)}
+.vs .sm{font-size:14px;line-height:1.4;letter-spacing:-.42px;color:var(--sub)}
+.vs .sm b{color:var(--red)}
+.cmp{width:100%;display:flex;flex-direction:column;align-items:flex-start;text-align:center}
+.cmp.old{padding:15px 0 30px;height:264px;overflow:hidden}
+.cmp .tab{padding:5px 12px 5px 10px;border-radius:6.35px 13.6px 0 0;font-size:13px;font-weight:700;line-height:1.4;letter-spacing:-.26px;color:#fff;background:#d9d2d2}
+.cmp .bx{width:100%;height:200px;border-radius:0 14.5px 14.5px 14.5px;background:#eae6e6;display:flex;flex-direction:column;align-items:center;gap:13.6px;padding:25.4px 15.4px 20px}
+.cmp .fl{display:flex;justify-content:center;gap:32px}
+.cmp .nd{display:flex;flex-direction:column;align-items:center;gap:6.35px}
+.cmp .c{width:72.56px;height:72.56px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6.35px 13.6px -7.26px rgba(0,0,0,.2)}
+.cmp .c img{width:45px;height:45px;object-fit:contain}
+.cmp.old .c img{opacity:.9}
+.cmp .lb{padding:3px 10px;border-radius:13.6px;background:#a9a3a3;color:#fff;font-size:12px;font-weight:700;line-height:1.4;letter-spacing:-.24px;white-space:nowrap}
+.cmp .ds{font-size:14px;line-height:1.4;color:#7d7878}
+.cmp.new .tab{background:var(--red)}
+.cmp.new .bx{background:#ffd9d4}
+.cmp.new .fl{gap:18px}
+.cmp.new .lb{background:var(--ink)}
+.cmp.new .ds{font-weight:700;color:var(--sub)}
+.vs .ask{margin-top:35px;font-size:18.7px;line-height:1.5;letter-spacing:-.56px}
+.vs .ask b{font-weight:900;color:var(--red)}
 
-/* ---------- 06 0원 지원 ---------- */
-.s6{background:#fff}
-.sup{margin-top:clamp(35px,8.93vw,70px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(10px,2.55vw,20px)}
-.sup div{background:var(--pink);border-radius:clamp(14px,3.57vw,28px);padding:clamp(17px,4.34vw,34px) clamp(15px,3.83vw,30px) clamp(15px,3.83vw,30px);position:relative;min-height:clamp(170px,43.37vw,340px);overflow:hidden}
-.sup div:last-child{grid-column:1/-1;min-height:clamp(120px,30.61vw,240px)}
-.sup .no{width:clamp(21px,5.36vw,42px);height:clamp(21px,5.36vw,42px);border-radius:50%;background:var(--red);color:#fff;font-size:clamp(9.5px,2.42vw,19px);font-weight:800;display:grid;place-items:center}
-.sup b{display:block;color:var(--red);font-size:clamp(16px,4.08vw,32px);font-weight:800;margin-top:clamp(10px,2.55vw,20px);letter-spacing:-.03em;line-height:1.3}
-.sup small{display:block;font-size:clamp(13px,2.42vw,19px);color:var(--body);margin-top:clamp(4px,1.02vw,8px);line-height:1.5}
-.sup .ic{position:absolute;right:clamp(9px,2.3vw,18px);bottom:clamp(7px,1.79vw,14px);width:clamp(75px,19.13vw,150px);transform:rotate(-6deg);filter:drop-shadow(0 clamp(8px,2.04vw,16px) clamp(8px,2.04vw,16px) rgba(160,40,30,.22))}
+/* 05-2 수익 내는 방법 */
+.how{background:#fff}
+.how .p18{font-size:18px;line-height:1.4;letter-spacing:-.36px;color:var(--sub);white-space:nowrap}
+.rev{width:100%;display:flex;flex-direction:column;gap:10px;margin-top:23px;text-align:left}
+.rv-i{background:#fff2f1;border-radius:16px;padding:18px 16px;display:flex;align-items:center;gap:14px}
+.rv-i .n{width:44px;height:44px;border-radius:50%;background:var(--red);color:#fff;font-size:15px;font-weight:900;letter-spacing:-.3px;display:flex;align-items:center;justify-content:center;flex:none}
+.rv-i .ct{display:flex;flex-direction:column;gap:3px;min-width:0}
+.rv-i .t{font-size:16px;font-weight:700;line-height:1.3;letter-spacing:-.32px}
+.rv-i .s{font-size:12.5px;line-height:1.4;letter-spacing:-.25px;color:var(--sub)}
+.rv-i .pr{margin-top:2px;font-size:19px;font-weight:900;line-height:1.25;letter-spacing:-.38px;color:var(--red)}
+.rv-i .pr small{font-size:13px;font-weight:700;color:var(--sub)}
+.locked{position:relative;width:350px;height:228px;cursor:pointer;text-align:left;display:block}
+.locked .bl{position:absolute;left:0;top:0;width:350px;display:flex;flex-direction:column;gap:10px;filter:blur(4.5px);pointer-events:none;user-select:none}
+.locked .veil{position:absolute;inset:0;border-radius:16px;background:rgba(255,255,255,.35)}
+.lockpill{position:absolute;left:29.5px;top:92px;display:flex;align-items:center;gap:8px;padding:12px 20px;background:#fff;border:1px solid #ffd9d4;border-radius:99px;box-shadow:0 4px 14px rgba(153,51,38,.1);font-size:14px;font-weight:700;line-height:1.2;letter-spacing:-.28px;white-space:nowrap;transition:transform .25s ease,box-shadow .25s ease;animation:ring 2.4s ease-out infinite}
+.lockpill img{width:16px;height:18px}
+.locked:hover .lockpill,.locked:focus-visible .lockpill{transform:translateY(-2px);box-shadow:0 8px 20px rgba(153,51,38,.18)}
+@keyframes ring{0%{box-shadow:0 4px 14px rgba(153,51,38,.1),0 0 0 0 rgba(244,64,44,.28)}70%,100%{box-shadow:0 4px 14px rgba(153,51,38,.1),0 0 0 10px rgba(244,64,44,0)}}
+.how .note{margin-top:19px}
 
-/* ---------- 07 단계 ---------- */
-.s7{background:#fffafa}
-.steps{margin-top:clamp(40px,10.2vw,80px);display:grid;gap:clamp(13px,3.32vw,26px)}
-.st{border-radius:clamp(16px,4.08vw,32px);padding:clamp(22px,5.61vw,44px) clamp(115px,29.34vw,230px) clamp(22px,5.61vw,44px) clamp(20px,5.1vw,40px);background:#fff;border:clamp(1.5px,0.38vw,3px) solid var(--line);position:relative;overflow:hidden}
-.st .who{position:absolute;right:clamp(13px,3.32vw,26px);bottom:clamp(-8px,-1.02vw,-4px);width:clamp(95px,24.23vw,190px)}
-.st.hot{border-color:var(--red);box-shadow:0 clamp(13px,3.32vw,26px) clamp(28px,7.14vw,56px) clamp(-28px,-3.57vw,-14px) rgba(244,64,44,.45)}
-.st .k{display:inline-block;font-size:clamp(9.5px,2.42vw,19px);font-weight:800;color:#fff;background:var(--mute);border-radius:clamp(15px,3.83vw,30px);padding:clamp(3px,0.77vw,6px) clamp(9px,2.3vw,18px)}
-.st.hot .k{background:var(--red)}
-.st h4{font-size:clamp(18px,4.59vw,36px);font-weight:800;margin-top:clamp(8px,2.04vw,16px)}
-.st .pr{margin-top:clamp(5px,1.28vw,10px)}
-.st .pr strong{font-size:clamp(23px,5.87vw,46px);font-weight:900;color:var(--red);letter-spacing:-.03em}
-.st .pr small{font-size:clamp(13px,2.42vw,19px);color:var(--mute);margin-left:clamp(5px,1.28vw,10px)}
-.st ul{list-style:none;margin-top:clamp(13px,3.32vw,26px);display:flex;flex-wrap:wrap;gap:clamp(5px,1.28vw,10px)}
-.st li{font-size:clamp(13px,2.55vw,20px);background:var(--gray);border-radius:clamp(6px,1.53vw,12px);padding:clamp(5px,1.28vw,10px) clamp(9px,2.3vw,18px);color:var(--body)}
-.st.hot li{background:var(--pink);color:var(--ink);font-weight:600}
-.down{width:clamp(32px,8.16vw,64px);height:clamp(32px,8.16vw,64px);margin:clamp(-10px,-1.28vw,-5px) auto;display:grid;place-items:center;border-radius:50%;background:var(--red);position:relative;z-index:2}
-.down svg{width:clamp(15px,3.83vw,30px);stroke:#fff;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+/* 03 홍보비 100% (휴대폰 + 입금 알림) */
+.money{background:#fff7f6}
+.money .th{width:80px;height:81px;object-fit:cover}
+.mock{position:relative;width:290px;height:501px;text-align:left}
+.phone{position:absolute;left:23px;top:9px;width:245px;height:456px;background:#fff;border:6.35px solid #3d3d3d;border-bottom:0;border-radius:35.37px 35.37px 0 0;box-shadow:0 18.14px 36.28px -9.07px rgba(30,30,60,.25);padding:13.6px 20.86px 0;display:flex;flex-direction:column;align-items:center;overflow:hidden}
+.phone .isl{width:68px;height:18.14px;border-radius:10.9px;background:#111;flex:none}
+.phone .bar{width:100%;display:flex;align-items:center;justify-content:space-between;padding-bottom:2px;border-bottom:.45px solid #eceef3;font-size:14px;font-weight:500;line-height:1.4}
+.phone .bar img{width:55.3px;height:11.8px;object-fit:contain}
+.phone .art{width:100%;display:flex;flex-direction:column;align-items:flex-start;gap:6.35px;padding-top:11.8px;opacity:.9}
+.phone .art .tg{background:#fff2f1;border-radius:13.6px;padding:2.7px 7.26px;font-size:7px;font-weight:500;line-height:1.4;color:var(--red)}
+.phone .art h4{font-size:17.6px;font-weight:700;line-height:1.38;letter-spacing:-.352px;width:190.5px}
+.phone .art .mt{font-size:9px;line-height:1.4;color:var(--mute)}
+.phone .art img{width:190px;height:159px;border-radius:9.07px;object-fit:cover}
+.fade{position:absolute;left:0;top:215px;width:290px;height:318px;background:linear-gradient(rgba(255,247,246,0),#fff7f6 55%,#fff7f6)}
+.nt{position:absolute;left:25px;width:240px;height:74.33px;border-radius:11.27px;background:#fff}
+.nt img{position:absolute;left:33px;top:20.3px;width:33.8px;height:33.8px;object-fit:contain}
+.nt .tx{position:absolute;left:80px;display:flex;flex-direction:column;gap:.8px;line-height:1.4;white-space:nowrap}
+.nt .m{font-size:10.83px;color:var(--mute);letter-spacing:-.22px}
+.nt .t{font-size:12.08px;font-weight:700;letter-spacing:-.24px}
+.nt .a{font-size:16.6px;font-weight:900;color:var(--red);letter-spacing:-.33px}
+.nt.g2{left:42px;top:407.14px;width:208px;background:#f6f8ff;opacity:.45;box-shadow:0 11.42px 10.83px -.84px rgba(0,0,0,.2)}
+.nt.g1{left:34px;top:399.14px;width:224px;background:#f6f8ff;opacity:.7;box-shadow:0 11.42px 10.83px -.84px rgba(0,0,0,.2)}
+.nt.c{top:391.14px;background:#f6f8ff;box-shadow:0 11.42px 10.83px -.84px rgba(0,0,0,.2)}
+.nt.c .tx{top:6.35px}
+.nt.b{top:340.82px;background:#fff6f4;box-shadow:0 7px 5px rgba(0,0,0,.3)}
+.nt.b .tx{top:8.86px}
+.nt.a1{top:283px;background:#fff;box-shadow:0 5px 5px rgba(0,0,0,.3)}
+.nt.a1 .tx{top:8.86px}
+.sum{position:absolute;left:41px;top:244px;display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:99px;background:var(--ink);box-shadow:0 4px 2px rgba(0,0,0,.25);white-space:nowrap}
+.sum span{font-size:12px;font-weight:500;color:#fff}
+.sum b{font-size:12.5px;font-weight:900;color:#ff6b54;font-variant-numeric:tabular-nums}
+/* 알림이 아래(오래된 것)부터 차례로 떠오름 */
+.js .mock [data-step]{opacity:0;transform:translateY(-16px) scale(.97);transition:opacity .5s ease,transform .6s cubic-bezier(.2,.9,.3,1.15)}
+.js .mock .nt.g1[data-step],.js .mock .nt.g2[data-step]{opacity:0}
+.mock [data-step].on{opacity:1;transform:none}
+.mock .nt.g1.on{opacity:.7}.mock .nt.g2.on{opacity:.45}
+.money .yes{position:relative;z-index:1;font-size:26.7px;font-weight:700;line-height:1.3;letter-spacing:-.8px;white-space:nowrap}
 
-/* ---------- 08 DARK 수익 ---------- */
-.dark{background:var(--ink);color:#fff}
-.dark .t-sub{color:#c3c6cc}
-.chart{margin-top:clamp(50px,12.76vw,100px);display:flex;align-items:flex-end;justify-content:center;gap:clamp(15px,3.83vw,30px);height:clamp(280px,71.43vw,560px);position:relative}
-.chart .col{flex:1;max-width:clamp(110px,28.06vw,220px);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
-.chart .bar{width:100%;border-radius:clamp(12px,3.06vw,24px) clamp(12px,3.06vw,24px) 0 0;display:flex;justify-content:center;padding-top:clamp(16px,4.08vw,32px);font-size:clamp(17px,4.34vw,34px);font-weight:800;position:relative;height:0;transition:height 1.2s cubic-bezier(.2,.8,.2,1)}
-.chart .bar.g{background:linear-gradient(180deg,#f1f1f1 0%,#d8d8d8 60%,rgba(216,216,216,0) 100%);color:var(--ink)}
-.chart .bar.rd{background:linear-gradient(180deg,#ff5a45 0%,var(--red) 60%,rgba(244,64,44,0) 100%)}
-.chart .bar small{position:absolute;top:clamp(-54px,-6.89vw,-27px);font-size:clamp(9.5px,2.42vw,19px);font-weight:600;background:#4a4d54;color:#fff;border-radius:clamp(5px,1.28vw,10px);padding:clamp(3.5px,0.89vw,7px) clamp(7px,1.79vw,14px);white-space:nowrap}
-.chart .lbl{margin-top:clamp(10px,2.55vw,20px);font-size:clamp(11px,2.81vw,22px);color:#c3c6cc;font-weight:600}
-.deco{position:absolute;z-index:2;filter:drop-shadow(0 clamp(7px,1.79vw,14px) clamp(8px,2.04vw,16px) rgba(0,0,0,.35))}
-.chart .deco.c1{left:clamp(-10px,-1.28vw,-5px);bottom:clamp(15px,3.83vw,30px);width:clamp(60px,15.31vw,120px)}
-.chart .deco.c2{right:clamp(-6px,-0.77vw,-3px);bottom:clamp(30px,7.65vw,60px);width:clamp(65px,16.58vw,130px);animation-delay:.6s}
-.chart .deco.up{right:clamp(15px,3.83vw,30px);top:clamp(-30px,-3.83vw,-15px);width:clamp(75px,19.13vw,150px);transform:rotate(6deg)}
-.sim{margin-top:clamp(30px,7.65vw,60px);background:var(--ink-2);border-radius:clamp(16px,4.08vw,32px);padding:clamp(20px,5.1vw,40px) clamp(18px,4.59vw,36px)}
-.sim .row{display:flex;justify-content:space-between;font-size:clamp(13.64px,2.81vw,22px);color:#c3c6cc}
-.sim .row output{color:#fff;font-weight:800}
-.sim input[type=range]{width:100%;margin:clamp(10px,2.55vw,20px) 0 clamp(13px,3.32vw,26px);accent-color:var(--red);height:clamp(4px,1.02vw,8px)}
-.sim .seg{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(6px,1.53vw,12px)}
-.sim .seg button{border:1px solid #45484f;background:transparent;border-radius:clamp(7px,1.79vw,14px);padding:clamp(9px,2.3vw,18px) 0;font-size:clamp(11px,2.81vw,22px);font-weight:700;color:#c3c6cc;cursor:pointer}
-.sim .seg button.on{background:var(--red);border-color:var(--red);color:#fff}
-.sim .res{display:flex;justify-content:space-between;align-items:baseline;border-top:1px dashed #4a4d54;margin-top:clamp(15px,3.83vw,30px);padding-top:clamp(13px,3.32vw,26px);font-size:clamp(13.64px,2.81vw,22px)}
-.sim .res strong{font-size:clamp(28px,7.14vw,56px);font-weight:900;color:var(--red)}
-.sim .res strong small{font-size:clamp(13px,3.32vw,26px);color:#fff;margin-left:clamp(2px,0.51vw,4px)}
-.dark .cap{color:#7d8088}
-.aw{margin-top:clamp(85px,21.68vw,170px)}
-.bars3d{margin-top:clamp(85px,21.68vw,170px);display:flex;align-items:flex-end;justify-content:center;gap:clamp(12px,3.06vw,24px);height:clamp(260px,66.33vw,520px)}
-.b3{flex:1;max-width:clamp(80px,20.41vw,160px);position:relative;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
-.b3 .blk{width:100%;height:0;transition:height 1.2s cubic-bezier(.2,.8,.2,1);position:relative;border-radius:clamp(4px,1.02vw,8px) clamp(4px,1.02vw,8px) 0 0;display:flex;flex-direction:column;align-items:center;padding-top:clamp(12px,3.06vw,24px);text-align:center}
-.b3 .blk:after{content:"";position:absolute;right:clamp(-18px,-2.3vw,-9px);top:clamp(4.5px,1.15vw,9px);bottom:0;width:clamp(9px,2.3vw,18px);background:rgba(0,0,0,.18);transform:skewY(-30deg);transform-origin:left top}
-.b3:nth-of-type(1) .blk{background:#fff1c2;color:#7a5a00}
-.b3:nth-of-type(2) .blk{background:#ffe08a;color:#6d4f00}
-.b3:nth-of-type(3) .blk{background:#a8e3ef;color:#0d5866}
-.b3:nth-of-type(4) .blk{background:#ff8f86;color:#7a120a}
-.b3 em{font-style:normal;font-size:clamp(8.5px,2.17vw,17px);font-weight:700;color:#fff;background:rgba(0,0,0,.45);border-radius:clamp(15px,3.83vw,30px);padding:clamp(2px,0.51vw,4px) clamp(7px,1.79vw,14px)}
-.b3 strong{font-size:clamp(18px,4.59vw,36px);font-weight:900;margin-top:clamp(5px,1.28vw,10px);line-height:1.15;letter-spacing:-.03em}
-.b3 strong small{display:block;font-size:clamp(9.5px,2.42vw,19px);font-weight:700}
-.b3 .nm{margin-top:clamp(9px,2.3vw,18px);font-size:clamp(10.5px,2.68vw,21px);font-weight:700;color:#e2e4e8;white-space:nowrap}
-.b3 .tro{position:absolute;top:clamp(-150px,-19.13vw,-75px);left:50%;width:clamp(75px,19.13vw,150px);margin-left:clamp(-75px,-9.57vw,-37.5px);filter:drop-shadow(0 clamp(8px,2.04vw,16px) clamp(9px,2.3vw,18px) rgba(0,0,0,.4))}
-.bars3d{position:relative}
-.bars3d .deco.c3{left:clamp(5px,1.28vw,10px);bottom:clamp(20px,5.1vw,40px);width:clamp(55px,14.03vw,110px)}
-.bars3d .deco.c4{left:clamp(35px,8.93vw,70px);bottom:clamp(15px,3.83vw,30px);width:clamp(45px,11.48vw,90px);animation-delay:.8s}
+/* 06 0원 지원 */
+.free{background:#fff}
+.sup{display:flex;flex-direction:column;gap:10px;margin-top:40px}
+.sp{position:relative;width:350px;height:83px;border-radius:12.5px;background:#fff2f1;text-align:left;overflow:hidden}
+.sp .no{position:absolute;left:20px;top:11px;font-size:25px;font-weight:900;line-height:1.28;letter-spacing:-.5px;color:var(--red);opacity:.3}
+.sp .t{position:absolute;left:69px;top:16px;font-size:18px;font-weight:700;line-height:1.28;letter-spacing:-.36px;color:var(--red);white-space:nowrap}
+.sp .s{position:absolute;left:69px;top:51px;font-size:11px;line-height:1.35;letter-spacing:-.22px;color:var(--sub);white-space:nowrap}
+.sp img{position:absolute;left:279.3px;top:19.3px;width:45.9px;height:45.9px;object-fit:contain;transform:rotate(6deg)}
 
-/* ---------- 09 이런 분 (노트) ---------- */
-.s9{background:var(--ink);padding-top:clamp(15px,3.83vw,30px)}
-.note{background:var(--red);border-radius:clamp(22px,5.61vw,44px);padding:0 clamp(16px,4.08vw,32px) clamp(16px,4.08vw,32px);margin-top:clamp(45px,11.48vw,90px);position:relative}
-.note .memo{position:absolute;right:clamp(-16px,-2.04vw,-8px);top:clamp(-80px,-10.2vw,-40px);width:clamp(85px,21.68vw,170px);transform:rotate(12deg);z-index:2;filter:drop-shadow(0 clamp(9px,2.3vw,18px) clamp(9px,2.3vw,18px) rgba(0,0,0,.35))}
-.note .bulb{position:absolute;left:clamp(-10px,-1.28vw,-5px);top:clamp(-70px,-8.93vw,-35px);width:clamp(65px,16.58vw,130px);transform:rotate(-12deg);z-index:2;filter:drop-shadow(0 clamp(9px,2.3vw,18px) clamp(9px,2.3vw,18px) rgba(0,0,0,.35))}
-.note .tabs{display:flex;justify-content:center;gap:clamp(25px,6.38vw,50px);height:clamp(25px,6.38vw,50px)}
-.note .tabs i{width:clamp(10px,2.55vw,20px);height:clamp(32px,8.16vw,64px);border-radius:clamp(6px,1.53vw,12px);background:#e4e6eb;margin-top:clamp(-26px,-3.32vw,-13px);box-shadow:inset 0 clamp(-6px,-0.77vw,-3px) 0 rgba(0,0,0,.15)}
-.paper{background:#fff;background-image:linear-gradient(#f1f2f5 1px,transparent 1px),linear-gradient(90deg,#f1f2f5 1px,transparent 1px);background-size:clamp(14px,3.57vw,28px) clamp(14px,3.57vw,28px);padding:clamp(40px,10.2vw,80px) clamp(18px,4.59vw,36px);text-align:center}
-.paper h3{font-size:clamp(28px,7.14vw,56px);font-weight:800;line-height:1.3}
-.paper h3 span{color:var(--red);box-shadow:inset 0 clamp(-16px,-2.04vw,-8px) 0 #ffe36e}
-.paper ul{list-style:none;margin-top:clamp(30px,7.65vw,60px);display:grid;gap:clamp(23px,5.87vw,46px)}
-.paper li{font-size:clamp(14px,3.57vw,28px);line-height:1.5}
-.paper li:before{content:"";display:block;width:clamp(25px,6.38vw,50px);height:clamp(25px,6.38vw,50px);margin:0 auto clamp(8px,2.04vw,16px);border-radius:50%;background:var(--red) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12 5 5 9-10'/%3E%3C/svg%3E") center/60% no-repeat}
-.paper li b{color:var(--red)}
-.proc{margin-top:clamp(55px,14.03vw,110px);display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(5px,1.28vw,10px);position:relative}
-.proc:before{content:"";position:absolute;left:12%;right:12%;top:clamp(35px,8.93vw,70px);border-top:clamp(1.5px,0.38vw,3px) dashed #4a4d54}
-.proc>div{text-align:center;position:relative}
-.proc i{width:clamp(70px,17.86vw,140px);height:clamp(70px,17.86vw,140px);border-radius:50%;background:var(--ink-2);border:clamp(1.5px,0.38vw,3px) solid #4a4d54;display:grid;place-items:center;margin:0 auto clamp(9px,2.3vw,18px)}
-.proc i img{width:clamp(44px,11.22vw,88px)}
-.proc>div:last-child i{background:var(--red);border-color:var(--red)}
-.proc small{display:block;font-size:clamp(9px,2.3vw,18px);font-weight:700;color:#7d8088}
-.proc b{display:block;font-size:clamp(11.5px,2.93vw,23px);line-height:1.45;color:#fff;margin-top:clamp(2px,0.51vw,4px)}
+/* 06-2 기자증 */
+.idc{background:#fff7f6}
+.idc>*{position:relative;z-index:1}
+.idc .h2{width:253px;height:89px}
+.idc .cards{width:350px;height:300px;z-index:0}
+.idc .cards img{position:absolute;left:0;top:-4.3px;width:350px;height:335px}
+.bens{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:10px;height:177px;width:100%}
+.ben{display:flex;align-items:center;gap:10px;padding:12px 22px 12px 16px;background:#fff;border-radius:99px;box-shadow:0 4px 14px rgba(153,51,38,.1);font-size:15px;font-weight:500;line-height:1.2;letter-spacing:-.3px;white-space:nowrap}
+.ben img{width:22px;height:22px}
+.ben b{color:var(--red)}
+.idc .gap4{height:4px}
 
-/* ---------- 10 CTA ---------- */
-.s10{background:var(--ink-2);color:#fff;text-align:center}
-.wallet{width:clamp(210px,53.57vw,420px);height:clamp(150px,38.27vw,300px);margin:0 auto clamp(15px,3.83vw,30px);position:relative}
-.wallet:before{content:"";position:absolute;left:50%;top:50%;width:clamp(210px,53.57vw,420px);height:clamp(210px,53.57vw,420px);margin:clamp(-210px,-26.79vw,-105px) 0 0 clamp(-210px,-26.79vw,-105px);border-radius:50%;background:radial-gradient(circle,rgba(255,120,90,.45),rgba(255,120,90,0) 65%)}
-.wallet .main{position:absolute;left:50%;top:clamp(10px,2.55vw,20px);width:clamp(135px,34.44vw,270px);margin-left:clamp(-135px,-17.22vw,-67.5px);filter:drop-shadow(0 clamp(15px,3.83vw,30px) clamp(20px,5.1vw,40px) rgba(244,64,44,.45))}
-.wallet .wing{position:absolute;left:clamp(-10px,-1.28vw,-5px);top:clamp(-10px,-1.28vw,-5px);width:clamp(75px,19.13vw,150px);transform:rotate(-14deg);animation-delay:.4s}
-.wallet .cn{position:absolute;width:clamp(45px,11.48vw,90px);filter:drop-shadow(0 clamp(5px,1.28vw,10px) clamp(6px,1.53vw,12px) rgba(0,0,0,.4))}
-.wallet .cn.a{right:clamp(5px,1.28vw,10px);top:0;animation-delay:.9s}
-.wallet .cn.b{right:clamp(-20px,-2.55vw,-10px);bottom:clamp(15px,3.83vw,30px);width:clamp(35px,8.93vw,70px);animation-delay:1.4s}
-.s10 .kicker{font-size:clamp(17px,4.34vw,34px);color:#e2e4e8}
-.s10 h2{font-size:clamp(42px,10.71vw,84px);font-weight:800;letter-spacing:-.04em;margin-top:clamp(5px,1.28vw,10px)}
-.s10 h2 .lt{font-weight:300}
-.go{display:inline-block;margin-top:clamp(30px,7.65vw,60px);background:var(--red);color:#fff;text-decoration:none;font-size:clamp(15px,3.83vw,30px);font-weight:800;border-radius:clamp(5px,1.28vw,10px);padding:clamp(15px,3.83vw,30px) clamp(28px,7.14vw,56px);border:0;cursor:pointer}
-.go:hover{background:var(--red-d)}
+/* 07 활동 단계 */
+.steps{background:linear-gradient(to top,#fff7f6 58.654%,#fff)}
+.stc{position:relative;width:350px;background:#fff;text-align:left;overflow:hidden}
+.stc.s1{height:209px;border:1.36px solid #eceef3;border-radius:15px;margin-top:27px}
+.stc.s2{height:243px;border:1.36px solid var(--red);border-radius:14.5px;box-shadow:0 11.79px 25.4px -12.7px rgba(244,64,44,.45)}
+.stc .in{position:absolute;left:16.78px;top:18.59px;display:flex;flex-direction:column;align-items:flex-start;gap:7px}
+.stc .sb{padding:2.72px 8.16px;border-radius:13.6px;background:var(--mute);color:#fff;font-size:12px;font-weight:500;line-height:1.4;letter-spacing:-.24px}
+.stc.s2 .sb{background:var(--red);font-weight:700}
+.stc .nm{font-size:19.8px;font-weight:700;line-height:1.4;letter-spacing:-.4px;white-space:nowrap}
+.stc .pr{font-size:25.3px;font-weight:700;line-height:1.3;letter-spacing:-.76px;color:var(--red);white-space:pre}
+.stc.s2 .pr{font-weight:900}
+.stc .pr small{font-size:12px;font-weight:400}
+.chips{display:flex;flex-wrap:wrap;align-content:flex-end;align-items:flex-end;gap:4.53px;width:227px;height:69px}
+.chips span{padding:4.53px 10px;border-radius:5px;background:#f8f9fd;font-size:12.4px;line-height:1.4;letter-spacing:-.25px;color:var(--sub);white-space:nowrap}
+.stc.s2 .chips{gap:5px;height:103px}
+.stc.s2 .chips span{padding:5px 10px;background:#fff2f1;font-weight:700;color:var(--ink)}
+.stc .il{position:absolute;width:86.16px;height:86.16px;object-fit:contain}
+.stc.s1 .il{left:241.64px;top:127.64px}
+.stc.s2 .il{left:243.64px;top:141.64px}
+.arw{height:43px;padding:7px 0}
+.arw i{display:flex;width:29px;height:29px;border-radius:50%;background:var(--red);align-items:center;justify-content:center;animation:nudge 1.8s ease-in-out infinite}
+.arw img{width:13.6px;height:13.6px}
+@keyframes nudge{50%{transform:translateY(3px)}}
+.steps .warn{width:356px;font-size:11px;line-height:1.55;letter-spacing:-.22px;color:var(--red)}
 
-/* footer */
-.foot{background:#f4f5f7;padding:clamp(35px,8.93vw,70px) 0;text-align:center;font-size:clamp(13px,2.17vw,17px);color:var(--mute);line-height:1.9}
-.foot img{height:clamp(16px,4.08vw,32px);margin:0 auto clamp(9px,2.3vw,18px);display:block}
-.foot b{color:var(--ink)}
-.warn{background:#fff;padding:clamp(30px,7.65vw,60px) 0 clamp(40px,10.2vw,80px)}
-.warn h5{text-align:center;font-size:clamp(13.64px,2.81vw,22px);margin-bottom:clamp(10px,2.55vw,20px)}
-.warn ul{list-style:none;border:1px solid var(--line);border-radius:clamp(8px,2.04vw,16px);padding:clamp(13px,3.32vw,26px) clamp(14px,3.57vw,28px);font-size:clamp(13px,2.17vw,17px);line-height:1.85;color:var(--body)}
+/* 09 이런 분들은 꼭 + 선발 전형 */
+.who{background:var(--ink);padding:30px 20px 70px;gap:0}
+.notebk{position:relative;width:350px;height:695px}
+.red{position:absolute;left:0;top:40px;width:350px;height:654px;border-radius:19.6px;background:var(--red);padding:0 15px 15px;display:flex;flex-direction:column}
+.spring{position:relative;height:22.3px;flex:none}
+.spring i{position:absolute;top:-11.59px;width:8.92px;height:28.53px;border-radius:5.35px;background:#e4e6eb}
+.paper{flex:1;background:#fff;border-radius:9px;padding:35.67px 16px;display:flex;flex-direction:column;align-items:center;gap:20.5px}
+.paper h3{font-size:25.37px;font-weight:700;line-height:1.3;letter-spacing:-.76px}
+.rec{display:flex;flex-direction:column;align-items:center;gap:7.13px;font-size:15.14px;line-height:1.5;letter-spacing:-.45px}
+.rec i{display:flex;width:22.3px;height:22.3px;border-radius:50%;background:var(--red);align-items:center;justify-content:center}
+.rec i img{width:13.4px;height:13.4px}
+.rec b{color:var(--red)}
+.notebk .st{position:absolute;left:.93px;top:2.26px;width:57.96px;height:57.96px;transform:rotate(-12deg)}
+.notebk .pc{position:absolute;left:272.17px;top:11.51px;width:75.8px;height:75.8px;transform:rotate(12deg)}
+.flow{display:flex;gap:5px;width:100%;margin-top:48px}
+.flow>div{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px}
+.flow .c{width:63px;height:63px;border-radius:50%;background:#2a2c30;border:1px solid #3e4148;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
+.flow .c.go{border:1.6px solid var(--red)}
+.flow .c img{width:26px;height:26px}
+.flow small{display:block;height:20px;font-size:12px;font-weight:500;line-height:1.4;letter-spacing:-.24px;color:var(--mute)}
+.flow b{font-size:14.3px;font-weight:700;line-height:1.3;letter-spacing:-.29px;color:#fff;white-space:nowrap}
 
-/* 하단 고정 바 */
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;background:#282828;padding:clamp(11px,2.81vw,22px) 20px}
-.dock .in{display:flex;align-items:center;justify-content:space-between;gap:clamp(8px,2.04vw,16px);padding:0}
-.dock .t{color:#fff;font-size:clamp(13px,2.42vw,19px);line-height:1.35;white-space:nowrap}
-.dock .t em{font-style:normal;color:var(--red);font-weight:700}
-.dock .clock{color:#fff;font-size:clamp(29px,7.4vw,58px);font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-.01em;white-space:nowrap}
-.dock button{background:var(--red);color:#fff;font-weight:800;font-size:clamp(14.88px,3.06vw,24px);border:0;border-radius:clamp(5px,1.28vw,10px);padding:clamp(11px,2.81vw,22px) clamp(15px,3.83vw,30px);cursor:pointer;white-space:nowrap}
+/* 10 마지막 CTA */
+.cta{background:#2a2c30;gap:6px}
+.ill{position:relative;width:190.5px;height:136px}
+.ill .gl{position:absolute;left:0;top:-27.2px;width:190.5px;height:190.5px}
+.ill .wl{position:absolute;left:34px;top:9.07px;width:122.4px;height:122.4px;object-fit:contain}
+.ill .s1{position:absolute;left:145.1px;top:0;width:40.8px;height:40.8px;animation:tw 3s ease-in-out infinite}
+.ill .s2{position:absolute;left:158.7px;top:90.7px;width:31.7px;height:31.7px;animation:tw 3s ease-in-out 1.2s infinite}
+@keyframes tw{50%{transform:scale(1.08) rotate(6deg)}}
+.cta .bo{margin-top:15px;font-size:20px;line-height:1.4;letter-spacing:-.4px;color:#e2e4e8}
+.cta .h{font-size:35px;font-weight:700;line-height:1.3;letter-spacing:-1.05px;color:var(--red);white-space:nowrap}
+.cta .h span{font-weight:300;color:#fff}
+.btn{margin-top:28.7px;padding:13.6px 25.4px;border-radius:58px;background:var(--red);color:#fff;font-size:17px;font-weight:700;line-height:1.4;letter-spacing:-.34px;white-space:nowrap;animation:pulse 2.4s ease-out infinite;transition:transform .2s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:scale(.97)}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(244,64,44,.45)}70%,100%{box-shadow:0 0 0 14px rgba(244,64,44,0)}}
 
-/* 바텀시트 */
-.dim{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:50;opacity:0;pointer-events:none;transition:.3s}
-.sheet{position:fixed;left:50%;bottom:0;width:100%;max-width:640px;max-height:92vh;overflow:auto;background:#fff;border-radius:clamp(15px,3.83vw,30px) clamp(15px,3.83vw,30px) 0 0;z-index:51;transform:translate(-50%,100%);transition:transform .35s cubic-bezier(.2,.8,.2,1);padding:clamp(17px,4.34vw,34px) clamp(16px,4.08vw,32px) clamp(15px,3.83vw,30px)}
-.open .dim{opacity:1;pointer-events:auto}
-.open .sheet{transform:translate(-50%,0)}
-.sheet .hd{display:flex;justify-content:space-between;align-items:center;font-size:clamp(13px,2.42vw,19px);font-weight:700}
-.sheet .hd button{background:none;border:0;width:40px;height:40px;cursor:pointer}
-.sheet .hd svg{width:26px;stroke:var(--ink);stroke-width:2.2}
-.sheet .lead{margin-top:clamp(14px,3.57vw,28px);font-size:clamp(13px,2.42vw,19px);color:var(--body)}
-.sheet h3{font-size:clamp(17px,4.34vw,34px);font-weight:800;margin-top:clamp(2px,0.51vw,4px)}
-.fld{display:block;margin-top:clamp(12px,3.06vw,24px)}
-.fld>span{display:block;font-size:clamp(13px,2.17vw,17px);font-weight:600;color:var(--body);margin-bottom:clamp(5px,1.28vw,10px)}
-.fld input,.fld select{width:100%;height:clamp(32px,8.16vw,64px);min-height:50px;border:0;border-radius:clamp(7px,1.79vw,14px);background:#f4f5f7;padding:0 clamp(10px,2.55vw,20px);font-size:clamp(13px,2.42vw,19px)}
-.fld input:focus,.fld select:focus{outline:2px solid var(--red)}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(5px,1.28vw,10px)}
-.opt{display:grid;grid-template-columns:1fr 1fr;gap:clamp(5px,1.28vw,10px)}
-.opt label{cursor:pointer;position:relative}
-.opt input{position:absolute;opacity:0}
-.opt span{display:block;text-align:center;border-radius:clamp(7px,1.79vw,14px);background:#f4f5f7;padding:clamp(8px,2.04vw,16px) clamp(4px,1.02vw,8px);font-size:clamp(13px,2.55vw,20px);font-weight:700}
-.opt span small{display:block;font-size:clamp(13px,1.91vw,15px);font-weight:400;color:var(--mute);margin-top:clamp(1px,0.26vw,2px)}
-.opt input:checked+span{background:var(--pink);outline:2px solid var(--red);color:var(--red)}
-.agree{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:clamp(15px,3.83vw,30px);border:2px solid var(--red);border-radius:clamp(7px,1.79vw,14px);height:clamp(35px,8.93vw,70px);min-height:54px;font-size:clamp(13px,2.55vw,20px);font-weight:800;cursor:pointer}
-.agree input{width:22px;height:22px;accent-color:var(--red)}
-.terms{margin-top:clamp(6px,1.53vw,12px);font-size:clamp(13px,1.91vw,15px);color:var(--mute);line-height:1.6;background:#f8f9fb;border-radius:clamp(6px,1.53vw,12px);padding:clamp(8px,2.04vw,16px) clamp(9px,2.3vw,18px)}
-.submit{margin-top:clamp(14px,3.57vw,28px);text-align:center;font-size:clamp(13px,2.3vw,18px);font-weight:700;line-height:1.5}
-.submit button{width:100%;height:clamp(37px,9.44vw,74px);min-height:56px;margin-top:clamp(7px,1.79vw,14px);border:0;border-radius:clamp(7px,1.79vw,14px);background:var(--red);color:#fff;font-size:clamp(14.88px,3.06vw,24px);font-weight:800;cursor:pointer;opacity:.45;transition:.2s}
-.submit button.ok{opacity:1}
-.msg{font-size:clamp(13px,2.04vw,16px);color:var(--red);margin-top:clamp(5px,1.28vw,10px);min-height:20px;text-align:center}
-.done{text-align:center;padding:clamp(20px,5.1vw,40px) 0 clamp(5px,1.28vw,10px);display:none}
-.done.on{display:block}
-.done .emo{width:clamp(65px,16.58vw,130px);margin-bottom:clamp(10px,2.55vw,20px)}
-.done h3{font-size:clamp(16px,4.08vw,32px)}
-.done p{color:var(--body);margin-top:clamp(6px,1.53vw,12px);line-height:1.6;font-size:clamp(13px,2.42vw,19px)}
+/* 푸터 */
+.ft{background:#f4f5f7;padding:30px 20px;display:flex;flex-direction:column;align-items:center;gap:7px;text-align:center}
+.ft img{width:122px;height:26px;object-fit:contain}
+.ft p{font-size:12.2px;line-height:1.4;letter-spacing:-.24px;color:var(--mute);white-space:pre}
+.ft .who-t{font-weight:700;color:var(--ink)}
+.ft .cp{font-size:11px}
+.ft a{color:inherit;text-decoration:none}
+.nt-box{background:#fff;padding:30px 20px;display:flex;flex-direction:column;align-items:center;gap:9px}
+.nt-box h5{font-size:14px;font-weight:700;line-height:1.4}
+.nt-box ul{list-style:none;width:100%;border:1px solid #eceef3;border-radius:7px;padding:12px;font-size:11px;line-height:1.85;letter-spacing:-.22px;color:var(--sub)}
+.nt-box li{position:relative;padding-left:15px}
+.nt-box li+li{margin-top:6px}
+.nt-box li::before{content:'※';position:absolute;left:0}
+.bt{background:#1a1b1e;padding:30px 20px 110px;display:flex;flex-direction:column;align-items:center;gap:6px}
+.bt img{width:100px;height:21px;margin:2.5px 0}
+.bt p{font-size:11px;color:var(--mute)}
 
-/* 이탈 리마인드 팝업 */
-.blocker{position:fixed;inset:0;z-index:60;display:grid;place-items:center;padding:20px;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:.25s}
-.blocker.on{opacity:1;pointer-events:auto}
-.bk{position:relative;width:100%;max-width:clamp(240px,61.22vw,480px);background:#fff6d6;border-radius:clamp(15px,3.83vw,30px);padding:clamp(25px,6.38vw,50px) clamp(17px,4.34vw,34px) clamp(17px,4.34vw,34px);text-align:center;transform:scale(.85);transition:transform .35s cubic-bezier(.3,1.5,.5,1)}
-.blocker.on .bk{transform:none}
-.bk .x{position:absolute;right:clamp(10px,2.55vw,20px);top:clamp(10px,2.55vw,20px);width:clamp(20px,5.1vw,40px);height:clamp(20px,5.1vw,40px);border-radius:50%;border:0;background:#f0e3b4;cursor:pointer;display:grid;place-items:center}
-.bk .x svg{width:clamp(9px,2.3vw,18px);stroke:#7a6a35;stroke-width:3}
-.bk .chip{display:inline-block;border:2px solid var(--ink);border-radius:clamp(15px,3.83vw,30px);padding:clamp(3px,0.77vw,6px) clamp(9px,2.3vw,18px);font-size:clamp(9.5px,2.42vw,19px);font-weight:700;background:#fff}
-.bk .q{font-size:clamp(13px,3.32vw,26px);font-weight:700;margin-top:clamp(9px,2.3vw,18px)}
-.bk h3{font-size:clamp(27px,6.89vw,54px);line-height:1.2;font-weight:900;color:var(--red);margin-top:clamp(4px,1.02vw,8px);letter-spacing:-.04em}
-.env{position:relative;width:clamp(165px,42.09vw,330px);height:clamp(135px,34.44vw,270px);margin:clamp(13px,3.32vw,26px) auto clamp(40px,10.2vw,80px)}
-.env .pp{position:absolute;left:clamp(31px,7.91vw,62px);right:clamp(31px,7.91vw,62px);top:clamp(3px,0.77vw,6px);height:clamp(95px,24.23vw,190px);background:linear-gradient(160deg,#ff6a52,var(--red));border-radius:clamp(8px,2.04vw,16px);color:#fff;padding-top:clamp(10px,2.55vw,20px);box-shadow:0 clamp(4px,1.02vw,8px) clamp(9px,2.3vw,18px) rgba(0,0,0,.12);animation:peek 2.4s ease-in-out infinite;z-index:1}
-@keyframes peek{50%{transform:translateY(-12px)}}
-.env .pp small{display:block;font-size:clamp(8.5px,2.17vw,17px);opacity:.9}
-.env .pp b{display:block;font-size:clamp(20px,5.1vw,40px);font-weight:900;margin-top:clamp(1px,0.26vw,2px);letter-spacing:-.03em}
-.env .pp span{display:block;font-size:clamp(8px,2.04vw,16px);font-weight:700;margin-top:clamp(1px,0.26vw,2px)}
-.env .ev{position:absolute;left:0;bottom:clamp(-150px,-19.13vw,-75px);width:clamp(165px,42.09vw,330px);z-index:2;filter:drop-shadow(0 clamp(7px,1.79vw,14px) clamp(8px,2.04vw,16px) rgba(0,0,0,.15))}
-.env .pp2{position:absolute;right:clamp(-14px,-1.79vw,-7px);top:clamp(-20px,-2.55vw,-10px);width:clamp(48px,12.24vw,96px);z-index:3;transform:rotate(14deg)}
-.bk .cont{width:100%;height:clamp(37px,9.44vw,74px);min-height:56px;margin-top:clamp(10px,2.55vw,20px);border:0;border-radius:clamp(20px,5.1vw,40px);background:var(--ink);color:#fff;font-size:clamp(14.88px,3.06vw,24px);font-weight:800;cursor:pointer;position:relative}
-.bk .cont:before{content:"";position:absolute;left:clamp(5px,1.28vw,10px);top:50%;width:clamp(13px,3.32vw,26px);height:clamp(13px,3.32vw,26px);margin-top:clamp(-13px,-1.66vw,-6.5px);border-radius:50%;background:var(--red)}
-.bk .later{margin-top:clamp(8px,2.04vw,16px);background:none;border:0;font-size:clamp(13px,2.3vw,18px);color:#8a7f5c;text-decoration:underline;cursor:pointer}
+/* 바텀시트 — 피그마 640 시안 수치 그대로, 컬럼 폭에 맞춰 축소 (--zs = 컬럼폭/640) */
+.layer{position:fixed;inset:0;z-index:50;display:flex;align-items:flex-end;justify-content:center;visibility:hidden;transition:visibility 0s .4s}
+.layer.open{visibility:visible;transition:none}
+.dim{position:absolute;inset:0;background:rgba(15,16,20,.55);opacity:0;transition:opacity .35s ease}
+.layer.open .dim{opacity:1}
+.sheet{position:relative;width:640px;zoom:var(--zs);max-height:calc(94dvh / var(--zs));overflow-y:auto;overscroll-behavior:contain;background:#fff;border-radius:30px 30px 0 0;box-shadow:0 0 40px rgba(0,0,0,.15);padding:34px 32px 30px;transform:translateY(100%);transition:transform .42s cubic-bezier(.2,.8,.2,1)}
+.layer.open .sheet{transform:none}
+.sh-hd{display:flex;align-items:center;justify-content:space-between;font-size:19px;font-weight:700;line-height:1.4;letter-spacing:-.38px}
+.sh-hd button{width:34px;height:34px;display:flex;align-items:center;justify-content:center;margin-right:-6px}
+.sh-hd img{width:22px;height:22px}
+.sheet .ld{margin-top:28px;font-size:19px;line-height:1.4;letter-spacing:-.38px;color:var(--sub)}
+.sheet h3{font-size:34px;font-weight:900;line-height:1.4;letter-spacing:-.68px}
+.fld{display:flex;flex-direction:column;gap:10px;padding-top:24px}
+.fld>span{font-size:17px;font-weight:500;line-height:1.4;letter-spacing:-.34px;color:var(--sub)}
+.fld input,.fld select{width:100%;height:64px;border:0;border-radius:14px;background:#f4f5f7;padding:0 20px;font:inherit;font-size:19px;letter-spacing:-.38px;color:var(--ink);outline:none;-webkit-appearance:none;appearance:none;transition:box-shadow .2s}
+.fld input::placeholder{color:var(--mute)}
+.fld input:focus,.fld select:focus{box-shadow:inset 0 0 0 2px var(--red)}
+.fld select{background:#f4f5f7 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0h10L5 6z' fill='%239a9ea6'/%3E%3C/svg%3E") no-repeat right 22px center;padding-right:44px}
+.fld select:invalid{color:var(--mute)}
+.two{display:flex;gap:10px}
+.opt{display:flex;gap:10px}
+.opt label{flex:1;cursor:pointer}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+.opt span{display:flex;flex-direction:column;align-items:center;gap:2px;padding:14px 4px;border-radius:14px;background:#f4f5f7;border:2px solid transparent;font-size:20px;font-weight:700;line-height:1.4;letter-spacing:-.4px;transition:background .2s,border-color .2s,color .2s}
+.opt small{font-size:15px;font-weight:400;color:var(--mute);letter-spacing:-.3px}
+.opt input:checked+span{background:#fff2f1;border-color:var(--red);color:var(--red)}
+.opt input:focus-visible+span{outline:2px solid var(--ink);outline-offset:2px}
+.agree{margin-top:30px;height:70px;border:2px solid var(--red);border-radius:14px;display:flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;font-size:20px;font-weight:900;line-height:1.4;letter-spacing:-.4px}
+.agree input{width:22px;height:22px;border:2px solid var(--mute);border-radius:4px;-webkit-appearance:none;appearance:none;display:grid;place-content:center;cursor:pointer;margin:0}
+.agree input:checked{background:var(--red);border-color:var(--red)}
+.agree input:checked::after{content:'';width:11px;height:6px;border:2.5px solid #fff;border-top:0;border-right:0;transform:translateY(-1px) rotate(-45deg)}
+.terms{margin-top:12px;background:#f8f9fb;border-radius:12px;padding:16px 18px;font-size:15px;line-height:1.6;letter-spacing:-.3px;color:var(--mute)}
+.fin{margin-top:28px;text-align:center;font-size:18px;font-weight:700;line-height:1.5;letter-spacing:-.36px}
+.sbm{margin-top:14px;width:100%;height:74px;border-radius:14px;background:var(--red);color:#fff;font-size:24px;font-weight:900;line-height:1.4;letter-spacing:-.48px;transition:filter .2s}
+.sbm:active{filter:brightness(.92)}
+.sbm:disabled{filter:grayscale(.3) brightness(.95);cursor:default}
+.msg{margin-top:12px;text-align:center;font-size:17px;color:var(--red)}
+.msg:empty{display:none}
+.done{display:none;flex-direction:column;align-items:center;text-align:center;padding:40px 0 6px}
+.done.on{display:flex}
+.done img{width:130px;height:130px;object-fit:contain}
+.done h3{margin-top:16px}
+.done p{margin-top:8px;font-size:19px;line-height:1.5;color:var(--sub)}
+.done .sbm{margin-top:36px}
 
-@media (max-width:640px){
-  .dock{padding:12px 14px}.dock .in{gap:8px}.dock .t{font-size:11px}.dock .clock{font-size:24px}.dock button{font-size:14px;padding:12px}
-  .hero{min-height:clamp(380px,96.94vw,760px)}
-  .cmp .node .ci{width:clamp(65px,16.58vw,130px);height:clamp(65px,16.58vw,130px)}.cmp .node .ci img{width:clamp(46px,11.73vw,92px)}
-  .noti{right:-6px}
+/* 상시 노출 시작하기 버튼 */
+.fix{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;justify-content:center;pointer-events:none}
+.fix>div{width:390px;zoom:var(--z);padding:0 20px calc(14px + env(safe-area-inset-bottom))}
+.fbtn{pointer-events:auto;display:block;width:100%;height:54px;border-radius:58px;background:var(--red);color:#fff;font-size:17px;font-weight:700;letter-spacing:-.34px;box-shadow:0 10px 22px -8px rgba(200,40,25,.55);animation:pulse 2.4s ease-out infinite;transition:transform .2s ease}
+.fbtn:active{transform:scale(.98)}
+
+/* 리마인드 팝업 — 혜택 카드가 주인공 */
+.blk{position:fixed;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;background:rgba(15,16,20,.6);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility 0s .3s}
+.blk.on{opacity:1;visibility:visible;transition:opacity .3s ease}
+.pop{position:relative;width:330px;zoom:var(--z);background:#fff6d6;border-radius:26px;box-shadow:0 20px 60px rgba(0,0,0,.25);padding:34px 22px 18px;text-align:center;transform:translateY(16px) scale(.96);transition:transform .4s cubic-bezier(.2,.9,.3,1.2)}
+.blk.on .pop{transform:none}
+.pop .x{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;background:#f0e3b4;display:flex;align-items:center;justify-content:center}
+.pop .x img{width:14px;height:14px}
+.pop .chip{display:inline-block;padding:4px 13px;border:1.5px solid var(--ink);border-radius:30px;background:#fff;font-size:13px;font-weight:700;line-height:1.4;letter-spacing:-.26px}
+.pop .q{margin-top:14px;font-size:17px;font-weight:700;line-height:1.4;letter-spacing:-.34px}
+.pop .big{margin-top:2px;font-size:38px;font-weight:900;line-height:1.18;letter-spacing:-.76px;color:var(--red)}
+.gift{position:relative;margin-top:20px;border-radius:18px;padding:18px 20px 20px;background:linear-gradient(145deg,#ff6a52,#f4402c 71%);color:#fff;text-align:center;box-shadow:0 14px 26px -12px rgba(200,50,30,.55)}
+.gift small{display:block;font-size:13px;font-weight:500;line-height:1.4;opacity:.9}
+.gift strong{display:block;font-size:31px;font-weight:900;line-height:1.2;letter-spacing:-.62px}
+.gift em{display:inline-block;margin-top:8px;padding:4px 11px;border-radius:99px;background:#fff;color:var(--red);font-style:normal;font-size:13px;font-weight:900;letter-spacing:-.26px}
+.gift .st{position:absolute;right:-6px;top:-16px;width:40px;height:40px;transform:rotate(14deg)}
+.pop .cont{position:relative;margin-top:18px;width:100%;height:56px;border-radius:30px;background:var(--ink);color:#fff;font-size:18px;font-weight:900;letter-spacing:-.36px}
+.pop .cont i{position:absolute;left:20px;top:50%;width:20px;height:20px;margin-top:-10px;border-radius:50%;background:var(--red);animation:dot 1.6s ease-out infinite}
+@keyframes dot{0%{box-shadow:0 0 0 0 rgba(244,64,44,.6)}80%,100%{box-shadow:0 0 0 9px rgba(244,64,44,0)}}
+.pop .later{margin-top:10px;padding:4px 8px;font-size:13.5px;line-height:1.4;letter-spacing:-.27px;color:#8a7f5c;text-decoration:underline;text-underline-offset:3px}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01s!important;transition-delay:0s!important}
 }
-@media (prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}.badge,.float,.noti,.env .pp{animation:none}}
 </style>
 </head>
 <body>
+<main class="pg">
 
 <!-- 01 HERO -->
-<section class="s1">
-  <div class="in">
-    <img class="logo" src="img/logo_dark.png" alt="openXmedia 오픈미디어">
-    <div class="hero">
-      <h1><span class="lt">오픈미디어에서</span><br>스마트한<br><span class="box">투잡</span>을<br>시작하세요!</h1>
-      <div class="badge" aria-hidden="true">
-        <div class="strap"></div>
-        <div class="card-id">
-          <span class="press">PRESS</span>
-          <div class="ph"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="5"/><path d="M1.5 25c0-6.5 4.6-10 10.5-10s10.5 3.5 10.5 10Z"/></svg><b>?</b></div>
-          <small>오픈미디어 프리랜서 기자</small>
-          <strong>홍보비 100% 수익</strong>
-          <img class="lens" src="img/3d/zoom.png" alt="">
-        </div>
-      </div>
-    </div>
-    <div class="roll" id="roll">
-      <div class="it on"><span class="av"><img src="img/3d/megaphone.png" alt=""></span><p><small>수익모델 01</small><b>기업 홍보기사 판매</b></p><strong>3~20<span>만원/건</span></strong></div>
-      <div class="it"><span class="av"><img src="img/3d/calendar.png" alt=""></span><p><small>수익모델 02</small><b>기업회원 홍보 패키지</b></p><strong>30~100<span>만원/월</span></strong></div>
-      <div class="it"><span class="av"><img src="img/3d/trophy.png" alt=""></span><p><small>수익모델 05</small><b>브랜드어워드</b></p><strong>300~1,000<span>만원</span></strong></div>
-    </div>
-    <p class="cap c">* 오픈미디어 홍보상품 판매가 기준 &nbsp;* 수익은 실제 계약 및 판매 실적에 따라 달라질 수 있음</p>
+<header class="hero" id="hero">
+  <img class="logo" src="img/logo-hero.svg" alt="오픈미디어">
+  <span class="hl"></span>
+  <h1><span class="l">오픈미디어</span><span>프리랜서</span><span><span class="w" style="display:inline">기자 </span>를</span><span>모집합니다!</span></h1>
+  <img class="hv" src="img/hero-visual.jpg" alt="오픈미디어 기자증 예시">
+</header>
+
+<!-- 01-2 업계 비밀 -->
+<section class="secret">
+  <div class="dk">
+    <span class="tag rv"><i></i>업계 비밀</span>
+    <h2 class="rv" style="--d:.08s">언론 홍보,<br><span class="r">무료</span>로 할 수 있다는 거<br>알고 계셨나요?</h2>
+    <p class="p20 rv">기업이 내는 언론 홍보 비용은</p>
+    <p class="p20" style="margin-top:0">프리랜서 기자님의</p>
+    <span class="pct" data-on>100% 수익</span>
+    <p class="end rv">기업의 비용이,<br><span class="r">곧 나의 수익이 됩니다.</span></p>
   </div>
 </section>
 
-<!-- 02 WHAT -->
-<section class="s2">
-  <div class="in c">
-    <img class="emo fade float" src="img/3d/mic.png" alt="">
-    <h2 class="t-big fade"><span class="r">오픈미디어 프리랜서 기자</span>가<br>무엇인가요?</h2>
-    <div class="pills">
-      <div class="pill fade d1"><i><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></i><span>기자 경력 <span class="r">없어도 OK!</span></span></div>
-      <div class="pill fade d2"><i><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></i><span><span class="r">출퇴근</span> 없이!!</span></div>
-      <div class="pill fade d3"><i><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></i><span>원할 때 <span class="r">재택으로 어디서든!</span></span></div>
-      <div class="pill fade d4"><i><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></i><span>본업과 <span class="r">투잡 OK!</span></span></div>
-    </div>
-    <p class="def fade">인터넷언론사 소속으로<br><b>자유롭게 취재·기사 작성하는</b><br><mark>요즘 투잡 프리랜서 기자</mark> <b>입니다</b></p>
+<!-- 02 프리랜서 기자란 -->
+<section class="sec what">
+  <img class="ico80 rv" src="img/mic.png" alt="">
+  <h2 class="h2 rv"><span class="r">프리랜서 기자</span>가<br>무엇인가요?</h2>
+  <div class="def rv">
+    <p>인터넷언론사 소속으로</p>
+    <p><b>자유롭게 취재·기사 작성하는</b></p>
+    <p class="row"><span class="box">전문 프리랜서 기자</span>입니다</p>
+  </div>
+  <div class="pills">
+    <div class="rv" style="left:13px;top:0;width:216px;justify-content:flex-end"><p class="pill"><img src="img/check-pink.svg" alt="">경력 없어도&nbsp;<span class="r">누구나 OK!</span></p></div>
+    <div class="rv" style="left:3px;top:57px;width:236px;--d:.1s"><p class="pill"><img src="img/check-pink.svg" alt=""><span class="r">출퇴근 없이</span>&nbsp;자유로운 일정!</p></div>
+    <div class="rv" style="left:0;top:114px;width:242px;justify-content:flex-end;--d:.2s"><p class="pill"><img src="img/check-pink.svg" alt="">본업과 병행하는&nbsp;<span class="r">투잡·부업!</span></p></div>
+    <div class="rv" style="left:25.5px;top:171px;width:191px;--d:.3s"><p class="pill"><img src="img/check-pink.svg" alt="">실적만큼&nbsp;<span class="r">수익 창출!</span></p></div>
   </div>
 </section>
 
-<!-- 03 100% -->
-<section class="s3">
-  <div class="in c">
-    <img class="emo fade float" src="img/3d/bulb.png" alt="">
-    <p class="t-sub fade">고민은 수익을 늦출 뿐</p>
-    <h2 class="t-big fade" style="margin-top:6px"><span class="lt">기업에게 받은</span> <span class="r">홍보비,</span><br>정말 <span class="r">100%</span> 내 수익인가요?</h2>
-    <p class="cap fade">* 기자증·명함 발급 및 기사 송출비 등 별도 비용이 있습니다.</p>
-    <div class="phone-wrap fade" aria-hidden="true">
-      <div class="phone">
-        <div class="isl"></div>
-        <div class="scr">
-          <div class="bar"><span>&lsaquo;</span><img src="img/logo_dark.png" alt=""><span>&#8943;</span></div>
-          <span class="tag">기업 홍보기사</span>
-          <h4>지역 강소기업 ○○○, 신제품 출시로 시장 공략 본격화</h4>
-          <p class="by">프리랜서 기자 홍길동 · 2026.10.28</p>
-          <div class="thumb"></div>
-          <div class="ln"></div><div class="ln" style="width:88%"></div><div class="ln" style="width:70%"></div>
-        </div>
-      </div>
-      <div class="noti">
-        <img src="img/3d/card.png" alt="">
-        <p><small>오픈미디어 · 방금 전</small><b>기업 홍보기사 홍보비 입금</b><strong>+ 200,000원</strong></p>
-      </div>
-    </div>
-    <h2 class="t-big fade" style="margin-top:20px">네, 물론이에요!<br><span class="r">받은 홍보비는 전액</span><br>기자님의 수익이에요.</h2>
-    <p class="cap fade">* 예시 화면입니다. 홍보기사 판매금액은 건당 3만~20만원이며, 인턴기자는 기사 송출 시 건당 1만원의 송출비가 별도로 발생합니다.</p>
+<!-- 03 오픈미디어 신뢰 -->
+<section class="sec trust">
+  <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+  <img class="logo rv" src="img/logo-big.svg" alt="오픈미디어">
+  <h2 class="h2 rv"><span class="t">믿을 수 있는</span><br><span class="r">인터넷언론사 오픈미디어</span></h2>
+  <div class="qcard rv">
+    <p class="q">“기업 홍보기사를<br><b>300개 언론사에 동시 노출</b>합니다”</p>
+    <p class="num"><strong id="n300" data-to="300">300</strong><span>개 언론사 협업</span></p>
+    <p class="d">오픈미디어는 300개 인터넷언론사와<br>협업하는 인터넷언론사 연합점입니다.</p>
   </div>
-</section>
-
-<!-- 04 Q&A -->
-<section class="s4">
-  <div class="in c">
-    <img class="emo fade float" src="img/3d/chat.png" alt="">
-    <h2 class="t-big fade">지원 전,<br><span style="color:#5a6cf0">가장 많이 묻는 질문!</span></h2>
-    <div class="qa">
-      <article class="fade">
-        <p class="q">경력이 없고,<br>신입인데 가능한가요?</p>
-        <div class="av"><img src="img/3d/notebook.png" alt=""></div>
-        <p class="who">오픈미디어 답변</p>
-        <p class="ans">네, 가능합니다.</p>
-        <p>기자 경력이 없어도 <b>교육 매뉴얼과 활동 지원</b>을 통해 시작할 수 있습니다. 시간과 장소에 구애받지 않고 본인의 역량에 따라 자유롭게 활동해 보세요. 무엇보다 <b>지속적으로 교육을 진행</b>하고 있으니, 자유롭게 지원해 주세요.</p>
-      </article>
-      <article class="fade">
-        <p class="q">비용이 들어가나요?</p>
-        <div class="av"><img src="img/3d/gift.png" alt=""></div>
-        <p class="who">오픈미디어 답변</p>
-        <p class="ans">무료입니다.</p>
-        <p>다만 인턴기자는 기자증 발급 등록비와 명함 제작비 <b>10만원이 필요하며, 1년 후 전액 환급</b>됩니다. 공식기자로 전문적인 활동을 원한다면 연 100만원의 비용이 들어갑니다. 공식기자증, 명함, 홈페이지, 교육 매뉴얼, 사무실을 지원합니다.</p>
-      </article>
+  <div class="awards">
+    <div class="aw rv">
+      <div class="lg"><img src="img/minister.png" alt="장관상"></div>
+      <div class="tx"><span class="k">정부 포상</span><span class="t">장관상 수상 기업</span><span class="s">오픈미디어는 <b>장관상을 수상</b>하며 공신력을 인정받은 기업입니다.</span></div>
     </div>
-    <p class="t-sub fade" style="margin-top:40px">약 300개 인터넷언론사와 제휴한<br><b style="color:var(--ink)">대한기자협회 공식 제휴점 · 장관상 수상기업</b><br>오픈미디어가 함께합니다.</p>
-  </div>
-</section>
-
-<!-- 05 비교 -->
-<section class="s5">
-  <div class="in c">
-    <img class="emo fade float" src="img/3d/wallet.png" alt="">
-    <p class="t-sub fade">기업 취재하고 홍보기사를 송출하면</p>
-    <h2 class="t-big fade" style="margin-top:6px"><span class="r">받은 홍보비 100%</span>를<br>내가 가져가요!</h2>
-    <p class="t-sub fade" style="font-size:clamp(14px,2.8vw,22px);margin-top:20px">기업 발굴부터 수익까지 내가 직접!<br><b class="r">홍보 수익을 직접 받아가세요</b></p>
-    <div class="cmp">
-      <div class="box fade">
-        <span class="lb">기존 직장</span>
-        <div class="flow">
-          <div class="node"><div class="ci"><img src="img/3d/clock.png" alt=""></div><em>정해진 출퇴근</em></div>
-          <span class="arr">→</span>
-          <div class="node"><div class="ci"><img src="img/3d/lock.png" alt=""></div><em>고정 월급</em></div>
-        </div>
-        <ul><li>정해진 출퇴근 · 고정 근무지</li><li>정해진 월급 한 번</li></ul>
-      </div>
-      <div class="box hot fade">
-        <span class="lb">오픈미디어 프리랜서 기자</span>
-        <div class="flow">
-          <div class="node"><div class="ci"><img src="img/3d/mobile.png" alt=""></div><em>핸드폰 하나로</em></div>
-          <span class="arr">→</span>
-          <div class="node"><div class="ci"><img src="img/3d/pencil.png" alt=""></div><em>기사 작성·송출</em></div>
-          <span class="arr">→</span>
-          <div class="node"><div class="ci"><img src="img/3d/card.png" alt=""></div><em>홍보비 100%</em></div>
-        </div>
-        <ul><li>출퇴근 없음 · 재택근무</li><li>본업과 병행하는 두 번째 월급</li></ul>
-      </div>
-    </div>
-    <p class="cmp-end fade">오픈미디어와 함께<br><b>새로운 수익</b>을 낼 준비가 되셨나요?</p>
-  </div>
-</section>
-
-<!-- 06 지원 -->
-<section class="s6">
-  <div class="in">
-    <div class="c">
-      <img class="emo fade float" src="img/3d/gift.png" alt="">
-      <p class="t-sub fade">오픈미디어가 모두 지원해드려요!</p>
-      <h2 class="t-big fade" style="margin-top:6px"><span class="r">인턴기자 무료</span>로<br>투잡 시작해보세요!</h2>
-    </div>
-    <div class="sup">
-      <div class="fade"><span class="no">01</span><b>기자 교육<br>매뉴얼</b><small>ZERO 베이스로 시작해도<br>문제 없어요</small><img class="ic" src="img/3d/notebook.png" alt=""></div>
-      <div class="fade d1"><span class="no">02</span><b>기사 작성 ·<br>취재 가이드</b><small>처음 쓰는 기사도<br>가이드대로</small><img class="ic" src="img/3d/pencil.png" alt=""></div>
-      <div class="fade"><span class="no">03</span><b>기자증<br>발급 안내</b><small>기자증 이미지 ·<br>발급 절차까지</small><img class="ic" src="img/3d/card.png" alt=""></div>
-      <div class="fade d1"><span class="no">04</span><b>홈페이지<br>지원</b><small>활동에 필요한<br>나만의 홈페이지</small><img class="ic" src="img/3d/computer.png" alt=""></div>
-      <div class="fade"><span class="no">05</span><b>홍보상품 · 판매 가이드</b><small>무엇을 얼마에 파는지<br>A부터 Z까지</small><img class="ic" src="img/3d/megaphone.png" alt=""></div>
+    <div class="aw aw2 rv" style="--d:.1s">
+      <img class="star" src="img/bluestar.png" alt="푸른별 나눔기업">
+      <div class="tx"><span class="k">사회공헌</span><span class="t">푸른별 나눔기업</span><span class="s">수익의 일부를 <b>푸른별어린이재단에 기부</b>하며 아이들의 꿈을 함께 응원합니다.</span></div>
     </div>
   </div>
 </section>
 
-<!-- 07 단계 -->
-<section class="s7">
-  <div class="in">
-    <div class="c">
-      <img class="emo fade float" src="img/3d/medal.png" alt="">
-      <p class="t-sub fade">프리랜서 기자? 어렵지 않을까요?</p>
-      <h2 class="t-big fade" style="margin-top:6px"><span class="r">간편하게</span><br>기자증 받고,<br><span class="r">투잡 + 평생 커리어</span> 얻으세요!</h2>
-    </div>
-    <div class="steps">
-      <div class="st fade">
-        <span class="k">STEP 1</span>
-        <h4>프리랜서 인턴기자</h4>
-        <p class="pr"><strong>10만원</strong><small>1년 후 전액 환급</small></p>
-        <ul><li>기자증 발급 등록비 + 명함 제작비</li><li>기사 송출 시 건당 1만원</li></ul>
-        <img class="who" src="img/3d/flag.png" alt="">
+<!-- 05 기존 직장 vs 프리랜서 기자 -->
+<section class="sec vs">
+  <img class="wl rv" src="img/wallet.png" alt="">
+  <p class="p18 rv">기업 취재하고 홍보기사를 송출하면</p>
+  <h2 class="h2 rv"><span class="r">받은 수익 100%</span>를<br>내가 가져가요!</h2>
+  <p class="sm rv">기업 발굴부터 수익까지 내가 직접!<br><b>홍보 수익을 직접 받아가세요</b></p>
+  <div class="cmp old rv">
+    <span class="tab">기존 직장</span>
+    <div class="bx">
+      <div class="fl">
+        <div class="nd"><span class="c"><img src="img/clock.png" alt="" style="width:46px"></span><span class="lb">정해진 출퇴근</span></div>
+        <div class="nd"><span class="c"><img src="img/lock.png" alt=""></span><span class="lb">고정 월급</span></div>
       </div>
-      <div class="down"><svg viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg></div>
-      <div class="st hot fade">
-        <span class="k">STEP 2</span>
-        <h4>프리랜서 공식기자</h4>
-        <p class="pr"><strong>연 100만원</strong><small>전문 활동</small></p>
-        <ul><li>공식기자증</li><li>명함</li><li>홈페이지</li><li>교육 매뉴얼</li><li>사무실</li><li>기사 송출비 면제</li></ul>
-        <img class="who" src="img/3d/crown.png" alt="">
+      <p class="ds">정해진 출퇴근 · 고정 근무지<br>정해진 월급 한 번</p>
+    </div>
+  </div>
+  <div class="cmp new rv">
+    <span class="tab">프리랜서 기자·N잡·투잡</span>
+    <div class="bx">
+      <div class="fl">
+        <div class="nd"><span class="c"><img src="img/mobile.png" alt="" style="width:44px"></span><span class="lb">핸드폰 하나로</span></div>
+        <div class="nd"><span class="c"><img src="img/pencil.png" alt=""></span><span class="lb">기사 작성·송출</span></div>
+        <div class="nd"><span class="c"><img src="img/card.png" alt="" style="width:44px"></span><span class="lb">100% 수익</span></div>
+      </div>
+      <p class="ds">출퇴근 없음 · 재택근무<br>본업과 병행하는 두 번째 월급</p>
+    </div>
+  </div>
+  <p class="ask rv">오픈미디어와 함께<br><b>새로운 수익</b>을 낼 준비가 되셨나요?</p>
+</section>
+
+<!-- 05-2 수익 내는 방법 -->
+<section class="sec how">
+  <p class="p18 rv">기존 업계는 기사 한 건 낼 때마다 돈을 내죠</p>
+  <h2 class="h2 rv">오픈미디어 기자는<br>이 방법으로 <span class="r">돈을 법니다</span></h2>
+  <div class="rev">
+    <div class="rv-i rv"><span class="n">01</span><div class="ct"><p class="t">기업 홍보기사 판매</p><p class="s">기업 소식·대표 인터뷰를 기사로 써서 판매</p><p class="pr"><small>건당 </small>3~20만원</p></div></div>
+    <div class="rv-i rv" style="--d:.08s"><span class="n">02</span><div class="ct"><p class="t">기업회원 홍보 패키지</p><p class="s">한 번 계약하면 매달 들어오는 고정 수익</p><p class="pr"><small>기업당 월 </small>30~100만원</p></div></div>
+    <div class="rv-i rv" style="--d:.16s"><span class="n">03</span><div class="ct"><p class="t">플랫폼 수익</p><p class="s">크몽·숨고에서 언론홍보 서비스를 판매</p><span style="height:2px"></span></div></div>
+  </div>
+  <button type="button" class="locked rv" data-open aria-label="나머지 수익 노하우는 합격 후 무료 공개 — 지원 신청하기">
+    <div class="bl" aria-hidden="true">
+      <div class="rv-i"><span class="n">04</span><div class="ct"><p class="t">합격 후 공개되는 수익</p><p class="s">지원 후 담당자 안내로 확인할 수 있어요</p><p class="pr"><small>1건당 </small>○○만원</p></div></div>
+      <div class="rv-i"><span class="n">05</span><div class="ct"><p class="t">합격자 전용 수익 노하우</p><p class="s">오리엔테이션에서 자세히 알려드려요 안내</p><p class="pr"><small>건당 </small>○○○~○,○○○만원</p></div></div>
+    </div>
+    <span class="veil"></span>
+    <span class="lockpill"><img src="img/lock-ico.svg" alt="">나머지 수익 노하우는&nbsp;<span class="r">합격 후 무료 공개!</span></span>
+  </button>
+  <p class="note">* 회사 안내 판매금액 기준이며, 실제 수익은<br>계약 및 판매 실적에 따라 달라질 수 있습니다.</p>
+</section>
+
+<!-- 03 홍보비 100% 내 수익 -->
+<section class="sec money">
+  <img class="th rv" src="img/think.png" alt="">
+  <p class="lead rv">고민은 수익을 늦출 뿐</p>
+  <h2 class="h2 rv">기업에게 받은 <span class="r">홍보비,</span><br>정말 <span class="r">100%</span> 내 수익인가요?</h2>
+  <p class="note rv">* 기자증·명함 발급 및 기사 송출비 등 별도 비용이 있습니다.</p>
+  <div class="mock" id="mock">
+    <div class="phone">
+      <span class="isl"></span>
+      <div class="bar"><span style="width:14px">‹</span><img src="img/logo-dark.png" alt=""><span>⋯</span></div>
+      <div class="art">
+        <span class="tg">기업 홍보기사</span>
+        <h4>지역 강소기업 ○○○,<br>신제품으로 시장 공략</h4>
+        <p class="mt">프리랜서 기자 홍길동 · 2026.10.28</p>
+        <img src="img/article.jpg" alt="">
       </div>
     </div>
+    <div class="fade"></div>
+    <div class="nt g2" data-step="1"></div>
+    <div class="nt g1" data-step="1"></div>
+    <div class="nt c" data-step="1"><img src="img/wallet.png" alt=""><div class="tx"><span class="m">오픈미디어 · 12분 전</span><span class="t">플랫폼 수익</span><span class="a">+ 180,000원</span></div></div>
+    <div class="nt b" data-step="2"><img src="img/n-red.png" alt=""><div class="tx"><span class="m">오픈미디어 · 3분 전</span><span class="t">기업회원 홍보 패키지 입금</span><span class="a">+ 150,000원</span></div></div>
+    <div class="nt a1" data-step="3"><img src="img/n-blue.png" alt=""><div class="tx"><span class="m">오픈미디어 · 방금 전</span><span class="t">기업 홍보기사 홍보비 입금</span><span class="a">+ 200,000원</span></div></div>
+    <div class="sum" data-step="4"><span>오늘 홍보비 입금 5건</span><b id="sumAmt">+710,000원</b></div>
+  </div>
+  <p class="yes rv">네, 물론이에요!<br><span class="r">받은 홍보비는 전액</span><br>기자님의 수익이에요.</p>
+</section>
+
+<!-- 06 0원 지원 -->
+<section class="sec free">
+  <img class="ico80 rv" src="img/gift.png" alt="">
+  <p class="lead rv">오픈미디어가 모두 지원해드려요!</p>
+  <h2 class="h2 rv"><span class="r">인턴기자 무료</span>로<br>투잡 시작해보세요!</h2>
+  <div class="sup">
+    <div class="sp rv"><span class="no">01</span><span class="t">기자 교육 매뉴얼</span><span class="s">ZERO 베이스로 시작해도 문제 없어요</span><img src="img/s-notebook.png" alt=""></div>
+    <div class="sp rv" style="--d:.06s"><span class="no">02</span><span class="t">기사 작성 · 취재 가이드</span><span class="s">처음 쓰는 기사도 가이드대로</span><img src="img/s-pencil.png" alt=""></div>
+    <div class="sp rv" style="--d:.12s"><span class="no">03</span><span class="t">기자증 발급 안내</span><span class="s">기자증 이미지 · 발급 절차까지</span><img src="img/s-card.png" alt=""></div>
+    <div class="sp rv" style="--d:.18s"><span class="no">04</span><span class="t">홈페이지 지원</span><span class="s">활동에 필요한 나만의 홈페이지</span><img src="img/s-monitor.png" alt=""></div>
+    <div class="sp rv" style="--d:.24s"><span class="no">05</span><span class="t">홍보상품 · 판매 가이드</span><span class="s">무엇을 얼마에 파는지 A부터 Z까지</span><img src="img/s-mega.png" alt=""></div>
   </div>
 </section>
 
-<!-- 08 DARK 수익 -->
-<section class="dark">
-  <div class="in c">
-    <p class="t-sub fade">한 번 고객이 아닌 장기 고객으로!</p>
-    <h2 class="t-big fade" style="margin-top:6px">기업회원 패키지로<br><span class="r">월 매출 포트폴리오</span>를 만들어요</h2>
-    <p class="cap fade">* 회원기업 10곳 확보 시 예시 · 실제 수익을 보장하지 않습니다.</p>
-    <div class="chart" id="chart">
-      <div class="col"><div class="bar g" data-h="30"><small>월 30만원 × 10곳</small>300만원</div><span class="lbl">기본 패키지</span></div>
-      <div class="col"><div class="bar g" data-h="50"><small>월 50만원 × 10곳</small>500만원</div><span class="lbl">스탠다드</span></div>
-      <div class="col"><div class="bar rd" data-h="100"><small>월 100만원 × 10곳</small>1,000만원</div><span class="lbl">프리미엄</span></div>
-    </div>
-
-    <div class="sim fade">
-      <div class="row"><span>회원기업 수</span><output id="simN">10곳</output></div>
-      <input type="range" id="simRange" min="1" max="30" value="10" aria-label="회원기업 수">
-      <div class="seg" role="group" aria-label="패키지">
-        <button type="button" class="on" data-v="30">월 30만원</button>
-        <button type="button" data-v="50">월 50만원</button>
-        <button type="button" data-v="100">월 100만원</button>
-      </div>
-      <div class="res"><span style="color:#c3c6cc">예상 월 매출 규모</span><strong id="simOut">300<small>만원</small></strong></div>
-    </div>
-    <p class="cap" style="text-align:left">월 30만원: 기업소식 기사 월 5건 · 대표 인터뷰 1회 · 신규제품 출시 홍보 / 월 50만원: 기업소식 기사 월 8건 · 대표 인터뷰 · 월간 홍보 리포트 / 월 100만원: 신제품·행사 집중 홍보 · 데일리 홍보 운영</p>
-
-    <div class="aw">
-      <p class="t-sub fade">오픈미디어는 브랜드어워드 운영사!</p>
-      <h2 class="t-big fade" style="margin-top:6px">브랜드어워드로<br><span class="r">큰 수익</span>에 도전해보세요!</h2>
-      <div class="bars3d" id="bars3d">
-        <div class="b3"><div class="blk" data-h="34"><em>최소</em><strong>300<small>~400만원</small></strong></div><span class="nm">국민 어워드</span></div>
-        <div class="b3"><div class="blk" data-h="40"><strong>300<small>~400만원</small></strong></div><span class="nm">동아 어워드</span></div>
-        <div class="b3"><div class="blk" data-h="55"><strong>500<small>만원</small></strong></div><span class="nm">KBSN 어워드</span></div>
-        <div class="b3"><div class="blk" data-h="100"><img class="tro float" src="img/3d/trophy.png" alt=""><em>최대</em><strong>1,000<small>600만원~</small></strong></div><span class="nm">포브스 어워드</span></div>
-      </div>
-      <p class="cap fade">* 어워드별 판매금액 기준 (포브스 600만~1,000만원) · 발전 가능성이 높은 기업에게 주는 상입니다.</p>
-      <p class="t-sub fade" style="margin-top:50px">이 밖에도 <b style="color:#fff">홍보기사 건당 3만~20만원,</b><br><b style="color:#fff">크몽·숨고 활동</b>과 <b style="color:#fff">기자 소개 파트너스</b> 수익까지!</p>
-    </div>
+<!-- 06-2 기자증 -->
+<section class="sec idc">
+  <p class="lead rv">진짜 기자처럼 활동할 수 있을까?</p>
+  <h2 class="h2 rv">오픈미디어<br><span class="r">정식 기자증</span>을 드려요</h2>
+  <div class="cards rv"><img src="img/idcards.jpg" alt="오픈미디어 기자증 앞면·뒷면 예시"></div>
+  <p class="note">실제 발급되는 기자증 예시</p>
+  <div class="bens">
+    <p class="ben rv"><img src="img/check-red.svg" alt="">기업 미팅·취재 현장에서&nbsp;<b>소속 증명</b></p>
+    <p class="ben rv" style="--d:.1s"><img src="img/check-red.svg" alt="">기자증과&nbsp;<b>명함까지 함께 발급</b></p>
+    <p class="ben rv" style="--d:.2s"><img src="img/check-red.svg" alt="">인턴기자부터&nbsp;<b>바로 발급 가능</b></p>
   </div>
+  <span class="gap4"></span>
 </section>
 
-<!-- 09 이런 분 -->
-<section class="s9">
-  <div class="in">
-    <div class="note fade">
-      <img class="bulb" src="img/3d/star.png" alt="">
-      <img class="memo" src="img/3d/pencil.png" alt="">
-      <div class="tabs"><i></i><i></i><i></i><i></i><i></i></div>
+<!-- 07 활동 단계 -->
+<section class="sec steps">
+  <img class="ico80 rv" src="img/medal.png" alt="">
+  <p class="lead rv">프리랜서 기자? 어렵지 않을까요?</p>
+  <h2 class="h2 rv"><span class="r">간편하게</span><br>기자증 받고,<br><span class="r">투잡 + 평생 커리어</span> 얻으세요!</h2>
+  <div class="stc s1 rv">
+    <div class="in">
+      <span class="sb">STEP 1</span>
+      <p class="nm">프리랜서 인턴기자</p>
+      <p class="pr">10만원</p>
+      <div class="chips"><span>기자증 발급 등록비 + 명함 제작비</span><span>기사 송출 시 건당 1만원</span></div>
+    </div>
+    <img class="il" src="img/flag.png" alt="">
+  </div>
+  <div class="arw"><i><img src="img/arrow-down.svg" alt=""></i></div>
+  <div class="stc s2 rv">
+    <div class="in">
+      <span class="sb">STEP 2</span>
+      <p class="nm">프리랜서 공식기자</p>
+      <p class="pr">연 100만원  <small>1년 후 전액 환급</small></p>
+      <div class="chips"><span>공식기자증</span><span>명함</span><span>홈페이지</span><span>교육 매뉴얼</span><span>사무실</span><span>기사 송출비 면제</span></div>
+    </div>
+    <img class="il" src="img/crown.png" alt="">
+  </div>
+  <p class="warn">* 프리랜서 공식기자는 1년간 수익이 없으면 연회비를 전액 환급해 드립니다.</p>
+</section>
+
+<!-- 09 이런 분들은 꼭 + 선발 전형 -->
+<section class="sec who">
+  <div class="notebk">
+    <div class="red">
+      <div class="spring"><i style="left:93.65px"></i><i style="left:124.86px"></i><i style="left:156.07px"></i><i style="left:187.28px"></i><i style="left:218.49px"></i></div>
       <div class="paper">
-        <h3>이런 분들은<br><span>꼭!</span> 지원하세요</h3>
-        <ul>
-          <li>본업과 병행할 수 있는<br><b>부업</b>을 찾고 있다면?</li>
-          <li><b>재택</b>으로 자유롭게<br>활동하고 싶다면?</li>
-          <li><b>글쓰기와 인터뷰</b>에<br>관심이 있다면?</li>
-          <li>기업 대표 및 <b>사업자 네트워크</b>가<br>있으시다면?</li>
-          <li><b>영업 경험</b>을 활용해<br>추가 수익을 만들고 싶다면?</li>
-          <li>언론·홍보·마케팅 분야에서<br><b>새로운 기회</b>를 찾고 있다면?</li>
-        </ul>
+        <h3 class="rv">이런 분들은<br><span class="r">꼭!</span> 지원하세요</h3>
+        <div class="rec rv"><i><img src="img/check-w.svg" alt=""></i><p>본업과 병행할 수 있는<br><b>부업</b>을 찾고 있다면?</p></div>
+        <div class="rec rv"><i><img src="img/check-w.svg" alt=""></i><p><b>재택</b>으로 자유롭게<br>활동하고 싶다면?</p></div>
+        <div class="rec rv"><i><img src="img/check-w.svg" alt=""></i><p><b>글쓰기와 인터뷰</b>에<br>관심이 있다면?</p></div>
+        <div class="rec rv"><i><img src="img/check-w.svg" alt=""></i><p><b>영업 경험</b>을 활용해<br>추가 수익을 만들고 싶다면?</p></div>
+        <div class="rec rv"><i><img src="img/check-w.svg" alt=""></i><p>언론·홍보·마케팅 분야에서<br><b>새로운 기회</b>를 찾고 있다면?</p></div>
       </div>
     </div>
-    <div class="proc fade">
-      <div><i><img src="img/3d/mail.png" alt=""></i><small>STEP 1</small><b>지원서<br>접수</b></div>
-      <div><i><img src="img/3d/callring.png" alt=""></i><small>STEP 2</small><b>전화·화상<br>인터뷰</b></div>
-      <div><i><img src="img/3d/videocam.png" alt=""></i><small>STEP 3</small><b>교육 및<br>오리엔테이션</b></div>
-      <div><i><img src="img/3d/rocket.png" alt=""></i><small>STEP 4</small><b>활동<br>시작</b></div>
-    </div>
+    <img class="st" src="img/star.png" alt="">
+    <img class="pc" src="img/pencil-big.png" alt="">
+  </div>
+  <div class="flow">
+    <div class="rv"><span class="c"><img src="img/i-mail.svg" alt=""></span><small>STEP 1</small><b>지원서<br>접수</b></div>
+    <div class="rv" style="--d:.1s"><span class="c"><img src="img/i-video.svg" alt=""></span><small>STEP 2</small><b>전화·화상<br>인터뷰</b></div>
+    <div class="rv" style="--d:.2s"><span class="c"><img src="img/i-edu.svg" alt=""></span><small>STEP 3</small><b>교육 및<br>오리엔테이션</b></div>
+    <div class="rv" style="--d:.3s"><span class="c go"><img src="img/i-start.svg" alt=""></span><small>STEP 4</small><b>활동<br>시작</b></div>
   </div>
 </section>
 
-<!-- 10 CTA -->
-<section class="s10">
-  <div class="in">
-    <div class="wallet fade" aria-hidden="true">
-      <img class="main" src="img/3d/wallet.png" alt="">
-      <img class="cn a float" src="img/3d/star.png" alt="">
-      <img class="cn b float" src="img/3d/star.png" alt="">
-    </div>
-    <p class="kicker fade">- 투잡의 블루오션 -</p>
-    <h2 class="fade"><span class="r">두 번째 월급</span><span class="lt">의 기회</span></h2>
-    <button class="go fade" type="button" data-open>지금 프리랜서 기자 시작하기</button>
+<!-- 10 마지막 CTA -->
+<section class="sec cta">
+  <div class="ill rv">
+    <img class="gl" src="img/cta-glow.svg" alt="">
+    <img class="wl" src="img/wallet.png" alt="">
+    <img class="s1" src="img/star.png" alt="">
+    <img class="s2" src="img/star.png" alt="">
   </div>
+  <p class="bo rv">- 투잡의 블루오션 -</p>
+  <p class="h rv">두 번째 월급<span>의 기회</span></p>
+  <button type="button" class="btn" data-open>지금 프리랜서 기자 시작하기</button>
 </section>
 
-<footer class="foot">
-  <img src="img/logo_dark.png" alt="openXmedia">
-  <b>오픈미디어 프리랜서 기자 모집 담당자</b><br>
-  담당자 서윤재 PD &nbsp;|&nbsp; 연락처 <a href="tel:01000000000" style="color:inherit">010-0000-0000</a><br>
-  © openmedia All Rights Reserved.<br>
-  <small style="font-size:11px">3D 아이콘: 3dicons.co (CC0)</small>
-</footer>
-<div class="warn">
-  <div class="in">
+<footer>
+  <div class="ft">
+    <img src="img/logo-foot.png" alt="오픈미디어">
+    <p class="who-t">오픈미디어 프리랜서 기자 모집 담당자</p>
+    <p>채용 담당자 박세진   |  연락처 <a href="tel:01077001418">010-7700-1418</a></p>
+    <p class="cp">© openmedia All Rights Reserved.</p>
+  </div>
+  <div class="nt-box">
     <h5>유의사항</h5>
     <ul>
-      <li>※ 수익은 실제 계약 및 판매 실적에 따라 달라지며, 일정한 수익이나 매출을 보장하지 않습니다.</li>
-      <li>※ 인턴기자 등록비 10만원은 안내된 조건에 따라 1년 후 환급됩니다.</li>
-      <li>※ 공식기자 연 100만원과 기사 송출비 등 비용 조건은 신청 전에 확인해 주세요.</li>
+      <li>표기된 금액은 회사 안내 판매금액 기준이며, 실제 수익은 계약 및 판매 실적에 따라 달라집니다. 일정한 수익이나 매출을 보장하지 않습니다.</li>
+      <li>페이지 속 기사와 입금 화면은 이해를 돕기 위한 예시입니다.</li>
+      <li>프리랜서 인턴기자는 등록비 10만원(기자증 발급·명함 제작)이 있으며, 기사 송출 시 건당 1만원의 송출비가 발생합니다.</li>
+      <li>프리랜서 공식기자는 연 100만원이며, 안내된 조건에 따라 1년 후 환급됩니다. 기사 송출비는 면제됩니다.</li>
+      <li>기사 게재 여부와 송출 조건은 각 언론사의 기준을 따릅니다.</li>
+      <li>크몽·숨고 등 외부 플랫폼에서 판매할 경우, 해당 플랫폼의 수수료와 판매 조건이 적용됩니다.</li>
+      <li>지원서 접수 후 인터뷰를 거쳐 활동 여부가 결정됩니다.</li>
     </ul>
   </div>
-</div>
-
-<!-- 하단 고정 바 -->
-<div class="dock">
-  <div class="in">
-    <p class="t">지금 <em>프리랜서 기자</em><br>모집중!</p>
-    <span class="clock" id="clock">00 : 00 : 00</span>
-    <button type="button" data-open>무료 지원 신청</button>
+  <div class="bt">
+    <img src="img/logo-white.svg" alt="오픈미디어">
+    <p>인터넷언론사 연합점 · 프리랜서 기자 및 영업팀 모집</p>
   </div>
-</div>
+</footer>
+</main>
 
-<!-- 이탈 리마인드 팝업 -->
-<div class="blocker" id="blocker" role="dialog" aria-modal="true" aria-label="지원 신청 리마인드">
-  <div class="bk">
-    <button type="button" class="x" data-close aria-label="닫기"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
-    <span class="chip">오픈미디어 <span id="bkMonth"></span>월 모집중</span>
-    <p class="q">투잡, 이대로 포기하실 건가요?</p>
-    <h3>인턴기자<br>무료로 시작!</h3>
-    <div class="env" aria-hidden="true">
-      <div class="pp"><small>인턴기자 등록비</small><b>100,000원</b><span>1년 후 전액 환급</span></div>
-      <img class="ev" src="img/3d/mail.png" alt="">
-      <img class="pp2 float" src="img/3d/star.png" alt="">
-    </div>
-    <button type="button" class="cont" id="bkCont">지원 신청 이어하기</button>
-    <button type="button" class="later" data-close>다음에 할게요</button>
-  </div>
-</div>
+<div class="fix"><div><button type="button" class="fbtn" data-open>지금 프리랜서 기자 시작하기</button></div></div>
 
-<!-- 바텀시트 신청 -->
-<div id="layer">
+<!-- 신청 바텀시트 -->
+<div class="layer" id="layer">
   <div class="dim" data-leave></div>
   <div class="sheet" role="dialog" aria-modal="true" aria-label="프리랜서 기자 지원 신청">
-    <div class="hd">프리랜서 기자 지원 신청하기<button type="button" data-leave aria-label="닫기"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></svg></button></div>
+    <div class="sh-hd">프리랜서 기자 지원 신청하기<button type="button" data-leave aria-label="닫기"><img src="img/x-sheet.svg" alt=""></button></div>
     <form id="frm" novalidate>
-      <p class="lead">빠른 상담을 위해</p>
+      <p class="ld">빠른 상담을 위해</p>
       <h3>최소한의 정보만 받고 있어요</h3>
       <label class="fld"><span>이름</span><input name="name" placeholder="예) 홍길동" autocomplete="name"></label>
       <label class="fld"><span>휴대전화</span><input name="tel" inputmode="numeric" placeholder="숫자만 입력해 주세요" autocomplete="tel"></label>
-      <div class="fld"><span>지역</span>
+      <div class="fld"><span>지역 · 인터뷰 방식</span>
         <div class="two">
-          <select name="sido"><option value="">시/도</option><option>서울</option><option>경기</option><option>인천</option><option>부산</option><option>대구</option><option>광주</option><option>대전</option><option>울산</option><option>세종</option><option>강원</option><option>충북</option><option>충남</option><option>전북</option><option>전남</option><option>경북</option><option>경남</option><option>제주</option></select>
-          <select name="how"><option value="">인터뷰 방식</option><option>전화 인터뷰</option><option>화상 인터뷰</option></select>
+          <select name="sido" required aria-label="시/도"><option value="">시/도</option><option>서울</option><option>경기</option><option>인천</option><option>부산</option><option>대구</option><option>광주</option><option>대전</option><option>울산</option><option>세종</option><option>강원</option><option>충북</option><option>충남</option><option>전북</option><option>전남</option><option>경북</option><option>경남</option><option>제주</option></select>
+          <select name="how" required aria-label="인터뷰 방식"><option value="">인터뷰 방식</option><option>전화 인터뷰</option><option>화상 인터뷰</option></select>
         </div>
       </div>
       <div class="fld"><span>희망 활동 유형</span>
         <div class="opt">
-          <label><input type="radio" name="type" value="인턴기자" checked><span>인턴기자<small>등록비 10만원 · 1년 후 환급</small></span></label>
-          <label><input type="radio" name="type" value="공식기자"><span>공식기자<small>연 100만원</small></span></label>
+          <label><input type="radio" name="type" value="인턴기자" checked><span>인턴기자<small>등록비 10만원</small></span></label>
+          <label><input type="radio" name="type" value="공식기자"><span>공식기자<small>연 100만원 · 1년 후 환급</small></span></label>
         </div>
       </div>
-      <label class="agree"><input type="checkbox" name="agree"> 약관에 전체 동의합니다</label>
+      <label class="agree"><input type="checkbox" name="agree">약관에 전체 동의합니다</label>
       <p class="terms">[필수] 개인정보 수집·이용 동의 — 수집항목: 이름, 휴대전화, 지역 / 이용목적: 프리랜서 기자 지원 상담 / 보유기간: 상담 종료 후 1년. 동의를 거부할 수 있으나 거부 시 지원 접수가 제한됩니다.</p>
-      <div class="submit">거의 완료되었어요!<br>신청 완료하면 투잡 준비 끝!
-        <button type="submit" id="sbm">신청 완료</button>
-        <p class="msg" id="msg"></p>
-      </div>
+      <p class="fin">거의 완료되었어요!<br>신청 완료하면 투잡 준비 끝!</p>
+      <button type="submit" class="sbm" id="sbm">신청 완료</button>
+      <p class="msg" id="msg" role="alert"></p>
     </form>
     <div class="done" id="done">
-      <img class="emo" src="img/3d/tick.png" alt="">
+      <img src="img/tick.png" alt="">
       <h3>신청이 완료되었습니다</h3>
       <p id="doneP">담당자가 확인 후 연락드리겠습니다.</p>
-      <div class="submit"><button type="button" class="ok" data-close>확인</button></div>
+      <button type="button" class="sbm" data-close>확인</button>
     </div>
   </div>
 </div>
 
+<!-- 리마인드 팝업 (신청창 닫을 때) -->
+<div class="blk" id="blocker" role="dialog" aria-modal="true" aria-label="지원 신청 리마인드">
+  <div class="pop">
+    <button type="button" class="x" data-close aria-label="닫기"><img src="img/x-pop.svg" alt=""></button>
+    <span class="chip">오픈미디어 <span id="bkMonth">10</span>월 모집중</span>
+    <p class="q">투잡, 이대로 포기하실 건가요?</p>
+    <p class="big">인턴기자<br>무료로 시작!</p>
+    <div class="gift">
+      <small>인턴기자 등록비</small>
+      <strong>100,000원</strong>
+      <em>기자증·명함 바로 발급</em>
+      <img class="st" src="img/star.png" alt="">
+    </div>
+    <button type="button" class="cont" id="bkCont"><i></i>지원 신청 이어하기</button>
+    <button type="button" class="later" data-close>다음에 할게요</button>
+  </div>
+</div>
+
 <script>
-// 구글 시트 접수 주소: Apps Script 웹 앱 배포 URL (SHEET-SETUP.md 참고)
-const SHEET_URL='';
+// 구글 시트 접수 주소: Apps Script 웹 앱 배포 URL (../SHEET-SETUP.md 참고)
+const SHEET_URL='https://script.google.com/macros/s/AKfycbzwsA0dAm533PR2Z44N10SqzYY0bj54Ef1b27oa3k9m-V595rDSs6DFOw23SFkV5Wy1/exec';
 
-// 스크롤 등장
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.15});
-document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// 막대 그래프 성장
-const grow=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;
-  const b3=e.target.id==='bars3d';e.target.querySelectorAll('[data-h]').forEach(b=>b.style.height=(b3?26+b.dataset.h*.68:b.dataset.h*.86)+'%');grow.unobserve(e.target)}),{threshold:.3});
-['chart','bars3d'].forEach(id=>grow.observe(document.getElementById(id)));
+// 히어로 등장
+requestAnimationFrame(()=>document.getElementById('hero').classList.add('on'));
 
-// 히어로 롤링 카드
-const items=[...document.querySelectorAll('#roll .it')];let ri=0;
-setInterval(()=>{const cur=items[ri];cur.classList.remove('on');cur.classList.add('out');
-  setTimeout(()=>cur.classList.remove('out'),600);ri=(ri+1)%items.length;items[ri].classList.add('on')},2600);
+// 스크롤 등장 + 강조 박스
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+document.querySelectorAll('.rv,[data-on]').forEach(el=>io.observe(el));
 
-// 오늘 자정까지 카운트다운
-const clock=document.getElementById('clock');
-function tick(){const n=new Date(),e=new Date(n);e.setHours(24,0,0,0);const s=Math.floor((e-n)/1000),p=v=>String(v).padStart(2,'0');
-  clock.textContent=p(Math.floor(s/3600))+' : '+p(Math.floor(s%3600/60))+' : '+p(s%60)}
-tick();setInterval(tick,1000);
+// 숫자 카운트업
+function count(el,to,fmt,ms){if(reduce){el.textContent=fmt(to);return}
+  const t0=performance.now();(function f(t){const p=Math.min(1,(t-t0)/ms),v=Math.round(to*(1-Math.pow(1-p,3)));el.textContent=fmt(v);if(p<1)requestAnimationFrame(f)})(t0)}
+const n300=document.getElementById('n300');
+new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){count(n300,300,v=>v,1300);o.disconnect()}}),{threshold:.6}).observe(n300);
 
-// 패키지 시뮬레이터
-const r=document.getElementById('simRange'),nOut=document.getElementById('simN'),out=document.getElementById('simOut');let price=30;
-function calc(){nOut.textContent=r.value+'곳';out.innerHTML=(r.value*price).toLocaleString()+'<small>만원</small>'}
-r.addEventListener('input',calc);
-document.querySelectorAll('.seg button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.seg button').forEach(x=>x.classList.remove('on'));b.classList.add('on');price=+b.dataset.v;calc()}));
+// 입금 알림: 플랫폼 수익 → 기업회원 패키지 → 기업 홍보기사 → 오늘 입금 합계
+const mock=document.getElementById('mock'),sumAmt=document.getElementById('sumAmt');
+new IntersectionObserver((es,o)=>es.forEach(e=>{if(!e.isIntersecting)return;o.disconnect();
+  [1,2,3,4].forEach((s,i)=>setTimeout(()=>{
+    mock.querySelectorAll('[data-step="'+s+'"]').forEach(el=>el.classList.add('on'));
+    if(s===4)count(sumAmt,710000,v=>'+'+v.toLocaleString()+'원',900);
+  },reduce?0:250+i*800))}),{threshold:.45}).observe(mock);
 
-// 바텀시트
-const layer=document.getElementById('layer'),frm=document.getElementById('frm'),done=document.getElementById('done'),sbm=document.getElementById('sbm'),msg=document.getElementById('msg');
-document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',()=>{layer.classList.add('open');document.body.style.overflow='hidden'}));
-document.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',()=>{layer.classList.remove('open');blocker.classList.remove('on');document.body.style.overflow='';
-  setTimeout(()=>{frm.style.display='';done.classList.remove('on')},350)}));
-// 신청 도중 닫으면 리마인드 팝업 (접수 완료 후에는 바로 닫힘)
-const blocker=document.getElementById('blocker');
+// 바텀시트 / 리마인드 팝업
+const layer=document.getElementById('layer'),blocker=document.getElementById('blocker'),frm=document.getElementById('frm'),
+  done=document.getElementById('done'),sbm=document.getElementById('sbm'),msg=document.getElementById('msg');
 document.getElementById('bkMonth').textContent=new Date().getMonth()+1;
+const lock=on=>document.body.style.overflow=on?'hidden':'';
+function closeAll(){layer.classList.remove('open');blocker.classList.remove('on');lock(false);
+  setTimeout(()=>{frm.style.display='';done.classList.remove('on')},420)}
+document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',()=>{layer.classList.add('open');lock(true)}));
+document.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',closeAll));
+// 작성 도중 닫으면 리마인드 팝업 (접수 완료 후에는 바로 닫힘)
 document.querySelectorAll('[data-leave]').forEach(b=>b.addEventListener('click',()=>{
-  if(done.classList.contains('on'))return document.querySelector('.done [data-close]').click();
+  if(done.classList.contains('on'))return closeAll();
   blocker.classList.add('on')}));
-document.getElementById('bkCont').addEventListener('click',()=>{blocker.classList.remove('on');frm.name.focus()});
+document.getElementById('bkCont').addEventListener('click',()=>{blocker.classList.remove('on');setTimeout(()=>frm.name.focus({preventScroll:true}),300)});
+addEventListener('keydown',e=>{if(e.key!=='Escape')return;
+  if(blocker.classList.contains('on'))closeAll();else if(layer.classList.contains('open'))document.querySelector('.sh-hd [data-leave]').click()});
+
 frm.tel.addEventListener('input',()=>frm.tel.value=frm.tel.value.replace(/\D/g,'').slice(0,11));
-const valid=()=>frm.name.value.trim()&&/^01\d{8,9}$/.test(frm.tel.value)&&frm.sido.value&&frm.how.value&&frm.agree.checked;
-frm.addEventListener('input',()=>{sbm.classList.toggle('ok',!!valid());msg.textContent=''});
+frm.addEventListener('input',()=>msg.textContent='');
 frm.addEventListener('submit',e=>{e.preventDefault();
   if(!frm.name.value.trim())return msg.textContent='이름을 입력해 주세요.';
   if(!/^01\d{8,9}$/.test(frm.tel.value))return msg.textContent='휴대전화 번호를 확인해 주세요.';
@@ -725,7 +743,7 @@ frm.addEventListener('submit',e=>{e.preventDefault();
   fetch(SHEET_URL,{method:'POST',mode:'no-cors',body:data})
     .then(()=>{
       document.getElementById('doneP').textContent=who+'님, 담당자가 확인 후 '+how+' 일정을 안내해 드리겠습니다.';
-      frm.reset();sbm.classList.remove('ok');frm.style.display='none';done.classList.add('on')})
+      frm.reset();frm.style.display='none';done.classList.add('on')})
     .catch(()=>{msg.textContent='전송에 실패했습니다. 잠시 후 다시 시도해 주세요.'})
     .finally(()=>{sbm.disabled=false;sbm.textContent='신청 완료'})});
 </script>
