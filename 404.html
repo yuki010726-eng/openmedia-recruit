@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>오픈미디어 프리랜서 기자 모집</title>
+    <script>
+      // GitHub Pages는 /{번호} 파일이 없어 이 페이지로 오므로, 번호를 저장하고 메인으로 보낸다
+      var m = location.pathname.match(/^\/(\d+)\/?$/);
+      if (m) {
+        try {
+          sessionStorage.setItem("ref", m[1]);
+        } catch (e) {}
+      }
+      location.replace("/");
+    </script>
+  </head>
+  <body></body>
+</html>

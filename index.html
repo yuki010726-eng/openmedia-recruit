@@ -1,762 +1,3095 @@
 <!doctype html>
 <html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title>오픈미디어 프리랜서 기자 모집</title>
-<meta name="description" content="기업이 내는 언론 홍보 비용이 곧 나의 수익. 오픈미디어 프리랜서 기자를 모집합니다.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://yuki010726-eng.github.io/openmedia-recruit/">
-<meta property="og:site_name" content="오픈미디어">
-<meta property="og:title" content="오픈미디어 프리랜서 기자 모집">
-<meta property="og:description" content="기업이 내는 언론 홍보 비용이 곧 나의 수익. 오픈미디어 프리랜서 기자를 모집합니다.">
-<meta property="og:image" content="https://yuki010726-eng.github.io/openmedia-recruit/img/og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="오픈미디어 로고">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-<script>
-// 피그마 390px 설계를 화면 폭에 맞춰 그대로 확대/축소 (모바일 꽉 차게, PC는 460px 컬럼)
-document.documentElement.classList.add('js');
-function fit(){const w=Math.min(document.documentElement.clientWidth,460),r=document.documentElement.style;r.setProperty('--z',w/390);r.setProperty('--q',w/390+'px');r.setProperty('--p',w/640+'px')}
-fit();addEventListener('resize',fit);
-</script>
-<style>
-@font-face{font-family:'Paperlogy';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2') format('woff2');font-weight:900;font-display:swap}
-:root{--z:1;--q:1px;--p:.609375px;--red:#f4402c;--ink:#1f2227;--sub:#555a63;--mute:#9a9ea6}
-*{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%}
-html,body{overflow-x:hidden}
-body{background:radial-gradient(900px 520px at 50% 0,#fff1ee,rgba(255,241,238,0) 75%) fixed,linear-gradient(#ffe5e0,#fdd3cb) fixed;font-family:'Noto Sans KR',sans-serif;color:var(--ink);word-break:keep-all;-webkit-font-smoothing:antialiased}
-img{display:block;max-width:none}
-button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
-.pg{width:390px;margin:0 auto;zoom:var(--z);background:#fff;overflow:hidden;box-shadow:0 0 0 1px rgba(150,60,50,.05),0 24px 70px rgba(120,40,30,.2)}
-.r{color:var(--red)}
-.sec{display:flex;flex-direction:column;align-items:center;gap:15px;padding:70px 20px;text-align:center;position:relative}
-.h2{font-size:30px;font-weight:700;line-height:1.3;letter-spacing:-.9px;white-space:nowrap}
-.lead{font-size:17.6px;line-height:1.4;letter-spacing:-.352px;color:var(--sub);white-space:nowrap}
-.note{font-size:11px;line-height:1.4;letter-spacing:-.22px;color:var(--mute)}
-.ico80{width:80px;height:80px;object-fit:contain}
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>오픈미디어 프리랜서 기자 모집</title>
+    <meta
+      name="description"
+      content="기업이 내는 언론 홍보 비용이 곧 나의 수익. 오픈미디어 프리랜서 기자를 모집합니다."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://yuki010726-eng.github.io/openmedia-recruit/"
+    />
+    <meta property="og:site_name" content="오픈미디어" />
+    <meta property="og:title" content="오픈미디어 프리랜서 기자 모집" />
+    <meta
+      property="og:description"
+      content="기업이 내는 언론 홍보 비용이 곧 나의 수익. 오픈미디어 프리랜서 기자를 모집합니다."
+    />
+    <meta
+      property="og:image"
+      content="https://yuki010726-eng.github.io/openmedia-recruit/img/og.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="오픈미디어 로고" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <base href="/" />
+    <script>
+      // /{번호} 경로로 들어오면 404.html이 번호를 넘겨 주고, 주소창은 /{번호}로 되돌려 둔다
+      var REF = "";
+      try {
+        REF = sessionStorage.getItem("ref") || "";
+        sessionStorage.removeItem("ref");
+      } catch (e) {}
+      if (!/^\d+$/.test(REF)) REF = "";
+      if (REF) history.replaceState(null, "", "/" + REF);
+    </script>
+    <script>
+      // 피그마 390px 설계를 화면 폭에 맞춰 그대로 확대/축소 (모바일 꽉 차게, PC는 460px 컬럼)
+      document.documentElement.classList.add("js");
+      function fit() {
+        const w = Math.min(document.documentElement.clientWidth, 460),
+          r = document.documentElement.style;
+        r.setProperty("--z", w / 390);
+        r.setProperty("--q", w / 390 + "px");
+        r.setProperty("--p", w / 640 + "px");
+      }
+      fit();
+      addEventListener("resize", fit);
+    </script>
+    <style>
+      @font-face {
+        font-family: "Paperlogy";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2")
+          format("woff2");
+        font-weight: 900;
+        font-display: swap;
+      }
+      :root {
+        --z: 1;
+        --q: 1px;
+        --p: 0.609375px;
+        --red: #f4402c;
+        --ink: #1f2227;
+        --sub: #555a63;
+        --mute: #9a9ea6;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+      html,
+      body {
+        overflow-x: hidden;
+      }
+      body {
+        background:
+          radial-gradient(
+              900px 520px at 50% 0,
+              #fff1ee,
+              rgba(255, 241, 238, 0) 75%
+            )
+            fixed,
+          linear-gradient(#ffe5e0, #fdd3cb) fixed;
+        font-family: "Noto Sans KR", sans-serif;
+        color: var(--ink);
+        word-break: keep-all;
+        -webkit-font-smoothing: antialiased;
+      }
+      img {
+        display: block;
+        max-width: none;
+      }
+      button {
+        font: inherit;
+        color: inherit;
+        background: none;
+        border: 0;
+        cursor: pointer;
+      }
+      .pg {
+        width: 390px;
+        margin: 0 auto;
+        zoom: var(--z);
+        background: #fff;
+        overflow: hidden;
+        box-shadow:
+          0 0 0 1px rgba(150, 60, 50, 0.05),
+          0 24px 70px rgba(120, 40, 30, 0.2);
+      }
+      .r {
+        color: var(--red);
+      }
+      .sec {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 70px 20px;
+        text-align: center;
+        position: relative;
+      }
+      .h2 {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1.3;
+        letter-spacing: -0.9px;
+        white-space: nowrap;
+      }
+      .lead {
+        font-size: 17.6px;
+        line-height: 1.4;
+        letter-spacing: -0.352px;
+        color: var(--sub);
+        white-space: nowrap;
+      }
+      .note {
+        font-size: 11px;
+        line-height: 1.4;
+        letter-spacing: -0.22px;
+        color: var(--mute);
+      }
+      .ico80 {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+      }
 
-/* 스크롤 등장 (과하지 않게: 18px 위로 + 페이드) */
-.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
-.js .rv.on{opacity:1;transform:none}
+      /* 스크롤 등장 (과하지 않게: 18px 위로 + 페이드) */
+      .js .rv {
+        opacity: 0;
+        transform: translateY(18px);
+        transition:
+          opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+          transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+        transition-delay: var(--d, 0s);
+      }
+      .js .rv.on {
+        opacity: 1;
+        transform: none;
+      }
 
-/* 01 HERO */
-.hero{position:relative;height:317px;background:linear-gradient(180deg,rgba(255,146,146,.4),rgba(255,146,146,0)),#fff2f1}
-.hero .logo{position:absolute;left:23px;top:29px;width:83px;height:17.43px;z-index:2}
-.hero .hv{position:absolute;left:159.6px;top:0;width:230.7px;height:317px}
-.hero .hl{position:absolute;left:29px;top:176px;width:68px;height:43px;background:var(--red);z-index:1;transform-origin:left;transition:transform .6s cubic-bezier(.2,.7,.2,1) .55s}
-.js .hero .hl{transform:scaleX(0)}
-.js .hero.on .hl{transform:none}
-.hero h1{position:absolute;left:32px;top:89px;z-index:2;font-size:34px;font-weight:700;line-height:1.3;letter-spacing:-1.02px;white-space:nowrap}
-.hero h1 span{display:block}
-.hero h1 .l{font-size:30px;font-weight:300;letter-spacing:-.9px}
-.hero h1 .w{color:#fff}
-.js .hero h1 span,.js .hero .hv{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
-.js .hero .hv{transform:none;transition-duration:1s}
-.js .hero.on h1 span,.js .hero.on .hv{opacity:1;transform:none}
-.hero h1 span:nth-child(2){transition-delay:.08s}.hero h1 span:nth-child(3){transition-delay:.16s}.hero h1 span:nth-child(4){transition-delay:.24s}
+      /* 01 HERO */
+      .hero {
+        position: relative;
+        height: 317px;
+        background:
+          linear-gradient(
+            180deg,
+            rgba(255, 146, 146, 0.4),
+            rgba(255, 146, 146, 0)
+          ),
+          #fff2f1;
+      }
+      .hero .logo {
+        position: absolute;
+        left: 23px;
+        top: 29px;
+        width: 83px;
+        height: 17.43px;
+        z-index: 2;
+      }
+      .hero .hv {
+        position: absolute;
+        left: 159.6px;
+        top: 0;
+        width: 230.7px;
+        height: 317px;
+      }
+      .hero .hl {
+        position: absolute;
+        left: 29px;
+        top: 176px;
+        width: 68px;
+        height: 43px;
+        background: var(--red);
+        z-index: 1;
+        transform-origin: left;
+        transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) 0.55s;
+      }
+      .js .hero .hl {
+        transform: scaleX(0);
+      }
+      .js .hero.on .hl {
+        transform: none;
+      }
+      .hero h1 {
+        position: absolute;
+        left: 32px;
+        top: 89px;
+        z-index: 2;
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 1.3;
+        letter-spacing: -1.02px;
+        white-space: nowrap;
+      }
+      .hero h1 span {
+        display: block;
+      }
+      .hero h1 .l {
+        font-size: 30px;
+        font-weight: 300;
+        letter-spacing: -0.9px;
+      }
+      .hero h1 .w {
+        color: #fff;
+      }
+      .js .hero h1 span,
+      .js .hero .hv {
+        opacity: 0;
+        transform: translateY(14px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+      }
+      .js .hero .hv {
+        transform: none;
+        transition-duration: 1s;
+      }
+      .js .hero.on h1 span,
+      .js .hero.on .hv {
+        opacity: 1;
+        transform: none;
+      }
+      .hero h1 span:nth-child(2) {
+        transition-delay: 0.08s;
+      }
+      .hero h1 span:nth-child(3) {
+        transition-delay: 0.16s;
+      }
+      .hero h1 span:nth-child(4) {
+        transition-delay: 0.24s;
+      }
 
-/* 01-2 업계 비밀 */
-.secret{background:#fff2f1;padding:20px}
-.dk{background:#1a1c21;border-radius:15px;padding:48px 24px 44px;display:flex;flex-direction:column;align-items:center;text-align:center;color:#fff}
-.tag{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--red);border-radius:99px;padding:6px 14px 6px 12px;font-size:13px;font-weight:700;line-height:1.2;letter-spacing:-.26px;color:var(--red)}
-.tag i{width:6px;height:6px;border-radius:50%;background:var(--red);animation:live 1.6s ease-out infinite}
-@keyframes live{0%{box-shadow:0 0 0 0 rgba(244,64,44,.7)}80%,100%{box-shadow:0 0 0 5px rgba(244,64,44,0)}}
-.dk h2{margin-top:18px;font-size:30px;font-weight:700;line-height:1.35;letter-spacing:-.9px}
-.dk .p20{margin-top:28px;font-size:20px;font-weight:500;line-height:1.5;letter-spacing:-.4px}
-.pct{position:relative;display:inline-block;margin-bottom:9px;font-size:30px;font-weight:900;line-height:1.7;letter-spacing:-.6px;padding:0 7.5px;z-index:0}
-.pct::before{content:'';position:absolute;left:50%;top:3.5px;width:164px;height:44px;margin-left:-82px;background:var(--red);z-index:-1;transform-origin:left;transition:transform .6s cubic-bezier(.2,.7,.2,1) .2s}
-.js .pct::before{transform:scaleX(0)}
-.js .pct.on::before{transform:none}
-.dk .end{margin-top:36px;font-size:25px;font-weight:700;line-height:1.5;letter-spacing:-.5px}
+      /* 01-2 업계 비밀 */
+      .secret {
+        background: #fff2f1;
+        padding: 20px;
+      }
+      .dk {
+        background: #1a1c21;
+        border-radius: 15px;
+        padding: 48px 24px 44px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+      }
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        border: 1px solid var(--red);
+        border-radius: 99px;
+        padding: 6px 14px 6px 12px;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: -0.26px;
+        color: var(--red);
+      }
+      .tag i {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--red);
+        animation: live 1.6s ease-out infinite;
+      }
+      @keyframes live {
+        0% {
+          box-shadow: 0 0 0 0 rgba(244, 64, 44, 0.7);
+        }
+        80%,
+        100% {
+          box-shadow: 0 0 0 5px rgba(244, 64, 44, 0);
+        }
+      }
+      .dk h2 {
+        margin-top: 18px;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1.35;
+        letter-spacing: -0.9px;
+      }
+      .dk .p20 {
+        margin-top: 28px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: -0.4px;
+      }
+      .pct {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 9px;
+        font-size: 30px;
+        font-weight: 900;
+        line-height: 1.7;
+        letter-spacing: -0.6px;
+        padding: 0 7.5px;
+        z-index: 0;
+      }
+      .pct::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 3.5px;
+        width: 164px;
+        height: 44px;
+        margin-left: -82px;
+        background: var(--red);
+        z-index: -1;
+        transform-origin: left;
+        transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) 0.2s;
+      }
+      .js .pct::before {
+        transform: scaleX(0);
+      }
+      .js .pct.on::before {
+        transform: none;
+      }
+      .dk .end {
+        margin-top: 36px;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 1.5;
+        letter-spacing: -0.5px;
+      }
 
-/* 02 프리랜서 기자란 */
-.what{background:linear-gradient(#fff2f1,#fff)}
-.what .h2{width:194px;height:92px}
-.def{display:flex;flex-direction:column;align-items:center;gap:3px;height:114px;font-size:20px;line-height:1.4;letter-spacing:-.4px;white-space:nowrap}
-.def b{font-weight:700}
-.def .row{display:flex;align-items:center;gap:4.5px;font-weight:700}
-.def .box{background:var(--red);color:#fff;font-weight:900;padding:0 5px 1px;position:relative}
-.pills{position:relative;width:242px;height:217px}
-.pills>div{position:absolute;display:flex}
-.pill{display:flex;align-items:center;gap:10px;padding:12px 18px 12px 15px;background:#fff;border-radius:999px;filter:drop-shadow(0 6px 9px rgba(160,40,30,.2));font-size:15px;font-weight:700;white-space:nowrap}
-.pill img{width:22px;height:22px}
+      /* 02 프리랜서 기자란 */
+      .what {
+        background: linear-gradient(#fff2f1, #fff);
+      }
+      .what .h2 {
+        width: 194px;
+        height: 92px;
+      }
+      .def {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+        height: 114px;
+        font-size: 20px;
+        line-height: 1.4;
+        letter-spacing: -0.4px;
+        white-space: nowrap;
+      }
+      .def b {
+        font-weight: 700;
+      }
+      .def .row {
+        display: flex;
+        align-items: center;
+        gap: 4.5px;
+        font-weight: 700;
+      }
+      .def .box {
+        background: var(--red);
+        color: #fff;
+        font-weight: 900;
+        padding: 0 5px 1px;
+        position: relative;
+      }
+      .pills {
+        position: relative;
+        width: 242px;
+        height: 217px;
+      }
+      .pills > div {
+        position: absolute;
+        display: flex;
+      }
+      .pill {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 18px 12px 15px;
+        background: #fff;
+        border-radius: 999px;
+        filter: drop-shadow(0 6px 9px rgba(160, 40, 30, 0.2));
+        font-size: 15px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+      .pill img {
+        width: 22px;
+        height: 22px;
+      }
 
-/* 03 오픈미디어 신뢰 */
-.trust{background:linear-gradient(to top,#fff2f1,#fff)}
-.dots{position:absolute;left:192px;top:-25px;width:6px;height:50px;z-index:2}
-.dots i{position:absolute;left:0;width:6px;height:6px;border-radius:50%;background:var(--red);animation:blink 1.8s ease-in-out infinite}
-.dots i:nth-child(1){top:0;opacity:.8}.dots i:nth-child(2){top:22px;opacity:.5;animation-delay:.3s}.dots i:nth-child(3){top:44px;opacity:.1;animation-delay:.6s}
-@keyframes blink{50%{transform:scale(1.35)}}
-.trust .logo{width:185.7px;height:39px}
-.trust .h2{padding-top:9px}
-.trust .h2 .t{font-weight:400}
-.qcard{width:100%;margin-top:8px;background:#fff;border-radius:22px;padding:26px 22px;display:flex;flex-direction:column;align-items:center;gap:14px;filter:drop-shadow(0 6px 9px rgba(160,40,30,.2))}
-.qcard .q{font-size:18px;line-height:26.1px;letter-spacing:-.54px}
-.qcard .q b{color:var(--red)}
-.num{display:flex;align-items:flex-end;gap:7px;height:56px}
-.num strong{font-family:'Paperlogy','Noto Sans KR',sans-serif;font-weight:900;font-size:45px;line-height:56px;letter-spacing:-1px;color:var(--red);min-width:91px;text-align:right}
-.num span{font-size:18px;font-weight:700;padding-bottom:6px}
-.qcard .d{font-size:14px;line-height:1.4;color:var(--sub)}
-.awards{width:350px;display:flex;flex-direction:column;gap:15px;filter:drop-shadow(0 6px 9px rgba(160,40,30,.2));text-align:left}
-.aw{background:#fff;border-radius:18px;display:flex;align-items:center;gap:14px;padding:14px 16px 14px 14px}
-.aw .lg{width:102px;height:56.4px;border-radius:7.2px;background:#fff;position:relative;flex:none}
-.aw .lg img{position:absolute;left:4.2px;top:12.6px;width:94.7px;height:30.6px}
-.aw .tx{display:flex;flex-direction:column;gap:3px;line-height:1.45}
-.aw .k{font-size:11px;font-weight:700;color:var(--red);letter-spacing:-.22px}
-.aw .t{font-size:16px;font-weight:700;letter-spacing:-.32px}
-.aw .s{font-size:11px;color:var(--sub);letter-spacing:-.22px;width:190px}
-.aw .s b{color:var(--ink)}
-.aw2{height:109px;padding:0;position:relative;display:block}
-.aw2 .star{position:absolute;left:27px;top:15px;width:79px;height:79px;border-radius:5.56px}
-.aw2 .tx{position:absolute;left:129.2px;top:14.1px;width:206.8px}
-.aw2 .s{width:auto}
+      /* 03 오픈미디어 신뢰 */
+      .trust {
+        background: linear-gradient(to top, #fff2f1, #fff);
+      }
+      .dots {
+        position: absolute;
+        left: 192px;
+        top: -25px;
+        width: 6px;
+        height: 50px;
+        z-index: 2;
+      }
+      .dots i {
+        position: absolute;
+        left: 0;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--red);
+        animation: blink 1.8s ease-in-out infinite;
+      }
+      .dots i:nth-child(1) {
+        top: 0;
+        opacity: 0.8;
+      }
+      .dots i:nth-child(2) {
+        top: 22px;
+        opacity: 0.5;
+        animation-delay: 0.3s;
+      }
+      .dots i:nth-child(3) {
+        top: 44px;
+        opacity: 0.1;
+        animation-delay: 0.6s;
+      }
+      @keyframes blink {
+        50% {
+          transform: scale(1.35);
+        }
+      }
+      .trust .logo {
+        width: 185.7px;
+        height: 39px;
+      }
+      .trust .h2 {
+        padding-top: 9px;
+      }
+      .trust .h2 .t {
+        font-weight: 400;
+      }
+      .qcard {
+        width: 100%;
+        margin-top: 8px;
+        background: #fff;
+        border-radius: 22px;
+        padding: 26px 22px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        filter: drop-shadow(0 6px 9px rgba(160, 40, 30, 0.2));
+      }
+      .qcard .q {
+        font-size: 18px;
+        line-height: 26.1px;
+        letter-spacing: -0.54px;
+      }
+      .qcard .q b {
+        color: var(--red);
+      }
+      .num {
+        display: flex;
+        align-items: flex-end;
+        gap: 7px;
+        height: 56px;
+      }
+      .num strong {
+        font-family: "Paperlogy", "Noto Sans KR", sans-serif;
+        font-weight: 900;
+        font-size: 45px;
+        line-height: 56px;
+        letter-spacing: -1px;
+        color: var(--red);
+        min-width: 91px;
+        text-align: right;
+      }
+      .num span {
+        font-size: 18px;
+        font-weight: 700;
+        padding-bottom: 6px;
+      }
+      .qcard .d {
+        font-size: 14px;
+        line-height: 1.4;
+        color: var(--sub);
+      }
+      .awards {
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        filter: drop-shadow(0 6px 9px rgba(160, 40, 30, 0.2));
+        text-align: left;
+      }
+      .aw {
+        background: #fff;
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 14px 16px 14px 14px;
+      }
+      .aw .lg {
+        width: 102px;
+        height: 56.4px;
+        border-radius: 7.2px;
+        background: #fff;
+        position: relative;
+        flex: none;
+      }
+      .aw .lg img {
+        position: absolute;
+        left: 4.2px;
+        top: 12.6px;
+        width: 94.7px;
+        height: 30.6px;
+      }
+      .aw .tx {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        line-height: 1.45;
+      }
+      .aw .k {
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--red);
+        letter-spacing: -0.22px;
+      }
+      .aw .t {
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: -0.32px;
+      }
+      .aw .s {
+        font-size: 11px;
+        color: var(--sub);
+        letter-spacing: -0.22px;
+        width: 190px;
+      }
+      .aw .s b {
+        color: var(--ink);
+      }
+      .aw2 {
+        height: 109px;
+        padding: 0;
+        position: relative;
+        display: block;
+      }
+      .aw2 .star {
+        position: absolute;
+        left: 27px;
+        top: 15px;
+        width: 79px;
+        height: 79px;
+        border-radius: 5.56px;
+      }
+      .aw2 .tx {
+        position: absolute;
+        left: 129.2px;
+        top: 14.1px;
+        width: 206.8px;
+      }
+      .aw2 .s {
+        width: auto;
+      }
 
-/* 05 기존 직장 vs 프리랜서 */
-.vs{background:linear-gradient(to top,#fff2f1,#fff)}
-.vs .wl{width:82px;height:81px;object-fit:contain}
-.vs .p18{font-size:18px;line-height:1.4;letter-spacing:-.36px;color:var(--sub)}
-.vs .sm{font-size:14px;line-height:1.4;letter-spacing:-.42px;color:var(--sub)}
-.vs .sm b{color:var(--red)}
-.cmp{width:100%;display:flex;flex-direction:column;align-items:flex-start;text-align:center}
-.cmp.old{padding:15px 0 30px;height:264px;overflow:hidden}
-.cmp .tab{padding:5px 12px 5px 10px;border-radius:6.35px 13.6px 0 0;font-size:13px;font-weight:700;line-height:1.4;letter-spacing:-.26px;color:#fff;background:#d9d2d2}
-.cmp .bx{width:100%;height:200px;border-radius:0 14.5px 14.5px 14.5px;background:#eae6e6;display:flex;flex-direction:column;align-items:center;gap:13.6px;padding:25.4px 15.4px 20px}
-.cmp .fl{display:flex;justify-content:center;gap:32px}
-.cmp .nd{display:flex;flex-direction:column;align-items:center;gap:6.35px}
-.cmp .c{width:72.56px;height:72.56px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6.35px 13.6px -7.26px rgba(0,0,0,.2)}
-.cmp .c img{width:45px;height:45px;object-fit:contain}
-.cmp.old .c img{opacity:.9}
-.cmp .lb{padding:3px 10px;border-radius:13.6px;background:#a9a3a3;color:#fff;font-size:12px;font-weight:700;line-height:1.4;letter-spacing:-.24px;white-space:nowrap}
-.cmp .ds{font-size:14px;line-height:1.4;color:#7d7878}
-.cmp.new .tab{background:var(--red)}
-.cmp.new .bx{background:#ffd9d4}
-.cmp.new .fl{gap:18px}
-.cmp.new .lb{background:var(--ink)}
-.cmp.new .ds{font-weight:700;color:var(--sub)}
-.vs .ask{margin-top:35px;font-size:18.7px;line-height:1.5;letter-spacing:-.56px}
-.vs .ask b{font-weight:900;color:var(--red)}
+      /* 05 기존 직장 vs 프리랜서 */
+      .vs {
+        background: linear-gradient(to top, #fff2f1, #fff);
+      }
+      .vs .wl {
+        width: 82px;
+        height: 81px;
+        object-fit: contain;
+      }
+      .vs .p18 {
+        font-size: 18px;
+        line-height: 1.4;
+        letter-spacing: -0.36px;
+        color: var(--sub);
+      }
+      .vs .sm {
+        font-size: 14px;
+        line-height: 1.4;
+        letter-spacing: -0.42px;
+        color: var(--sub);
+      }
+      .vs .sm b {
+        color: var(--red);
+      }
+      .cmp {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+      }
+      .cmp.old {
+        padding: 15px 0 30px;
+        height: 264px;
+        overflow: hidden;
+      }
+      .cmp .tab {
+        padding: 5px 12px 5px 10px;
+        border-radius: 6.35px 13.6px 0 0;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 1.4;
+        letter-spacing: -0.26px;
+        color: #fff;
+        background: #d9d2d2;
+      }
+      .cmp .bx {
+        width: 100%;
+        height: 200px;
+        border-radius: 0 14.5px 14.5px 14.5px;
+        background: #eae6e6;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 13.6px;
+        padding: 25.4px 15.4px 20px;
+      }
+      .cmp .fl {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+      }
+      .cmp .nd {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6.35px;
+      }
+      .cmp .c {
+        width: 72.56px;
+        height: 72.56px;
+        border-radius: 50%;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 6.35px 13.6px -7.26px rgba(0, 0, 0, 0.2);
+      }
+      .cmp .c img {
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
+      }
+      .cmp.old .c img {
+        opacity: 0.9;
+      }
+      .cmp .lb {
+        padding: 3px 10px;
+        border-radius: 13.6px;
+        background: #a9a3a3;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.4;
+        letter-spacing: -0.24px;
+        white-space: nowrap;
+      }
+      .cmp .ds {
+        font-size: 14px;
+        line-height: 1.4;
+        color: #7d7878;
+      }
+      .cmp.new .tab {
+        background: var(--red);
+      }
+      .cmp.new .bx {
+        background: #ffd9d4;
+      }
+      .cmp.new .fl {
+        gap: 18px;
+      }
+      .cmp.new .lb {
+        background: var(--ink);
+      }
+      .cmp.new .ds {
+        font-weight: 700;
+        color: var(--sub);
+      }
+      .vs .ask {
+        margin-top: 35px;
+        font-size: 18.7px;
+        line-height: 1.5;
+        letter-spacing: -0.56px;
+      }
+      .vs .ask b {
+        font-weight: 900;
+        color: var(--red);
+      }
 
-/* 05-2 수익 내는 방법 */
-.how{background:#fff}
-.how .p18{font-size:18px;line-height:1.4;letter-spacing:-.36px;color:var(--sub);white-space:nowrap}
-.rev{width:100%;display:flex;flex-direction:column;gap:10px;margin-top:23px;text-align:left}
-.rv-i{background:#fff2f1;border-radius:16px;padding:18px 16px;display:flex;align-items:center;gap:14px}
-.rv-i .n{width:44px;height:44px;border-radius:50%;background:var(--red);color:#fff;font-size:15px;font-weight:900;letter-spacing:-.3px;display:flex;align-items:center;justify-content:center;flex:none}
-.rv-i .ct{display:flex;flex-direction:column;gap:3px;min-width:0}
-.rv-i .t{font-size:16px;font-weight:700;line-height:1.3;letter-spacing:-.32px}
-.rv-i .s{font-size:12.5px;line-height:1.4;letter-spacing:-.25px;color:var(--sub)}
-.rv-i .pr{margin-top:2px;font-size:19px;font-weight:900;line-height:1.25;letter-spacing:-.38px;color:var(--red)}
-.rv-i .pr small{font-size:13px;font-weight:700;color:var(--sub)}
-.locked{position:relative;width:350px;height:228px;cursor:pointer;text-align:left;display:block}
-.locked .bl{position:absolute;left:0;top:0;width:350px;display:flex;flex-direction:column;gap:10px;filter:blur(4.5px);pointer-events:none;user-select:none}
-.locked .veil{position:absolute;inset:0;border-radius:16px;background:rgba(255,255,255,.35)}
-.lockpill{position:absolute;left:29.5px;top:92px;display:flex;align-items:center;gap:8px;padding:12px 20px;background:#fff;border:1px solid #ffd9d4;border-radius:99px;box-shadow:0 4px 14px rgba(153,51,38,.1);font-size:14px;font-weight:700;line-height:1.2;letter-spacing:-.28px;white-space:nowrap;transition:transform .25s ease,box-shadow .25s ease;animation:ring 2.4s ease-out infinite}
-.lockpill img{width:16px;height:18px}
-.locked:hover .lockpill,.locked:focus-visible .lockpill{transform:translateY(-2px);box-shadow:0 8px 20px rgba(153,51,38,.18)}
-@keyframes ring{0%{box-shadow:0 4px 14px rgba(153,51,38,.1),0 0 0 0 rgba(244,64,44,.28)}70%,100%{box-shadow:0 4px 14px rgba(153,51,38,.1),0 0 0 10px rgba(244,64,44,0)}}
-.how .note{margin-top:19px}
+      /* 05-2 수익 내는 방법 */
+      .how {
+        background: #fff;
+      }
+      .how .p18 {
+        font-size: 18px;
+        line-height: 1.4;
+        letter-spacing: -0.36px;
+        color: var(--sub);
+        white-space: nowrap;
+      }
+      .rev {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 23px;
+        text-align: left;
+      }
+      .rv-i {
+        background: #fff2f1;
+        border-radius: 16px;
+        padding: 18px 16px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .rv-i .n {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: var(--red);
+        color: #fff;
+        font-size: 15px;
+        font-weight: 900;
+        letter-spacing: -0.3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: none;
+      }
+      .rv-i .ct {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        min-width: 0;
+      }
+      .rv-i .t {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.3;
+        letter-spacing: -0.32px;
+      }
+      .rv-i .s {
+        font-size: 12.5px;
+        line-height: 1.4;
+        letter-spacing: -0.25px;
+        color: var(--sub);
+      }
+      .rv-i .pr {
+        margin-top: 2px;
+        font-size: 19px;
+        font-weight: 900;
+        line-height: 1.25;
+        letter-spacing: -0.38px;
+        color: var(--red);
+      }
+      .rv-i .pr small {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--sub);
+      }
+      .locked {
+        position: relative;
+        width: 350px;
+        height: 228px;
+        cursor: pointer;
+        text-align: left;
+        display: block;
+      }
+      .locked .bl {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        filter: blur(4.5px);
+        pointer-events: none;
+        user-select: none;
+      }
+      .locked .veil {
+        position: absolute;
+        inset: 0;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.35);
+      }
+      .lockpill {
+        position: absolute;
+        left: 29.5px;
+        top: 92px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 20px;
+        background: #fff;
+        border: 1px solid #ffd9d4;
+        border-radius: 99px;
+        box-shadow: 0 4px 14px rgba(153, 51, 38, 0.1);
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: -0.28px;
+        white-space: nowrap;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+        animation: ring 2.4s ease-out infinite;
+      }
+      .lockpill img {
+        width: 16px;
+        height: 18px;
+      }
+      .locked:hover .lockpill,
+      .locked:focus-visible .lockpill {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(153, 51, 38, 0.18);
+      }
+      @keyframes ring {
+        0% {
+          box-shadow:
+            0 4px 14px rgba(153, 51, 38, 0.1),
+            0 0 0 0 rgba(244, 64, 44, 0.28);
+        }
+        70%,
+        100% {
+          box-shadow:
+            0 4px 14px rgba(153, 51, 38, 0.1),
+            0 0 0 10px rgba(244, 64, 44, 0);
+        }
+      }
+      .how .note {
+        margin-top: 19px;
+      }
 
-/* 03 홍보비 100% (휴대폰 + 입금 알림) */
-.money{background:#fff7f6}
-.money .th{width:80px;height:81px;object-fit:cover}
-.mock{position:relative;width:290px;height:501px;text-align:left}
-.phone{position:absolute;left:23px;top:9px;width:245px;height:456px;background:#fff;border:6.35px solid #3d3d3d;border-bottom:0;border-radius:35.37px 35.37px 0 0;box-shadow:0 18.14px 36.28px -9.07px rgba(30,30,60,.25);padding:13.6px 20.86px 0;display:flex;flex-direction:column;align-items:center;overflow:hidden}
-.phone .isl{width:68px;height:18.14px;border-radius:10.9px;background:#111;flex:none}
-.phone .bar{width:100%;display:flex;align-items:center;justify-content:space-between;padding-bottom:2px;border-bottom:.45px solid #eceef3;font-size:14px;font-weight:500;line-height:1.4}
-.phone .bar img{width:55.3px;height:11.8px;object-fit:contain}
-.phone .art{width:100%;display:flex;flex-direction:column;align-items:flex-start;gap:6.35px;padding-top:11.8px;opacity:.9}
-.phone .art .tg{background:#fff2f1;border-radius:13.6px;padding:2.7px 7.26px;font-size:7px;font-weight:500;line-height:1.4;color:var(--red)}
-.phone .art h4{font-size:17.6px;font-weight:700;line-height:1.38;letter-spacing:-.352px;width:190.5px}
-.phone .art .mt{font-size:9px;line-height:1.4;color:var(--mute)}
-.phone .art img{width:190px;height:159px;border-radius:9.07px;object-fit:cover}
-.fade{position:absolute;left:0;top:215px;width:290px;height:318px;background:linear-gradient(rgba(255,247,246,0),#fff7f6 55%,#fff7f6)}
-.nt{position:absolute;left:25px;width:240px;height:74.33px;border-radius:11.27px;background:#fff}
-.nt img{position:absolute;left:33px;top:20.3px;width:33.8px;height:33.8px;object-fit:contain}
-.nt .tx{position:absolute;left:80px;display:flex;flex-direction:column;gap:.8px;line-height:1.4;white-space:nowrap}
-.nt .m{font-size:10.83px;color:var(--mute);letter-spacing:-.22px}
-.nt .t{font-size:12.08px;font-weight:700;letter-spacing:-.24px}
-.nt .a{font-size:16.6px;font-weight:900;color:var(--red);letter-spacing:-.33px}
-.nt.g2{left:42px;top:407.14px;width:208px;background:#f6f8ff;opacity:.45;box-shadow:0 11.42px 10.83px -.84px rgba(0,0,0,.2)}
-.nt.g1{left:34px;top:399.14px;width:224px;background:#f6f8ff;opacity:.7;box-shadow:0 11.42px 10.83px -.84px rgba(0,0,0,.2)}
-.nt.c{top:391.14px;background:#f6f8ff;box-shadow:0 11.42px 10.83px -.84px rgba(0,0,0,.2)}
-.nt.c .tx{top:6.35px}
-.nt.b{top:340.82px;background:#fff6f4;box-shadow:0 7px 5px rgba(0,0,0,.3)}
-.nt.b .tx{top:8.86px}
-.nt.a1{top:283px;background:#fff;box-shadow:0 5px 5px rgba(0,0,0,.3)}
-.nt.a1 .tx{top:8.86px}
-.sum{position:absolute;left:41px;top:244px;display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:99px;background:var(--ink);box-shadow:0 4px 2px rgba(0,0,0,.25);white-space:nowrap}
-.sum span{font-size:12px;font-weight:500;color:#fff}
-.sum b{font-size:12.5px;font-weight:900;color:#ff6b54;font-variant-numeric:tabular-nums}
-/* 알림이 아래(오래된 것)부터 차례로 떠오름 */
-.js .mock [data-step]{opacity:0;transform:translateY(-16px) scale(.97);transition:opacity .5s ease,transform .6s cubic-bezier(.2,.9,.3,1.15)}
-.js .mock .nt.g1[data-step],.js .mock .nt.g2[data-step]{opacity:0}
-.mock [data-step].on{opacity:1;transform:none}
-.mock .nt.g1.on{opacity:.7}.mock .nt.g2.on{opacity:.45}
-.money .yes{position:relative;z-index:1;font-size:26.7px;font-weight:700;line-height:1.3;letter-spacing:-.8px;white-space:nowrap}
+      /* 03 홍보비 100% (휴대폰 + 입금 알림) */
+      .money {
+        background: #fff7f6;
+      }
+      .money .th {
+        width: 80px;
+        height: 81px;
+        object-fit: cover;
+      }
+      .mock {
+        position: relative;
+        width: 290px;
+        height: 501px;
+        text-align: left;
+      }
+      .phone {
+        position: absolute;
+        left: 23px;
+        top: 9px;
+        width: 245px;
+        height: 456px;
+        background: #fff;
+        border: 6.35px solid #3d3d3d;
+        border-bottom: 0;
+        border-radius: 35.37px 35.37px 0 0;
+        box-shadow: 0 18.14px 36.28px -9.07px rgba(30, 30, 60, 0.25);
+        padding: 13.6px 20.86px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+      }
+      .phone .isl {
+        width: 68px;
+        height: 18.14px;
+        border-radius: 10.9px;
+        background: #111;
+        flex: none;
+      }
+      .phone .bar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 2px;
+        border-bottom: 0.45px solid #eceef3;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.4;
+      }
+      .phone .bar img {
+        width: 55.3px;
+        height: 11.8px;
+        object-fit: contain;
+      }
+      .phone .art {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6.35px;
+        padding-top: 11.8px;
+        opacity: 0.9;
+      }
+      .phone .art .tg {
+        background: #fff2f1;
+        border-radius: 13.6px;
+        padding: 2.7px 7.26px;
+        font-size: 7px;
+        font-weight: 500;
+        line-height: 1.4;
+        color: var(--red);
+      }
+      .phone .art h4 {
+        font-size: 17.6px;
+        font-weight: 700;
+        line-height: 1.38;
+        letter-spacing: -0.352px;
+        width: 190.5px;
+      }
+      .phone .art .mt {
+        font-size: 9px;
+        line-height: 1.4;
+        color: var(--mute);
+      }
+      .phone .art img {
+        width: 190px;
+        height: 159px;
+        border-radius: 9.07px;
+        object-fit: cover;
+      }
+      .fade {
+        position: absolute;
+        left: 0;
+        top: 215px;
+        width: 290px;
+        height: 318px;
+        background: linear-gradient(
+          rgba(255, 247, 246, 0),
+          #fff7f6 55%,
+          #fff7f6
+        );
+      }
+      .nt {
+        position: absolute;
+        left: 25px;
+        width: 240px;
+        height: 74.33px;
+        border-radius: 11.27px;
+        background: #fff;
+      }
+      .nt img {
+        position: absolute;
+        left: 33px;
+        top: 20.3px;
+        width: 33.8px;
+        height: 33.8px;
+        object-fit: contain;
+      }
+      .nt .tx {
+        position: absolute;
+        left: 80px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8px;
+        line-height: 1.4;
+        white-space: nowrap;
+      }
+      .nt .m {
+        font-size: 10.83px;
+        color: var(--mute);
+        letter-spacing: -0.22px;
+      }
+      .nt .t {
+        font-size: 12.08px;
+        font-weight: 700;
+        letter-spacing: -0.24px;
+      }
+      .nt .a {
+        font-size: 16.6px;
+        font-weight: 900;
+        color: var(--red);
+        letter-spacing: -0.33px;
+      }
+      .nt.g2 {
+        left: 42px;
+        top: 407.14px;
+        width: 208px;
+        background: #f6f8ff;
+        opacity: 0.45;
+        box-shadow: 0 11.42px 10.83px -0.84px rgba(0, 0, 0, 0.2);
+      }
+      .nt.g1 {
+        left: 34px;
+        top: 399.14px;
+        width: 224px;
+        background: #f6f8ff;
+        opacity: 0.7;
+        box-shadow: 0 11.42px 10.83px -0.84px rgba(0, 0, 0, 0.2);
+      }
+      .nt.c {
+        top: 391.14px;
+        background: #f6f8ff;
+        box-shadow: 0 11.42px 10.83px -0.84px rgba(0, 0, 0, 0.2);
+      }
+      .nt.c .tx {
+        top: 6.35px;
+      }
+      .nt.b {
+        top: 340.82px;
+        background: #fff6f4;
+        box-shadow: 0 7px 5px rgba(0, 0, 0, 0.3);
+      }
+      .nt.b .tx {
+        top: 8.86px;
+      }
+      .nt.a1 {
+        top: 283px;
+        background: #fff;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+      }
+      .nt.a1 .tx {
+        top: 8.86px;
+      }
+      .sum {
+        position: absolute;
+        left: 41px;
+        top: 244px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 7px 14px;
+        border-radius: 99px;
+        background: var(--ink);
+        box-shadow: 0 4px 2px rgba(0, 0, 0, 0.25);
+        white-space: nowrap;
+      }
+      .sum span {
+        font-size: 12px;
+        font-weight: 500;
+        color: #fff;
+      }
+      .sum b {
+        font-size: 12.5px;
+        font-weight: 900;
+        color: #ff6b54;
+        font-variant-numeric: tabular-nums;
+      }
+      /* 알림이 아래(오래된 것)부터 차례로 떠오름 */
+      .js .mock [data-step] {
+        opacity: 0;
+        transform: translateY(-16px) scale(0.97);
+        transition:
+          opacity 0.5s ease,
+          transform 0.6s cubic-bezier(0.2, 0.9, 0.3, 1.15);
+      }
+      .js .mock .nt.g1[data-step],
+      .js .mock .nt.g2[data-step] {
+        opacity: 0;
+      }
+      .mock [data-step].on {
+        opacity: 1;
+        transform: none;
+      }
+      .mock .nt.g1.on {
+        opacity: 0.7;
+      }
+      .mock .nt.g2.on {
+        opacity: 0.45;
+      }
+      .money .yes {
+        position: relative;
+        z-index: 1;
+        font-size: 26.7px;
+        font-weight: 700;
+        line-height: 1.3;
+        letter-spacing: -0.8px;
+        white-space: nowrap;
+      }
 
-/* 06 0원 지원 */
-.free{background:#fff}
-.sup{display:flex;flex-direction:column;gap:10px;margin-top:40px}
-.sp{position:relative;width:350px;height:83px;border-radius:12.5px;background:#fff2f1;text-align:left;overflow:hidden}
-.sp .no{position:absolute;left:20px;top:11px;font-size:25px;font-weight:900;line-height:1.28;letter-spacing:-.5px;color:var(--red);opacity:.3}
-.sp .t{position:absolute;left:69px;top:16px;font-size:18px;font-weight:700;line-height:1.28;letter-spacing:-.36px;color:var(--red);white-space:nowrap}
-.sp .s{position:absolute;left:69px;top:51px;font-size:11px;line-height:1.35;letter-spacing:-.22px;color:var(--sub);white-space:nowrap}
-.sp img{position:absolute;left:279.3px;top:19.3px;width:45.9px;height:45.9px;object-fit:contain;transform:rotate(6deg)}
+      /* 06 0원 지원 */
+      .free {
+        background: #fff;
+      }
+      .sup {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 40px;
+      }
+      .sp {
+        position: relative;
+        width: 350px;
+        height: 83px;
+        border-radius: 12.5px;
+        background: #fff2f1;
+        text-align: left;
+        overflow: hidden;
+      }
+      .sp .no {
+        position: absolute;
+        left: 20px;
+        top: 11px;
+        font-size: 25px;
+        font-weight: 900;
+        line-height: 1.28;
+        letter-spacing: -0.5px;
+        color: var(--red);
+        opacity: 0.3;
+      }
+      .sp .t {
+        position: absolute;
+        left: 69px;
+        top: 16px;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.28;
+        letter-spacing: -0.36px;
+        color: var(--red);
+        white-space: nowrap;
+      }
+      .sp .s {
+        position: absolute;
+        left: 69px;
+        top: 51px;
+        font-size: 11px;
+        line-height: 1.35;
+        letter-spacing: -0.22px;
+        color: var(--sub);
+        white-space: nowrap;
+      }
+      .sp img {
+        position: absolute;
+        left: 279.3px;
+        top: 19.3px;
+        width: 45.9px;
+        height: 45.9px;
+        object-fit: contain;
+        transform: rotate(6deg);
+      }
 
-/* 06-2 기자증 */
-.idc{background:#fff7f6}
-.idc>*{position:relative;z-index:1}
-.idc .h2{width:253px;height:89px}
-.idc .cards{width:350px;height:300px;z-index:0}
-.idc .cards img{position:absolute;left:0;top:-4.3px;width:350px;height:335px}
-.bens{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:10px;height:177px;width:100%}
-.ben{display:flex;align-items:center;gap:10px;padding:12px 22px 12px 16px;background:#fff;border-radius:99px;box-shadow:0 4px 14px rgba(153,51,38,.1);font-size:15px;font-weight:500;line-height:1.2;letter-spacing:-.3px;white-space:nowrap}
-.ben img{width:22px;height:22px}
-.ben b{color:var(--red)}
-.idc .gap4{height:4px}
+      /* 06-2 기자증 */
+      .idc {
+        background: #fff7f6;
+      }
+      .idc > * {
+        position: relative;
+        z-index: 1;
+      }
+      .idc .h2 {
+        width: 253px;
+        height: 89px;
+      }
+      .idc .cards {
+        width: 350px;
+        height: 300px;
+        z-index: 0;
+      }
+      .idc .cards img {
+        position: absolute;
+        left: 0;
+        top: -4.3px;
+        width: 350px;
+        height: 335px;
+      }
+      .bens {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        height: 177px;
+        width: 100%;
+      }
+      .ben {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 22px 12px 16px;
+        background: #fff;
+        border-radius: 99px;
+        box-shadow: 0 4px 14px rgba(153, 51, 38, 0.1);
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: -0.3px;
+        white-space: nowrap;
+      }
+      .ben img {
+        width: 22px;
+        height: 22px;
+      }
+      .ben b {
+        color: var(--red);
+      }
+      .idc .gap4 {
+        height: 4px;
+      }
 
-/* 07 활동 단계 */
-.steps{background:linear-gradient(to top,#fff7f6 58.654%,#fff)}
-.stc{position:relative;width:350px;background:#fff;text-align:left;overflow:hidden}
-.stc.s1{height:209px;border:1.36px solid #eceef3;border-radius:15px;margin-top:27px}
-.stc.s2{height:243px;border:1.36px solid var(--red);border-radius:14.5px;box-shadow:0 11.79px 25.4px -12.7px rgba(244,64,44,.45)}
-.stc .in{position:absolute;left:16.78px;top:18.59px;display:flex;flex-direction:column;align-items:flex-start;gap:7px}
-.stc .sb{padding:2.72px 8.16px;border-radius:13.6px;background:var(--mute);color:#fff;font-size:12px;font-weight:500;line-height:1.4;letter-spacing:-.24px}
-.stc.s2 .sb{background:var(--red);font-weight:700}
-.stc .nm{font-size:19.8px;font-weight:700;line-height:1.4;letter-spacing:-.4px;white-space:nowrap}
-.stc .pr{font-size:25.3px;font-weight:700;line-height:1.3;letter-spacing:-.76px;color:var(--red);white-space:pre}
-.stc.s2 .pr{font-weight:900}
-.stc .pr small{font-size:12px;font-weight:400}
-.chips{display:flex;flex-wrap:wrap;align-content:flex-end;align-items:flex-end;gap:4.53px;width:227px;height:69px}
-.chips span{padding:4.53px 10px;border-radius:5px;background:#f8f9fd;font-size:12.4px;line-height:1.4;letter-spacing:-.25px;color:var(--sub);white-space:nowrap}
-.stc.s2 .chips{gap:5px;height:103px}
-.stc.s2 .chips span{padding:5px 10px;background:#fff2f1;font-weight:700;color:var(--ink)}
-.stc .il{position:absolute;width:86.16px;height:86.16px;object-fit:contain}
-.stc.s1 .il{left:241.64px;top:127.64px}
-.stc.s2 .il{left:243.64px;top:141.64px}
-.arw{height:43px;padding:7px 0}
-.arw i{display:flex;width:29px;height:29px;border-radius:50%;background:var(--red);align-items:center;justify-content:center;animation:nudge 1.8s ease-in-out infinite}
-.arw img{width:13.6px;height:13.6px}
-@keyframes nudge{50%{transform:translateY(3px)}}
-.steps .warn{width:356px;font-size:11px;line-height:1.55;letter-spacing:-.22px;color:var(--red)}
+      /* 07 활동 단계 */
+      .steps {
+        background: linear-gradient(to top, #fff7f6 58.654%, #fff);
+      }
+      .stc {
+        position: relative;
+        width: 350px;
+        background: #fff;
+        text-align: left;
+        overflow: hidden;
+      }
+      .stc.s1 {
+        height: 209px;
+        border: 1.36px solid #eceef3;
+        border-radius: 15px;
+        margin-top: 27px;
+      }
+      .stc.s2 {
+        height: 243px;
+        border: 1.36px solid var(--red);
+        border-radius: 14.5px;
+        box-shadow: 0 11.79px 25.4px -12.7px rgba(244, 64, 44, 0.45);
+      }
+      .stc .in {
+        position: absolute;
+        left: 16.78px;
+        top: 18.59px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 7px;
+      }
+      .stc .sb {
+        padding: 2.72px 8.16px;
+        border-radius: 13.6px;
+        background: var(--mute);
+        color: #fff;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.4;
+        letter-spacing: -0.24px;
+      }
+      .stc.s2 .sb {
+        background: var(--red);
+        font-weight: 700;
+      }
+      .stc .nm {
+        font-size: 19.8px;
+        font-weight: 700;
+        line-height: 1.4;
+        letter-spacing: -0.4px;
+        white-space: nowrap;
+      }
+      .stc .pr {
+        font-size: 25.3px;
+        font-weight: 700;
+        line-height: 1.3;
+        letter-spacing: -0.76px;
+        color: var(--red);
+        white-space: pre;
+      }
+      .stc.s2 .pr {
+        font-weight: 900;
+      }
+      .stc .pr small {
+        font-size: 12px;
+        font-weight: 400;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-end;
+        align-items: flex-end;
+        gap: 4.53px;
+        width: 227px;
+        height: 69px;
+      }
+      .chips span {
+        padding: 4.53px 10px;
+        border-radius: 5px;
+        background: #f8f9fd;
+        font-size: 12.4px;
+        line-height: 1.4;
+        letter-spacing: -0.25px;
+        color: var(--sub);
+        white-space: nowrap;
+      }
+      .stc.s2 .chips {
+        gap: 5px;
+        height: 103px;
+      }
+      .stc.s2 .chips span {
+        padding: 5px 10px;
+        background: #fff2f1;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .stc .il {
+        position: absolute;
+        width: 86.16px;
+        height: 86.16px;
+        object-fit: contain;
+      }
+      .stc.s1 .il {
+        left: 241.64px;
+        top: 127.64px;
+      }
+      .stc.s2 .il {
+        left: 243.64px;
+        top: 141.64px;
+      }
+      .arw {
+        height: 43px;
+        padding: 7px 0;
+      }
+      .arw i {
+        display: flex;
+        width: 29px;
+        height: 29px;
+        border-radius: 50%;
+        background: var(--red);
+        align-items: center;
+        justify-content: center;
+        animation: nudge 1.8s ease-in-out infinite;
+      }
+      .arw img {
+        width: 13.6px;
+        height: 13.6px;
+      }
+      @keyframes nudge {
+        50% {
+          transform: translateY(3px);
+        }
+      }
+      .steps .warn {
+        width: 356px;
+        font-size: 11px;
+        line-height: 1.55;
+        letter-spacing: -0.22px;
+        color: var(--red);
+      }
 
-/* 09 이런 분들은 꼭 + 선발 전형 */
-.who{background:var(--ink);padding:30px 20px 70px;gap:0}
-.notebk{position:relative;width:350px;height:695px}
-.red{position:absolute;left:0;top:40px;width:350px;height:654px;border-radius:19.6px;background:var(--red);padding:0 15px 15px;display:flex;flex-direction:column}
-.spring{position:relative;height:22.3px;flex:none}
-.spring i{position:absolute;top:-11.59px;width:8.92px;height:28.53px;border-radius:5.35px;background:#e4e6eb}
-.paper{flex:1;background:#fff;border-radius:9px;padding:35.67px 16px;display:flex;flex-direction:column;align-items:center;gap:20.5px}
-.paper h3{font-size:25.37px;font-weight:700;line-height:1.3;letter-spacing:-.76px}
-.rec{display:flex;flex-direction:column;align-items:center;gap:7.13px;font-size:15.14px;line-height:1.5;letter-spacing:-.45px}
-.rec i{display:flex;width:22.3px;height:22.3px;border-radius:50%;background:var(--red);align-items:center;justify-content:center}
-.rec i img{width:13.4px;height:13.4px}
-.rec b{color:var(--red)}
-.notebk .st{position:absolute;left:.93px;top:2.26px;width:57.96px;height:57.96px;transform:rotate(-12deg)}
-.notebk .pc{position:absolute;left:272.17px;top:11.51px;width:75.8px;height:75.8px;transform:rotate(12deg)}
-.flow{display:flex;gap:5px;width:100%;margin-top:48px}
-.flow>div{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px}
-.flow .c{width:63px;height:63px;border-radius:50%;background:#2a2c30;border:1px solid #3e4148;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
-.flow .c.go{border:1.6px solid var(--red)}
-.flow .c img{width:26px;height:26px}
-.flow small{display:block;height:20px;font-size:12px;font-weight:500;line-height:1.4;letter-spacing:-.24px;color:var(--mute)}
-.flow b{font-size:14.3px;font-weight:700;line-height:1.3;letter-spacing:-.29px;color:#fff;white-space:nowrap}
+      /* 09 이런 분들은 꼭 + 선발 전형 */
+      .who {
+        background: var(--ink);
+        padding: 30px 20px 70px;
+        gap: 0;
+      }
+      .notebk {
+        position: relative;
+        width: 350px;
+        height: 695px;
+      }
+      .red {
+        position: absolute;
+        left: 0;
+        top: 40px;
+        width: 350px;
+        height: 654px;
+        border-radius: 19.6px;
+        background: var(--red);
+        padding: 0 15px 15px;
+        display: flex;
+        flex-direction: column;
+      }
+      .spring {
+        position: relative;
+        height: 22.3px;
+        flex: none;
+      }
+      .spring i {
+        position: absolute;
+        top: -11.59px;
+        width: 8.92px;
+        height: 28.53px;
+        border-radius: 5.35px;
+        background: #e4e6eb;
+      }
+      .paper {
+        flex: 1;
+        background: #fff;
+        border-radius: 9px;
+        padding: 35.67px 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20.5px;
+      }
+      .paper h3 {
+        font-size: 25.37px;
+        font-weight: 700;
+        line-height: 1.3;
+        letter-spacing: -0.76px;
+      }
+      .rec {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 7.13px;
+        font-size: 15.14px;
+        line-height: 1.5;
+        letter-spacing: -0.45px;
+      }
+      .rec i {
+        display: flex;
+        width: 22.3px;
+        height: 22.3px;
+        border-radius: 50%;
+        background: var(--red);
+        align-items: center;
+        justify-content: center;
+      }
+      .rec i img {
+        width: 13.4px;
+        height: 13.4px;
+      }
+      .rec b {
+        color: var(--red);
+      }
+      .notebk .st {
+        position: absolute;
+        left: 0.93px;
+        top: 2.26px;
+        width: 57.96px;
+        height: 57.96px;
+        transform: rotate(-12deg);
+      }
+      .notebk .pc {
+        position: absolute;
+        left: 272.17px;
+        top: 11.51px;
+        width: 75.8px;
+        height: 75.8px;
+        transform: rotate(12deg);
+      }
+      .flow {
+        display: flex;
+        gap: 5px;
+        width: 100%;
+        margin-top: 48px;
+      }
+      .flow > div {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+      }
+      .flow .c {
+        width: 63px;
+        height: 63px;
+        border-radius: 50%;
+        background: #2a2c30;
+        border: 1px solid #3e4148;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 8px;
+      }
+      .flow .c.go {
+        border: 1.6px solid var(--red);
+      }
+      .flow .c img {
+        width: 26px;
+        height: 26px;
+      }
+      .flow small {
+        display: block;
+        height: 20px;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.4;
+        letter-spacing: -0.24px;
+        color: var(--mute);
+      }
+      .flow b {
+        font-size: 14.3px;
+        font-weight: 700;
+        line-height: 1.3;
+        letter-spacing: -0.29px;
+        color: #fff;
+        white-space: nowrap;
+      }
 
-/* 10 마지막 CTA */
-.cta{background:#2a2c30;gap:6px}
-.ill{position:relative;width:190.5px;height:136px}
-.ill .gl{position:absolute;left:0;top:-27.2px;width:190.5px;height:190.5px}
-.ill .wl{position:absolute;left:34px;top:9.07px;width:122.4px;height:122.4px;object-fit:contain}
-.ill .s1{position:absolute;left:145.1px;top:0;width:40.8px;height:40.8px;animation:tw 3s ease-in-out infinite}
-.ill .s2{position:absolute;left:158.7px;top:90.7px;width:31.7px;height:31.7px;animation:tw 3s ease-in-out 1.2s infinite}
-@keyframes tw{50%{transform:scale(1.08) rotate(6deg)}}
-.cta .bo{margin-top:15px;font-size:20px;line-height:1.4;letter-spacing:-.4px;color:#e2e4e8}
-.cta .h{font-size:35px;font-weight:700;line-height:1.3;letter-spacing:-1.05px;color:var(--red);white-space:nowrap}
-.cta .h span{font-weight:300;color:#fff}
-.btn{margin-top:28.7px;padding:13.6px 25.4px;border-radius:58px;background:var(--red);color:#fff;font-size:17px;font-weight:700;line-height:1.4;letter-spacing:-.34px;white-space:nowrap;animation:pulse 2.4s ease-out infinite;transition:transform .2s ease}
-.btn:hover{transform:translateY(-2px)}
-.btn:active{transform:scale(.97)}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(244,64,44,.45)}70%,100%{box-shadow:0 0 0 14px rgba(244,64,44,0)}}
+      /* 10 마지막 CTA */
+      .cta {
+        background: #2a2c30;
+        gap: 6px;
+      }
+      .ill {
+        position: relative;
+        width: 190.5px;
+        height: 136px;
+      }
+      .ill .gl {
+        position: absolute;
+        left: 0;
+        top: -27.2px;
+        width: 190.5px;
+        height: 190.5px;
+      }
+      .ill .wl {
+        position: absolute;
+        left: 34px;
+        top: 9.07px;
+        width: 122.4px;
+        height: 122.4px;
+        object-fit: contain;
+      }
+      .ill .s1 {
+        position: absolute;
+        left: 145.1px;
+        top: 0;
+        width: 40.8px;
+        height: 40.8px;
+        animation: tw 3s ease-in-out infinite;
+      }
+      .ill .s2 {
+        position: absolute;
+        left: 158.7px;
+        top: 90.7px;
+        width: 31.7px;
+        height: 31.7px;
+        animation: tw 3s ease-in-out 1.2s infinite;
+      }
+      @keyframes tw {
+        50% {
+          transform: scale(1.08) rotate(6deg);
+        }
+      }
+      .cta .bo {
+        margin-top: 15px;
+        font-size: 20px;
+        line-height: 1.4;
+        letter-spacing: -0.4px;
+        color: #e2e4e8;
+      }
+      .cta .h {
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 1.3;
+        letter-spacing: -1.05px;
+        color: var(--red);
+        white-space: nowrap;
+      }
+      .cta .h span {
+        font-weight: 300;
+        color: #fff;
+      }
+      .btn {
+        margin-top: 28.7px;
+        padding: 13.6px 25.4px;
+        border-radius: 58px;
+        background: var(--red);
+        color: #fff;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 1.4;
+        letter-spacing: -0.34px;
+        white-space: nowrap;
+        animation: pulse 2.4s ease-out infinite;
+        transition: transform 0.2s ease;
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+      .btn:active {
+        transform: scale(0.97);
+      }
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(244, 64, 44, 0.45);
+        }
+        70%,
+        100% {
+          box-shadow: 0 0 0 14px rgba(244, 64, 44, 0);
+        }
+      }
 
-/* 푸터 */
-.ft{background:#f4f5f7;padding:30px 20px;display:flex;flex-direction:column;align-items:center;gap:7px;text-align:center}
-.ft img{width:122px;height:26px;object-fit:contain}
-.ft p{font-size:12.2px;line-height:1.4;letter-spacing:-.24px;color:var(--mute);white-space:pre}
-.ft .who-t{font-weight:700;color:var(--ink)}
-.ft .cp{font-size:11px}
-.ft a{color:inherit;text-decoration:none}
-.nt-box{background:#fff;padding:30px 20px;display:flex;flex-direction:column;align-items:center;gap:9px}
-.nt-box h5{font-size:14px;font-weight:700;line-height:1.4}
-.nt-box ul{list-style:none;width:100%;border:1px solid #eceef3;border-radius:7px;padding:12px;font-size:11px;line-height:1.85;letter-spacing:-.22px;color:var(--sub)}
-.nt-box li{position:relative;padding-left:15px}
-.nt-box li+li{margin-top:6px}
-.nt-box li::before{content:'※';position:absolute;left:0}
-.bt{background:#1a1b1e;padding:30px 20px 110px;display:flex;flex-direction:column;align-items:center;gap:6px}
-.bt img{width:100px;height:21px;margin:2.5px 0}
-.bt p{font-size:11px;color:var(--mute)}
+      /* 푸터 */
+      .ft {
+        background: #f4f5f7;
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 7px;
+        text-align: center;
+      }
+      .ft img {
+        width: 122px;
+        height: 26px;
+        object-fit: contain;
+      }
+      .ft p {
+        font-size: 12.2px;
+        line-height: 1.4;
+        letter-spacing: -0.24px;
+        color: var(--mute);
+        white-space: pre;
+      }
+      .ft .who-t {
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .ft .cp {
+        font-size: 11px;
+      }
+      .ft a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .nt-box {
+        background: #fff;
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 9px;
+      }
+      .nt-box h5 {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.4;
+      }
+      .nt-box ul {
+        list-style: none;
+        width: 100%;
+        border: 1px solid #eceef3;
+        border-radius: 7px;
+        padding: 12px;
+        font-size: 11px;
+        line-height: 1.85;
+        letter-spacing: -0.22px;
+        color: var(--sub);
+      }
+      .nt-box li {
+        position: relative;
+        padding-left: 15px;
+      }
+      .nt-box li + li {
+        margin-top: 6px;
+      }
+      .nt-box li::before {
+        content: "※";
+        position: absolute;
+        left: 0;
+      }
+      .bt {
+        background: #1a1b1e;
+        padding: 30px 20px 110px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+      }
+      .bt img {
+        width: 100px;
+        height: 21px;
+        margin: 2.5px 0;
+      }
+      .bt p {
+        font-size: 11px;
+        color: var(--mute);
+      }
 
-/* 바텀시트 — 피그마 640 시안 수치 그대로, --p(=컬럼폭/640 px)로 환산 (zoom은 iOS에서 가로 스크롤 버그가 있어 쓰지 않음) */
-.layer{position:fixed;inset:0;z-index:50;display:flex;align-items:flex-end;justify-content:center;visibility:hidden;transition:visibility 0s .4s}
-.layer.open{visibility:visible;transition:none}
-.dim{position:absolute;inset:0;background:rgba(15,16,20,.55);opacity:0;transition:opacity .35s ease}
-.layer.open .dim{opacity:1}
-.sheet{position:relative;overflow-x:hidden;width:calc(640*var(--p));max-height:94vh;max-height:94dvh;overflow-y:auto;overscroll-behavior:contain;background:#fff;border-radius:calc(30*var(--p)) calc(30*var(--p)) 0 0;box-shadow:0 0 calc(40*var(--p)) rgba(0,0,0,.15);padding:calc(34*var(--p)) calc(32*var(--p)) calc(30*var(--p));transform:translateY(100%);transition:transform .42s cubic-bezier(.2,.8,.2,1)}
-.layer.open .sheet{transform:none}
-.sh-hd{display:flex;align-items:center;justify-content:space-between;font-size:calc(19*var(--p));font-weight:700;line-height:1.4;letter-spacing:calc(-.38*var(--p))}
-.sh-hd button{width:calc(34*var(--p));height:calc(34*var(--p));display:flex;align-items:center;justify-content:center;margin-right:calc(-6*var(--p))}
-.sh-hd img{width:calc(22*var(--p));height:calc(22*var(--p))}
-.sheet .ld{margin-top:calc(28*var(--p));font-size:calc(19*var(--p));line-height:1.4;letter-spacing:calc(-.38*var(--p));color:var(--sub)}
-.sheet h3{font-size:calc(34*var(--p));font-weight:900;line-height:1.4;letter-spacing:calc(-.68*var(--p))}
-.fld{display:flex;flex-direction:column;gap:calc(10*var(--p));padding-top:calc(24*var(--p))}
-.fld>span{font-size:calc(17*var(--p));font-weight:500;line-height:1.4;letter-spacing:calc(-.34*var(--p));color:var(--sub)}
-.fld input,.fld select{width:100%;height:calc(64*var(--p));border:0;border-radius:calc(14*var(--p));background:#f4f5f7;padding:0 calc(20*var(--p));font:inherit;font-size:calc(19*var(--p));letter-spacing:calc(-.38*var(--p));color:var(--ink);outline:none;-webkit-appearance:none;appearance:none;transition:box-shadow .2s}
-.fld input::placeholder{color:var(--mute)}
-.fld input:focus,.fld select:focus{box-shadow:inset 0 0 0 calc(2*var(--p)) var(--red)}
-.fld select{background:#f4f5f7 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0h10L5 6z' fill='%239a9ea6'/%3E%3C/svg%3E") no-repeat right calc(22*var(--p)) center;padding-right:calc(44*var(--p))}
-.fld select:invalid{color:var(--mute)}
-.two{display:flex;gap:calc(10*var(--p))}
-.opt{display:flex;gap:calc(10*var(--p))}
-.opt label{flex:1;cursor:pointer}
-.opt input{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px;margin:0}
-.opt span{display:flex;flex-direction:column;align-items:center;gap:calc(2*var(--p));padding:calc(14*var(--p)) calc(4*var(--p));border-radius:calc(14*var(--p));background:#f4f5f7;border:calc(2*var(--p)) solid transparent;font-size:calc(20*var(--p));font-weight:700;line-height:1.4;letter-spacing:calc(-.4*var(--p));transition:background .2s,border-color .2s,color .2s}
-.opt small{font-size:calc(15*var(--p));font-weight:400;color:var(--mute);letter-spacing:calc(-.3*var(--p))}
-.opt input:checked+span{background:#fff2f1;border-color:var(--red);color:var(--red)}
-.opt input:focus-visible+span{outline:calc(2*var(--p)) solid var(--ink);outline-offset:calc(2*var(--p))}
-.agree{margin-top:calc(30*var(--p));height:calc(70*var(--p));border:calc(2*var(--p)) solid var(--red);border-radius:calc(14*var(--p));display:flex;align-items:center;justify-content:center;gap:calc(10*var(--p));cursor:pointer;font-size:calc(20*var(--p));font-weight:900;line-height:1.4;letter-spacing:calc(-.4*var(--p))}
-.agree input{width:calc(22*var(--p));height:calc(22*var(--p));border:calc(2*var(--p)) solid var(--mute);border-radius:calc(4*var(--p));-webkit-appearance:none;appearance:none;display:grid;place-content:center;cursor:pointer;margin:0}
-.agree input:checked{background:var(--red);border-color:var(--red)}
-.agree input:checked::after{content:'';width:calc(11*var(--p));height:calc(6*var(--p));border:calc(2.5*var(--p)) solid #fff;border-top:0;border-right:0;transform:translateY(calc(-1*var(--p))) rotate(-45deg)}
-.terms{margin-top:calc(12*var(--p));background:#f8f9fb;border-radius:calc(12*var(--p));padding:calc(16*var(--p)) calc(18*var(--p));font-size:calc(15*var(--p));line-height:1.6;letter-spacing:calc(-.3*var(--p));color:var(--mute)}
-.fin{margin-top:calc(28*var(--p));text-align:center;font-size:calc(18*var(--p));font-weight:700;line-height:1.5;letter-spacing:calc(-.36*var(--p))}
-.sbm{margin-top:calc(14*var(--p));width:100%;height:calc(74*var(--p));border-radius:calc(14*var(--p));background:var(--red);color:#fff;font-size:calc(24*var(--p));font-weight:900;line-height:1.4;letter-spacing:calc(-.48*var(--p));transition:filter .2s}
-.sbm:active{filter:brightness(.92)}
-.sbm:disabled{filter:grayscale(.3) brightness(.95);cursor:default}
-.msg{margin-top:calc(12*var(--p));text-align:center;font-size:calc(17*var(--p));color:var(--red)}
-.msg:empty{display:none}
-.done{display:none;flex-direction:column;align-items:center;text-align:center;padding:calc(40*var(--p)) 0 calc(6*var(--p))}
-.done.on{display:flex}
-.done img{width:calc(130*var(--p));height:calc(130*var(--p));object-fit:contain}
-.done h3{margin-top:calc(16*var(--p))}
-.done p{margin-top:calc(8*var(--p));font-size:calc(19*var(--p));line-height:1.5;color:var(--sub)}
-.done .sbm{margin-top:calc(36*var(--p))}
+      /* 바텀시트 — 피그마 640 시안 수치 그대로, --p(=컬럼폭/640 px)로 환산 (zoom은 iOS에서 가로 스크롤 버그가 있어 쓰지 않음) */
+      .layer {
+        position: fixed;
+        inset: 0;
+        z-index: 50;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        visibility: hidden;
+        transition: visibility 0s 0.4s;
+      }
+      .layer.open {
+        visibility: visible;
+        transition: none;
+      }
+      .dim {
+        position: absolute;
+        inset: 0;
+        background: rgba(15, 16, 20, 0.55);
+        opacity: 0;
+        transition: opacity 0.35s ease;
+      }
+      .layer.open .dim {
+        opacity: 1;
+      }
+      .sheet {
+        position: relative;
+        overflow-x: hidden;
+        width: calc(640 * var(--p));
+        max-height: 94vh;
+        max-height: 94dvh;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        background: #fff;
+        border-radius: calc(30 * var(--p)) calc(30 * var(--p)) 0 0;
+        box-shadow: 0 0 calc(40 * var(--p)) rgba(0, 0, 0, 0.15);
+        padding: calc(34 * var(--p)) calc(32 * var(--p)) calc(30 * var(--p));
+        transform: translateY(100%);
+        transition: transform 0.42s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      .layer.open .sheet {
+        transform: none;
+      }
+      .sh-hd {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: calc(19 * var(--p));
+        font-weight: 700;
+        line-height: 1.4;
+        letter-spacing: calc(-0.38 * var(--p));
+      }
+      .sh-hd button {
+        width: calc(34 * var(--p));
+        height: calc(34 * var(--p));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: calc(-6 * var(--p));
+      }
+      .sh-hd img {
+        width: calc(22 * var(--p));
+        height: calc(22 * var(--p));
+      }
+      .sheet .ld {
+        margin-top: calc(28 * var(--p));
+        font-size: calc(19 * var(--p));
+        line-height: 1.4;
+        letter-spacing: calc(-0.38 * var(--p));
+        color: var(--sub);
+      }
+      .sheet h3 {
+        font-size: calc(34 * var(--p));
+        font-weight: 900;
+        line-height: 1.4;
+        letter-spacing: calc(-0.68 * var(--p));
+      }
+      .fld {
+        display: flex;
+        flex-direction: column;
+        gap: calc(10 * var(--p));
+        padding-top: calc(24 * var(--p));
+      }
+      .fld > span {
+        font-size: calc(17 * var(--p));
+        font-weight: 500;
+        line-height: 1.4;
+        letter-spacing: calc(-0.34 * var(--p));
+        color: var(--sub);
+      }
+      .fld input,
+      .fld select {
+        width: 100%;
+        height: calc(64 * var(--p));
+        border: 0;
+        border-radius: calc(14 * var(--p));
+        background: #f4f5f7;
+        padding: 0 calc(20 * var(--p));
+        font: inherit;
+        font-size: calc(19 * var(--p));
+        letter-spacing: calc(-0.38 * var(--p));
+        color: var(--ink);
+        outline: none;
+        -webkit-appearance: none;
+        appearance: none;
+        transition: box-shadow 0.2s;
+      }
+      .fld input::placeholder {
+        color: var(--mute);
+      }
+      .fld input:focus,
+      .fld select:focus {
+        box-shadow: inset 0 0 0 calc(2 * var(--p)) var(--red);
+      }
+      .fld select {
+        background: #f4f5f7
+          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0h10L5 6z' fill='%239a9ea6'/%3E%3C/svg%3E")
+          no-repeat right calc(22 * var(--p)) center;
+        padding-right: calc(44 * var(--p));
+      }
+      .fld select:invalid {
+        color: var(--mute);
+      }
+      .two {
+        display: flex;
+        gap: calc(10 * var(--p));
+      }
+      .opt {
+        display: flex;
+        gap: calc(10 * var(--p));
+      }
+      .opt label {
+        flex: 1;
+        cursor: pointer;
+      }
+      .opt input {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+        width: 1px;
+        height: 1px;
+        margin: 0;
+      }
+      .opt span {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: calc(2 * var(--p));
+        padding: calc(14 * var(--p)) calc(4 * var(--p));
+        border-radius: calc(14 * var(--p));
+        background: #f4f5f7;
+        border: calc(2 * var(--p)) solid transparent;
+        font-size: calc(20 * var(--p));
+        font-weight: 700;
+        line-height: 1.4;
+        letter-spacing: calc(-0.4 * var(--p));
+        transition:
+          background 0.2s,
+          border-color 0.2s,
+          color 0.2s;
+      }
+      .opt small {
+        font-size: calc(15 * var(--p));
+        font-weight: 400;
+        color: var(--mute);
+        letter-spacing: calc(-0.3 * var(--p));
+      }
+      .opt input:checked + span {
+        background: #fff2f1;
+        border-color: var(--red);
+        color: var(--red);
+      }
+      .opt input:focus-visible + span {
+        outline: calc(2 * var(--p)) solid var(--ink);
+        outline-offset: calc(2 * var(--p));
+      }
+      .agree {
+        margin-top: calc(30 * var(--p));
+        height: calc(70 * var(--p));
+        border: calc(2 * var(--p)) solid var(--red);
+        border-radius: calc(14 * var(--p));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: calc(10 * var(--p));
+        cursor: pointer;
+        font-size: calc(20 * var(--p));
+        font-weight: 900;
+        line-height: 1.4;
+        letter-spacing: calc(-0.4 * var(--p));
+      }
+      .agree input {
+        width: calc(22 * var(--p));
+        height: calc(22 * var(--p));
+        border: calc(2 * var(--p)) solid var(--mute);
+        border-radius: calc(4 * var(--p));
+        -webkit-appearance: none;
+        appearance: none;
+        display: grid;
+        place-content: center;
+        cursor: pointer;
+        margin: 0;
+      }
+      .agree input:checked {
+        background: var(--red);
+        border-color: var(--red);
+      }
+      .agree input:checked::after {
+        content: "";
+        width: calc(11 * var(--p));
+        height: calc(6 * var(--p));
+        border: calc(2.5 * var(--p)) solid #fff;
+        border-top: 0;
+        border-right: 0;
+        transform: translateY(calc(-1 * var(--p))) rotate(-45deg);
+      }
+      .terms {
+        margin-top: calc(12 * var(--p));
+        background: #f8f9fb;
+        border-radius: calc(12 * var(--p));
+        padding: calc(16 * var(--p)) calc(18 * var(--p));
+        font-size: calc(15 * var(--p));
+        line-height: 1.6;
+        letter-spacing: calc(-0.3 * var(--p));
+        color: var(--mute);
+      }
+      .fin {
+        margin-top: calc(28 * var(--p));
+        text-align: center;
+        font-size: calc(18 * var(--p));
+        font-weight: 700;
+        line-height: 1.5;
+        letter-spacing: calc(-0.36 * var(--p));
+      }
+      .sbm {
+        margin-top: calc(14 * var(--p));
+        width: 100%;
+        height: calc(74 * var(--p));
+        border-radius: calc(14 * var(--p));
+        background: var(--red);
+        color: #fff;
+        font-size: calc(24 * var(--p));
+        font-weight: 900;
+        line-height: 1.4;
+        letter-spacing: calc(-0.48 * var(--p));
+        transition: filter 0.2s;
+      }
+      .sbm:active {
+        filter: brightness(0.92);
+      }
+      .sbm:disabled {
+        filter: grayscale(0.3) brightness(0.95);
+        cursor: default;
+      }
+      .msg {
+        margin-top: calc(12 * var(--p));
+        text-align: center;
+        font-size: calc(17 * var(--p));
+        color: var(--red);
+      }
+      .msg:empty {
+        display: none;
+      }
+      .done {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: calc(40 * var(--p)) 0 calc(6 * var(--p));
+      }
+      .done.on {
+        display: flex;
+      }
+      .done img {
+        width: calc(130 * var(--p));
+        height: calc(130 * var(--p));
+        object-fit: contain;
+      }
+      .done h3 {
+        margin-top: calc(16 * var(--p));
+      }
+      .done p {
+        margin-top: calc(8 * var(--p));
+        font-size: calc(19 * var(--p));
+        line-height: 1.5;
+        color: var(--sub);
+      }
+      .done .sbm {
+        margin-top: calc(36 * var(--p));
+      }
 
-/* 상시 노출 시작하기 버튼 */
-.fix{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;justify-content:center;pointer-events:none}
-.fix>div{width:calc(390*var(--q));padding:0 calc(20*var(--q)) calc(calc(14*var(--q)) + env(safe-area-inset-bottom))}
-.fbtn{pointer-events:auto;display:block;width:100%;height:calc(54*var(--q));border-radius:calc(58*var(--q));background:var(--red);color:#fff;font-size:calc(17*var(--q));font-weight:700;letter-spacing:calc(-.34*var(--q));box-shadow:0 calc(10*var(--q)) calc(22*var(--q)) calc(-8*var(--q)) rgba(200,40,25,.55);animation:pulse 2.4s ease-out infinite;transition:transform .2s ease}
-.fbtn:active{transform:scale(.98)}
+      /* 상시 노출 시작하기 버튼 */
+      .fix {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 40;
+        display: flex;
+        justify-content: center;
+        pointer-events: none;
+      }
+      .fix > div {
+        width: calc(390 * var(--q));
+        padding: 0 calc(20 * var(--q))
+          calc(calc(14 * var(--q)) + env(safe-area-inset-bottom));
+      }
+      .fbtn {
+        pointer-events: auto;
+        display: block;
+        width: 100%;
+        height: calc(54 * var(--q));
+        border-radius: calc(58 * var(--q));
+        background: var(--red);
+        color: #fff;
+        font-size: calc(17 * var(--q));
+        font-weight: 700;
+        letter-spacing: calc(-0.34 * var(--q));
+        box-shadow: 0 calc(10 * var(--q)) calc(22 * var(--q))
+          calc(-8 * var(--q)) rgba(200, 40, 25, 0.55);
+        animation: pulse 2.4s ease-out infinite;
+        transition: transform 0.2s ease;
+      }
+      .fbtn:active {
+        transform: scale(0.98);
+      }
 
-/* 리마인드 팝업 — 혜택 카드가 주인공 */
-.blk{position:fixed;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;background:rgba(15,16,20,.6);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility 0s .3s}
-.blk.on{opacity:1;visibility:visible;transition:opacity .3s ease}
-.pop{position:relative;width:calc(330*var(--q));background:#fff6d6;border-radius:calc(26*var(--q));box-shadow:0 calc(20*var(--q)) calc(60*var(--q)) rgba(0,0,0,.25);padding:calc(34*var(--q)) calc(22*var(--q)) calc(18*var(--q));text-align:center;transform:translateY(calc(16*var(--q))) scale(.96);transition:transform .4s cubic-bezier(.2,.9,.3,1.2)}
-.blk.on .pop{transform:none}
-.pop .x{position:absolute;top:calc(14*var(--q));right:calc(14*var(--q));width:calc(32*var(--q));height:calc(32*var(--q));border-radius:50%;background:#f0e3b4;display:flex;align-items:center;justify-content:center}
-.pop .x img{width:calc(14*var(--q));height:calc(14*var(--q))}
-.pop .chip{display:inline-block;padding:calc(4*var(--q)) calc(13*var(--q));border:calc(1.5*var(--q)) solid var(--ink);border-radius:calc(30*var(--q));background:#fff;font-size:calc(13*var(--q));font-weight:700;line-height:1.4;letter-spacing:calc(-.26*var(--q))}
-.pop .q{margin-top:calc(14*var(--q));font-size:calc(17*var(--q));font-weight:700;line-height:1.4;letter-spacing:calc(-.34*var(--q))}
-.pop .big{margin-top:calc(2*var(--q));font-size:calc(35*var(--q));white-space:nowrap;font-weight:900;line-height:1.18;letter-spacing:calc(-.76*var(--q));color:var(--red)}
-.gift{position:relative;margin-top:calc(20*var(--q));border-radius:calc(18*var(--q));padding:calc(18*var(--q)) calc(20*var(--q)) calc(20*var(--q));background:linear-gradient(145deg,#ff6a52,#f4402c 71%);color:#fff;text-align:center;box-shadow:0 calc(14*var(--q)) calc(26*var(--q)) calc(-12*var(--q)) rgba(200,50,30,.55)}
-.gift small{display:block;font-size:calc(13*var(--q));font-weight:500;line-height:1.4;opacity:.9}
-.gift strong{display:block;font-size:calc(31*var(--q));font-weight:900;line-height:1.2;letter-spacing:calc(-.62*var(--q))}
-.gift em{display:inline-block;margin-top:calc(8*var(--q));padding:calc(4*var(--q)) calc(11*var(--q));border-radius:calc(99*var(--q));background:#fff;color:var(--red);font-style:normal;font-size:calc(13*var(--q));font-weight:900;letter-spacing:calc(-.26*var(--q))}
-.gift .st{position:absolute;right:calc(-6*var(--q));top:calc(-16*var(--q));width:calc(40*var(--q));height:calc(40*var(--q));transform:rotate(14deg)}
-.pop .cont{position:relative;margin-top:calc(18*var(--q));width:100%;height:calc(56*var(--q));border-radius:calc(30*var(--q));background:var(--ink);color:#fff;font-size:calc(18*var(--q));font-weight:900;letter-spacing:calc(-.36*var(--q))}
-.pop .cont i{position:absolute;left:calc(22*var(--q));top:50%;width:calc(13*var(--q));height:calc(13*var(--q));margin-top:calc(-6.5*var(--q));border-radius:50%;background:var(--red);animation:dot 1.6s ease-out infinite}
-@keyframes dot{0%{box-shadow:0 0 0 0 rgba(244,64,44,.6)}80%,100%{box-shadow:0 0 0 calc(6*var(--q)) rgba(244,64,44,0)}}
-.pop .later{margin-top:calc(10*var(--q));padding:calc(4*var(--q)) calc(8*var(--q));font-size:calc(13.5*var(--q));line-height:1.4;letter-spacing:calc(-.27*var(--q));color:#8a7f5c;text-decoration:underline;text-underline-offset:calc(3*var(--q))}
+      /* 리마인드 팝업 — 혜택 카드가 주인공 */
+      .blk {
+        position: fixed;
+        inset: 0;
+        z-index: 60;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(15, 16, 20, 0.6);
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity 0.3s ease,
+          visibility 0s 0.3s;
+      }
+      .blk.on {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s ease;
+      }
+      .pop {
+        position: relative;
+        width: calc(330 * var(--q));
+        background: #fff6d6;
+        border-radius: calc(26 * var(--q));
+        box-shadow: 0 calc(20 * var(--q)) calc(60 * var(--q))
+          rgba(0, 0, 0, 0.25);
+        padding: calc(34 * var(--q)) calc(22 * var(--q)) calc(18 * var(--q));
+        text-align: center;
+        transform: translateY(calc(16 * var(--q))) scale(0.96);
+        transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+      }
+      .blk.on .pop {
+        transform: none;
+      }
+      .pop .x {
+        position: absolute;
+        top: calc(14 * var(--q));
+        right: calc(14 * var(--q));
+        width: calc(32 * var(--q));
+        height: calc(32 * var(--q));
+        border-radius: 50%;
+        background: #f0e3b4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .pop .x img {
+        width: calc(14 * var(--q));
+        height: calc(14 * var(--q));
+      }
+      .pop .chip {
+        display: inline-block;
+        padding: calc(4 * var(--q)) calc(13 * var(--q));
+        border: calc(1.5 * var(--q)) solid var(--ink);
+        border-radius: calc(30 * var(--q));
+        background: #fff;
+        font-size: calc(13 * var(--q));
+        font-weight: 700;
+        line-height: 1.4;
+        letter-spacing: calc(-0.26 * var(--q));
+      }
+      .pop .q {
+        margin-top: calc(14 * var(--q));
+        font-size: calc(17 * var(--q));
+        font-weight: 700;
+        line-height: 1.4;
+        letter-spacing: calc(-0.34 * var(--q));
+      }
+      .pop .big {
+        margin-top: calc(2 * var(--q));
+        font-size: calc(35 * var(--q));
+        white-space: nowrap;
+        font-weight: 900;
+        line-height: 1.18;
+        letter-spacing: calc(-0.76 * var(--q));
+        color: var(--red);
+      }
+      .gift {
+        position: relative;
+        margin-top: calc(20 * var(--q));
+        border-radius: calc(18 * var(--q));
+        padding: calc(18 * var(--q)) calc(20 * var(--q)) calc(20 * var(--q));
+        background: linear-gradient(145deg, #ff6a52, #f4402c 71%);
+        color: #fff;
+        text-align: center;
+        box-shadow: 0 calc(14 * var(--q)) calc(26 * var(--q))
+          calc(-12 * var(--q)) rgba(200, 50, 30, 0.55);
+      }
+      .gift small {
+        display: block;
+        font-size: calc(13 * var(--q));
+        font-weight: 500;
+        line-height: 1.4;
+        opacity: 0.9;
+      }
+      .gift strong {
+        display: block;
+        font-size: calc(31 * var(--q));
+        font-weight: 900;
+        line-height: 1.2;
+        letter-spacing: calc(-0.62 * var(--q));
+      }
+      .gift em {
+        display: inline-block;
+        margin-top: calc(8 * var(--q));
+        padding: calc(4 * var(--q)) calc(11 * var(--q));
+        border-radius: calc(99 * var(--q));
+        background: #fff;
+        color: var(--red);
+        font-style: normal;
+        font-size: calc(13 * var(--q));
+        font-weight: 900;
+        letter-spacing: calc(-0.26 * var(--q));
+      }
+      .gift .st {
+        position: absolute;
+        right: calc(-6 * var(--q));
+        top: calc(-16 * var(--q));
+        width: calc(40 * var(--q));
+        height: calc(40 * var(--q));
+        transform: rotate(14deg);
+      }
+      .pop .cont {
+        position: relative;
+        margin-top: calc(18 * var(--q));
+        width: 100%;
+        height: calc(56 * var(--q));
+        border-radius: calc(30 * var(--q));
+        background: var(--ink);
+        color: #fff;
+        font-size: calc(18 * var(--q));
+        font-weight: 900;
+        letter-spacing: calc(-0.36 * var(--q));
+      }
+      .pop .cont i {
+        position: absolute;
+        left: calc(22 * var(--q));
+        top: 50%;
+        width: calc(13 * var(--q));
+        height: calc(13 * var(--q));
+        margin-top: calc(-6.5 * var(--q));
+        border-radius: 50%;
+        background: var(--red);
+        animation: dot 1.6s ease-out infinite;
+      }
+      @keyframes dot {
+        0% {
+          box-shadow: 0 0 0 0 rgba(244, 64, 44, 0.6);
+        }
+        80%,
+        100% {
+          box-shadow: 0 0 0 calc(6 * var(--q)) rgba(244, 64, 44, 0);
+        }
+      }
+      .pop .later {
+        margin-top: calc(10 * var(--q));
+        padding: calc(4 * var(--q)) calc(8 * var(--q));
+        font-size: calc(13.5 * var(--q));
+        line-height: 1.4;
+        letter-spacing: calc(-0.27 * var(--q));
+        color: #8a7f5c;
+        text-decoration: underline;
+        text-underline-offset: calc(3 * var(--q));
+      }
 
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition-duration:.01s!important;transition-delay:0s!important}
-}
-</style>
-</head>
-<body>
-<main class="pg">
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation: none !important;
+          transition-duration: 0.01s !important;
+          transition-delay: 0s !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="pg">
+      <!-- 01 HERO -->
+      <header class="hero" id="hero">
+        <img class="logo" src="img/logo-hero.svg" alt="오픈미디어" />
+        <span class="hl"></span>
+        <h1>
+          <span class="l">오픈미디어</span><span>프리랜서</span
+          ><span><span class="w" style="display: inline">기자 </span>를</span
+          ><span>모집합니다!</span>
+        </h1>
+        <img
+          class="hv"
+          src="img/hero-visual.jpg"
+          alt="오픈미디어 기자증 예시"
+        />
+      </header>
 
-<!-- 01 HERO -->
-<header class="hero" id="hero">
-  <img class="logo" src="img/logo-hero.svg" alt="오픈미디어">
-  <span class="hl"></span>
-  <h1><span class="l">오픈미디어</span><span>프리랜서</span><span><span class="w" style="display:inline">기자 </span>를</span><span>모집합니다!</span></h1>
-  <img class="hv" src="img/hero-visual.jpg" alt="오픈미디어 기자증 예시">
-</header>
+      <!-- 01-2 업계 비밀 -->
+      <section class="secret">
+        <div class="dk">
+          <span class="tag rv"><i></i>업계 비밀</span>
+          <h2 class="rv" style="--d: 0.08s">
+            언론 홍보,<br /><span class="r">무료</span>로 할 수 있다는 거<br />알고
+            계셨나요?
+          </h2>
+          <p class="p20 rv">기업이 내는 언론 홍보 비용은</p>
+          <p class="p20" style="margin-top: 0">프리랜서 기자님의</p>
+          <span class="pct" data-on>100% 수익</span>
+          <p class="end rv">
+            기업의 비용이,<br /><span class="r">곧 나의 수익이 됩니다.</span>
+          </p>
+        </div>
+      </section>
 
-<!-- 01-2 업계 비밀 -->
-<section class="secret">
-  <div class="dk">
-    <span class="tag rv"><i></i>업계 비밀</span>
-    <h2 class="rv" style="--d:.08s">언론 홍보,<br><span class="r">무료</span>로 할 수 있다는 거<br>알고 계셨나요?</h2>
-    <p class="p20 rv">기업이 내는 언론 홍보 비용은</p>
-    <p class="p20" style="margin-top:0">프리랜서 기자님의</p>
-    <span class="pct" data-on>100% 수익</span>
-    <p class="end rv">기업의 비용이,<br><span class="r">곧 나의 수익이 됩니다.</span></p>
-  </div>
-</section>
+      <!-- 02 프리랜서 기자란 -->
+      <section class="sec what">
+        <img class="ico80 rv" src="img/mic.png" alt="" />
+        <h2 class="h2 rv">
+          <span class="r">프리랜서 기자</span>가<br />무엇인가요?
+        </h2>
+        <div class="def rv">
+          <p>인터넷언론사 소속으로</p>
+          <p><b>자유롭게 취재·기사 작성하는</b></p>
+          <p class="row"><span class="box">전문 프리랜서 기자</span>입니다</p>
+        </div>
+        <div class="pills">
+          <div
+            class="rv"
+            style="left: 13px; top: 0; width: 216px; justify-content: flex-end"
+          >
+            <p class="pill">
+              <img src="img/check-pink.svg" alt="" /><span
+                >경력 없어도 <span class="r">누구나 OK!</span></span
+              >
+            </p>
+          </div>
+          <div class="rv" style="left: 3px; top: 57px; width: 236px; --d: 0.1s">
+            <p class="pill">
+              <img src="img/check-pink.svg" alt="" /><span
+                ><span class="r">출퇴근 없이</span> 자유로운 일정!</span
+              >
+            </p>
+          </div>
+          <div
+            class="rv"
+            style="
+              left: 0;
+              top: 114px;
+              width: 242px;
+              justify-content: flex-end;
+              --d: 0.2s;
+            "
+          >
+            <p class="pill">
+              <img src="img/check-pink.svg" alt="" /><span
+                >본업과 병행하는 <span class="r">투잡·부업!</span></span
+              >
+            </p>
+          </div>
+          <div
+            class="rv"
+            style="left: 25.5px; top: 171px; width: 191px; --d: 0.3s"
+          >
+            <p class="pill">
+              <img src="img/check-pink.svg" alt="" /><span
+                >실적만큼 <span class="r">수익 창출!</span></span
+              >
+            </p>
+          </div>
+        </div>
+      </section>
 
-<!-- 02 프리랜서 기자란 -->
-<section class="sec what">
-  <img class="ico80 rv" src="img/mic.png" alt="">
-  <h2 class="h2 rv"><span class="r">프리랜서 기자</span>가<br>무엇인가요?</h2>
-  <div class="def rv">
-    <p>인터넷언론사 소속으로</p>
-    <p><b>자유롭게 취재·기사 작성하는</b></p>
-    <p class="row"><span class="box">전문 프리랜서 기자</span>입니다</p>
-  </div>
-  <div class="pills">
-    <div class="rv" style="left:13px;top:0;width:216px;justify-content:flex-end"><p class="pill"><img src="img/check-pink.svg" alt=""><span>경력 없어도 <span class="r">누구나 OK!</span></span></p></div>
-    <div class="rv" style="left:3px;top:57px;width:236px;--d:.1s"><p class="pill"><img src="img/check-pink.svg" alt=""><span><span class="r">출퇴근 없이</span> 자유로운 일정!</span></p></div>
-    <div class="rv" style="left:0;top:114px;width:242px;justify-content:flex-end;--d:.2s"><p class="pill"><img src="img/check-pink.svg" alt=""><span>본업과 병행하는 <span class="r">투잡·부업!</span></span></p></div>
-    <div class="rv" style="left:25.5px;top:171px;width:191px;--d:.3s"><p class="pill"><img src="img/check-pink.svg" alt=""><span>실적만큼 <span class="r">수익 창출!</span></span></p></div>
-  </div>
-</section>
+      <!-- 03 오픈미디어 신뢰 -->
+      <section class="sec trust">
+        <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+        <img class="logo rv" src="img/logo-big.svg" alt="오픈미디어" />
+        <h2 class="h2 rv">
+          <span class="t">믿을 수 있는</span><br /><span class="r"
+            >인터넷언론사 오픈미디어</span
+          >
+        </h2>
+        <div class="qcard rv">
+          <p class="q">
+            “기업 홍보기사를<br /><b>300개 언론사에 동시 노출</b>합니다”
+          </p>
+          <p class="num">
+            <strong id="n300" data-to="300">300</strong
+            ><span>개 언론사 협업</span>
+          </p>
+          <p class="d">
+            오픈미디어는 300개 인터넷언론사와<br />협업하는 인터넷언론사
+            연합점입니다.
+          </p>
+        </div>
+        <div class="awards">
+          <div class="aw rv">
+            <div class="lg"><img src="img/minister.png" alt="장관상" /></div>
+            <div class="tx">
+              <span class="k">정부 포상</span
+              ><span class="t">장관상 수상 기업</span
+              ><span class="s"
+                >오픈미디어는 <b>장관상을 수상</b>하며 공신력을 인정받은
+                기업입니다.</span
+              >
+            </div>
+          </div>
+          <div class="aw aw2 rv" style="--d: 0.1s">
+            <img class="star" src="img/bluestar.png" alt="푸른별 나눔기업" />
+            <div class="tx">
+              <span class="k">사회공헌</span
+              ><span class="t">푸른별 나눔기업</span
+              ><span class="s"
+                >수익의 일부를 <b>푸른별어린이재단에 기부</b>하며 아이들의 꿈을
+                함께 응원합니다.</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
 
-<!-- 03 오픈미디어 신뢰 -->
-<section class="sec trust">
-  <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
-  <img class="logo rv" src="img/logo-big.svg" alt="오픈미디어">
-  <h2 class="h2 rv"><span class="t">믿을 수 있는</span><br><span class="r">인터넷언론사 오픈미디어</span></h2>
-  <div class="qcard rv">
-    <p class="q">“기업 홍보기사를<br><b>300개 언론사에 동시 노출</b>합니다”</p>
-    <p class="num"><strong id="n300" data-to="300">300</strong><span>개 언론사 협업</span></p>
-    <p class="d">오픈미디어는 300개 인터넷언론사와<br>협업하는 인터넷언론사 연합점입니다.</p>
-  </div>
-  <div class="awards">
-    <div class="aw rv">
-      <div class="lg"><img src="img/minister.png" alt="장관상"></div>
-      <div class="tx"><span class="k">정부 포상</span><span class="t">장관상 수상 기업</span><span class="s">오픈미디어는 <b>장관상을 수상</b>하며 공신력을 인정받은 기업입니다.</span></div>
-    </div>
-    <div class="aw aw2 rv" style="--d:.1s">
-      <img class="star" src="img/bluestar.png" alt="푸른별 나눔기업">
-      <div class="tx"><span class="k">사회공헌</span><span class="t">푸른별 나눔기업</span><span class="s">수익의 일부를 <b>푸른별어린이재단에 기부</b>하며 아이들의 꿈을 함께 응원합니다.</span></div>
-    </div>
-  </div>
-</section>
+      <!-- 05 기존 직장 vs 프리랜서 기자 -->
+      <section class="sec vs">
+        <img class="wl rv" src="img/wallet.png" alt="" />
+        <p class="p18 rv">기업 취재하고 홍보기사를 송출하면</p>
+        <h2 class="h2 rv">
+          <span class="r">받은 수익 100%</span>를<br />내가 가져가요!
+        </h2>
+        <p class="sm rv">
+          기업 발굴부터 수익까지 내가 직접!<br /><b
+            >홍보 수익을 직접 받아가세요</b
+          >
+        </p>
+        <div class="cmp old rv">
+          <span class="tab">기존 직장</span>
+          <div class="bx">
+            <div class="fl">
+              <div class="nd">
+                <span class="c"
+                  ><img src="img/clock.png" alt="" style="width: 46px" /></span
+                ><span class="lb">정해진 출퇴근</span>
+              </div>
+              <div class="nd">
+                <span class="c"><img src="img/lock.png" alt="" /></span
+                ><span class="lb">고정 월급</span>
+              </div>
+            </div>
+            <p class="ds">정해진 출퇴근 · 고정 근무지<br />정해진 월급 한 번</p>
+          </div>
+        </div>
+        <div class="cmp new rv">
+          <span class="tab">프리랜서 기자·N잡·투잡</span>
+          <div class="bx">
+            <div class="fl">
+              <div class="nd">
+                <span class="c"
+                  ><img src="img/mobile.png" alt="" style="width: 44px" /></span
+                ><span class="lb">핸드폰 하나로</span>
+              </div>
+              <div class="nd">
+                <span class="c"><img src="img/pencil.png" alt="" /></span
+                ><span class="lb">기사 작성·송출</span>
+              </div>
+              <div class="nd">
+                <span class="c"
+                  ><img src="img/card.png" alt="" style="width: 44px" /></span
+                ><span class="lb">100% 수익</span>
+              </div>
+            </div>
+            <p class="ds">
+              출퇴근 없음 · 재택근무<br />본업과 병행하는 두 번째 월급
+            </p>
+          </div>
+        </div>
+        <p class="ask rv">
+          오픈미디어와 함께<br /><b>새로운 수익</b>을 낼 준비가 되셨나요?
+        </p>
+      </section>
 
-<!-- 05 기존 직장 vs 프리랜서 기자 -->
-<section class="sec vs">
-  <img class="wl rv" src="img/wallet.png" alt="">
-  <p class="p18 rv">기업 취재하고 홍보기사를 송출하면</p>
-  <h2 class="h2 rv"><span class="r">받은 수익 100%</span>를<br>내가 가져가요!</h2>
-  <p class="sm rv">기업 발굴부터 수익까지 내가 직접!<br><b>홍보 수익을 직접 받아가세요</b></p>
-  <div class="cmp old rv">
-    <span class="tab">기존 직장</span>
-    <div class="bx">
-      <div class="fl">
-        <div class="nd"><span class="c"><img src="img/clock.png" alt="" style="width:46px"></span><span class="lb">정해진 출퇴근</span></div>
-        <div class="nd"><span class="c"><img src="img/lock.png" alt=""></span><span class="lb">고정 월급</span></div>
+      <!-- 05-2 수익 내는 방법 -->
+      <section class="sec how">
+        <p class="p18 rv">기존 업계는 기사 한 건 낼 때마다 돈을 내죠</p>
+        <h2 class="h2 rv">
+          오픈미디어 기자는<br />이 방법으로 <span class="r">돈을 법니다</span>
+        </h2>
+        <div class="rev">
+          <div class="rv-i rv">
+            <span class="n">01</span>
+            <div class="ct">
+              <p class="t">기업 홍보기사 판매</p>
+              <p class="s">기업 소식·대표 인터뷰를 기사로 써서 판매</p>
+              <p class="pr"><small>건당 </small>3~20만원</p>
+            </div>
+          </div>
+          <div class="rv-i rv" style="--d: 0.08s">
+            <span class="n">02</span>
+            <div class="ct">
+              <p class="t">기업회원 홍보 패키지</p>
+              <p class="s">한 번 계약하면 매달 들어오는 고정 수익</p>
+              <p class="pr"><small>기업당 월 </small>30~100만원</p>
+            </div>
+          </div>
+          <div class="rv-i rv" style="--d: 0.16s">
+            <span class="n">03</span>
+            <div class="ct">
+              <p class="t">플랫폼 수익</p>
+              <p class="s">크몽·숨고에서 언론홍보 서비스를 판매</p>
+              <span style="height: 2px"></span>
+            </div>
+          </div>
+        </div>
+        <button
+          type="button"
+          class="locked rv"
+          data-open
+          aria-label="나머지 수익 노하우는 합격 후 무료 공개 — 지원 신청하기"
+        >
+          <div class="bl" aria-hidden="true">
+            <div class="rv-i">
+              <span class="n">04</span>
+              <div class="ct">
+                <p class="t">합격 후 공개되는 수익</p>
+                <p class="s">지원 후 담당자 안내로 확인할 수 있어요</p>
+                <p class="pr"><small>1건당 </small>○○만원</p>
+              </div>
+            </div>
+            <div class="rv-i">
+              <span class="n">05</span>
+              <div class="ct">
+                <p class="t">합격자 전용 수익 노하우</p>
+                <p class="s">오리엔테이션에서 자세히 알려드려요 안내</p>
+                <p class="pr"><small>건당 </small>○○○~○,○○○만원</p>
+              </div>
+            </div>
+          </div>
+          <span class="veil"></span>
+          <span class="lockpill"
+            ><img src="img/lock-ico.svg" alt="" /><span
+              >나머지 수익 노하우는
+              <span class="r">합격 후 무료 공개!</span></span
+            ></span
+          >
+        </button>
+        <p class="note">
+          * 회사 안내 판매금액 기준이며, 실제 수익은<br />계약 및 판매 실적에
+          따라 달라질 수 있습니다.
+        </p>
+      </section>
+
+      <!-- 03 홍보비 100% 내 수익 -->
+      <section class="sec money">
+        <img class="th rv" src="img/think.png" alt="" />
+        <p class="lead rv">고민은 수익을 늦출 뿐</p>
+        <h2 class="h2 rv">
+          기업에게 받은 <span class="r">홍보비,</span><br />정말
+          <span class="r">100%</span> 내 수익인가요?
+        </h2>
+        <p class="note rv">
+          * 기자증·명함 발급 및 기사 송출비 등 별도 비용이 있습니다.
+        </p>
+        <div class="mock" id="mock">
+          <div class="phone">
+            <span class="isl"></span>
+            <div class="bar">
+              <span style="width: 14px">‹</span
+              ><img src="img/logo-dark.png" alt="" /><span>⋯</span>
+            </div>
+            <div class="art">
+              <span class="tg">기업 홍보기사</span>
+              <h4>지역 강소기업 ○○○,<br />신제품으로 시장 공략</h4>
+              <p class="mt">프리랜서 기자 홍길동 · 2026.10.28</p>
+              <img src="img/article.jpg" alt="" />
+            </div>
+          </div>
+          <div class="fade"></div>
+          <div class="nt g2" data-step="1"></div>
+          <div class="nt g1" data-step="1"></div>
+          <div class="nt c" data-step="1">
+            <img src="img/wallet.png" alt="" />
+            <div class="tx">
+              <span class="m">오픈미디어 · 12분 전</span
+              ><span class="t">플랫폼 수익</span
+              ><span class="a">+ 180,000원</span>
+            </div>
+          </div>
+          <div class="nt b" data-step="2">
+            <img src="img/n-red.png" alt="" />
+            <div class="tx">
+              <span class="m">오픈미디어 · 3분 전</span
+              ><span class="t">기업회원 홍보 패키지 입금</span
+              ><span class="a">+ 150,000원</span>
+            </div>
+          </div>
+          <div class="nt a1" data-step="3">
+            <img src="img/n-blue.png" alt="" />
+            <div class="tx">
+              <span class="m">오픈미디어 · 방금 전</span
+              ><span class="t">기업 홍보기사 홍보비 입금</span
+              ><span class="a">+ 200,000원</span>
+            </div>
+          </div>
+          <div class="sum" data-step="4">
+            <span>오늘 홍보비 입금 5건</span><b id="sumAmt">+710,000원</b>
+          </div>
+        </div>
+        <p class="yes rv">
+          네, 물론이에요!<br /><span class="r">받은 홍보비는 전액</span
+          ><br />기자님의 수익이에요.
+        </p>
+      </section>
+
+      <!-- 06 0원 지원 -->
+      <section class="sec free">
+        <img class="ico80 rv" src="img/gift.png" alt="" />
+        <p class="lead rv">오픈미디어가 모두 지원해드려요!</p>
+        <h2 class="h2 rv">
+          <span class="r">인턴기자 무료</span>로<br />투잡 시작해보세요!
+        </h2>
+        <div class="sup">
+          <div class="sp rv">
+            <span class="no">01</span><span class="t">기자 교육 매뉴얼</span
+            ><span class="s">ZERO 베이스로 시작해도 문제 없어요</span
+            ><img src="img/s-notebook.png" alt="" />
+          </div>
+          <div class="sp rv" style="--d: 0.06s">
+            <span class="no">02</span
+            ><span class="t">기사 작성 · 취재 가이드</span
+            ><span class="s">처음 쓰는 기사도 가이드대로</span
+            ><img src="img/s-pencil.png" alt="" />
+          </div>
+          <div class="sp rv" style="--d: 0.12s">
+            <span class="no">03</span><span class="t">기자증 발급 안내</span
+            ><span class="s">기자증 이미지 · 발급 절차까지</span
+            ><img src="img/s-card.png" alt="" />
+          </div>
+          <div class="sp rv" style="--d: 0.18s">
+            <span class="no">04</span><span class="t">홈페이지 지원</span
+            ><span class="s">활동에 필요한 나만의 홈페이지</span
+            ><img src="img/s-monitor.png" alt="" />
+          </div>
+          <div class="sp rv" style="--d: 0.24s">
+            <span class="no">05</span
+            ><span class="t">홍보상품 · 판매 가이드</span
+            ><span class="s">무엇을 얼마에 파는지 A부터 Z까지</span
+            ><img src="img/s-mega.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- 06-2 기자증 -->
+      <section class="sec idc">
+        <p class="lead rv">진짜 기자처럼 활동할 수 있을까?</p>
+        <h2 class="h2 rv">
+          오픈미디어<br /><span class="r">정식 기자증</span>을 드려요
+        </h2>
+        <div class="cards rv">
+          <img src="img/idcards.jpg" alt="오픈미디어 기자증 앞면·뒷면 예시" />
+        </div>
+        <p class="note">실제 발급되는 기자증 예시</p>
+        <div class="bens">
+          <p class="ben rv">
+            <img src="img/check-red.svg" alt="" /><span
+              >기업 미팅·취재 현장에서 <b>소속 증명</b></span
+            >
+          </p>
+          <p class="ben rv" style="--d: 0.1s">
+            <img src="img/check-red.svg" alt="" /><span
+              >기자증과 <b>명함까지 함께 발급</b></span
+            >
+          </p>
+          <p class="ben rv" style="--d: 0.2s">
+            <img src="img/check-red.svg" alt="" /><span
+              >인턴기자부터 <b>바로 발급 가능</b></span
+            >
+          </p>
+        </div>
+        <span class="gap4"></span>
+      </section>
+
+      <!-- 07 활동 단계 -->
+      <section class="sec steps">
+        <img class="ico80 rv" src="img/medal.png" alt="" />
+        <p class="lead rv">프리랜서 기자? 어렵지 않을까요?</p>
+        <h2 class="h2 rv">
+          <span class="r">간편하게</span><br />기자증 받고,<br /><span class="r"
+            >투잡 + 평생 커리어</span
+          >
+          얻으세요!
+        </h2>
+        <div class="stc s1 rv">
+          <div class="in">
+            <span class="sb">STEP 1</span>
+            <p class="nm">프리랜서 인턴기자</p>
+            <p class="pr">10만원</p>
+            <div class="chips">
+              <span>기자증 발급 등록비 + 명함 제작비</span
+              ><span>기사 송출 시 건당 1만원</span>
+            </div>
+          </div>
+          <img class="il" src="img/flag.png" alt="" />
+        </div>
+        <div class="arw">
+          <i><img src="img/arrow-down.svg" alt="" /></i>
+        </div>
+        <div class="stc s2 rv">
+          <div class="in">
+            <span class="sb">STEP 2</span>
+            <p class="nm">프리랜서 공식기자</p>
+            <p class="pr">연 100만원 <small>1년 후 전액 환급</small></p>
+            <div class="chips">
+              <span>공식기자증</span><span>명함</span><span>홈페이지</span
+              ><span>교육 매뉴얼</span><span>사무실</span
+              ><span>기사 송출비 면제</span>
+            </div>
+          </div>
+          <img class="il" src="img/crown.png" alt="" />
+        </div>
+        <p class="warn">
+          * 프리랜서 공식기자는 1년간 수익이 없으면 연회비를 전액 환급해
+          드립니다.
+        </p>
+      </section>
+
+      <!-- 09 이런 분들은 꼭 + 선발 전형 -->
+      <section class="sec who">
+        <div class="notebk">
+          <div class="red">
+            <div class="spring">
+              <i style="left: 93.65px"></i><i style="left: 124.86px"></i
+              ><i style="left: 156.07px"></i><i style="left: 187.28px"></i
+              ><i style="left: 218.49px"></i>
+            </div>
+            <div class="paper">
+              <h3 class="rv">
+                이런 분들은<br /><span class="r">꼭!</span> 지원하세요
+              </h3>
+              <div class="rec rv">
+                <i><img src="img/check-w.svg" alt="" /></i>
+                <p>본업과 병행할 수 있는<br /><b>부업</b>을 찾고 있다면?</p>
+              </div>
+              <div class="rec rv">
+                <i><img src="img/check-w.svg" alt="" /></i>
+                <p><b>재택</b>으로 자유롭게<br />활동하고 싶다면?</p>
+              </div>
+              <div class="rec rv">
+                <i><img src="img/check-w.svg" alt="" /></i>
+                <p><b>글쓰기와 인터뷰</b>에<br />관심이 있다면?</p>
+              </div>
+              <div class="rec rv">
+                <i><img src="img/check-w.svg" alt="" /></i>
+                <p><b>영업 경험</b>을 활용해<br />추가 수익을 만들고 싶다면?</p>
+              </div>
+              <div class="rec rv">
+                <i><img src="img/check-w.svg" alt="" /></i>
+                <p>
+                  언론·홍보·마케팅 분야에서<br /><b>새로운 기회</b>를 찾고
+                  있다면?
+                </p>
+              </div>
+            </div>
+          </div>
+          <img class="st" src="img/star.png" alt="" />
+          <img class="pc" src="img/pencil-big.png" alt="" />
+        </div>
+        <div class="flow">
+          <div class="rv">
+            <span class="c"><img src="img/i-mail.svg" alt="" /></span
+            ><small>STEP 1</small><b>지원서<br />접수</b>
+          </div>
+          <div class="rv" style="--d: 0.1s">
+            <span class="c"><img src="img/i-video.svg" alt="" /></span
+            ><small>STEP 2</small><b>전화·화상<br />인터뷰</b>
+          </div>
+          <div class="rv" style="--d: 0.2s">
+            <span class="c"><img src="img/i-edu.svg" alt="" /></span
+            ><small>STEP 3</small><b>교육 및<br />오리엔테이션</b>
+          </div>
+          <div class="rv" style="--d: 0.3s">
+            <span class="c go"><img src="img/i-start.svg" alt="" /></span
+            ><small>STEP 4</small><b>활동<br />시작</b>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10 마지막 CTA -->
+      <section class="sec cta">
+        <div class="ill rv">
+          <img class="gl" src="img/cta-glow.svg" alt="" />
+          <img class="wl" src="img/wallet.png" alt="" />
+          <img class="s1" src="img/star.png" alt="" />
+          <img class="s2" src="img/star.png" alt="" />
+        </div>
+        <p class="bo rv">- 투잡의 블루오션 -</p>
+        <p class="h rv">두 번째 월급<span>의 기회</span></p>
+        <button type="button" class="btn" data-open>
+          지금 프리랜서 기자 시작하기
+        </button>
+      </section>
+
+      <footer>
+        <div class="ft">
+          <img src="img/logo-foot.png" alt="오픈미디어" />
+          <p class="who-t">오픈미디어 프리랜서 기자 모집 담당자</p>
+          <p>
+            채용 담당자 박세진 | 연락처
+            <a href="tel:01077001418">010-7700-1418</a>
+          </p>
+          <p class="cp">© openmedia All Rights Reserved.</p>
+        </div>
+        <div class="nt-box">
+          <h5>유의사항</h5>
+          <ul>
+            <li>
+              표기된 금액은 회사 안내 판매금액 기준이며, 실제 수익은 계약 및
+              판매 실적에 따라 달라집니다. 일정한 수익이나 매출을 보장하지
+              않습니다.
+            </li>
+            <li>페이지 속 기사와 입금 화면은 이해를 돕기 위한 예시입니다.</li>
+            <li>
+              프리랜서 인턴기자는 등록비 10만원(기자증 발급·명함 제작)이 있으며,
+              기사 송출 시 건당 1만원의 송출비가 발생합니다.
+            </li>
+            <li>
+              프리랜서 공식기자는 연 100만원이며, 안내된 조건에 따라 1년 후
+              환급됩니다. 기사 송출비는 면제됩니다.
+            </li>
+            <li>기사 게재 여부와 송출 조건은 각 언론사의 기준을 따릅니다.</li>
+            <li>
+              크몽·숨고 등 외부 플랫폼에서 판매할 경우, 해당 플랫폼의 수수료와
+              판매 조건이 적용됩니다.
+            </li>
+            <li>지원서 접수 후 인터뷰를 거쳐 활동 여부가 결정됩니다.</li>
+          </ul>
+        </div>
+        <div class="bt">
+          <img src="img/logo-white.svg" alt="오픈미디어" />
+          <p>인터넷언론사 연합점 · 프리랜서 기자 및 영업팀 모집</p>
+        </div>
+      </footer>
+    </main>
+
+    <div class="fix">
+      <div>
+        <button type="button" class="fbtn" data-open>
+          지금 프리랜서 기자 시작하기
+        </button>
       </div>
-      <p class="ds">정해진 출퇴근 · 고정 근무지<br>정해진 월급 한 번</p>
     </div>
-  </div>
-  <div class="cmp new rv">
-    <span class="tab">프리랜서 기자·N잡·투잡</span>
-    <div class="bx">
-      <div class="fl">
-        <div class="nd"><span class="c"><img src="img/mobile.png" alt="" style="width:44px"></span><span class="lb">핸드폰 하나로</span></div>
-        <div class="nd"><span class="c"><img src="img/pencil.png" alt=""></span><span class="lb">기사 작성·송출</span></div>
-        <div class="nd"><span class="c"><img src="img/card.png" alt="" style="width:44px"></span><span class="lb">100% 수익</span></div>
-      </div>
-      <p class="ds">출퇴근 없음 · 재택근무<br>본업과 병행하는 두 번째 월급</p>
-    </div>
-  </div>
-  <p class="ask rv">오픈미디어와 함께<br><b>새로운 수익</b>을 낼 준비가 되셨나요?</p>
-</section>
 
-<!-- 05-2 수익 내는 방법 -->
-<section class="sec how">
-  <p class="p18 rv">기존 업계는 기사 한 건 낼 때마다 돈을 내죠</p>
-  <h2 class="h2 rv">오픈미디어 기자는<br>이 방법으로 <span class="r">돈을 법니다</span></h2>
-  <div class="rev">
-    <div class="rv-i rv"><span class="n">01</span><div class="ct"><p class="t">기업 홍보기사 판매</p><p class="s">기업 소식·대표 인터뷰를 기사로 써서 판매</p><p class="pr"><small>건당 </small>3~20만원</p></div></div>
-    <div class="rv-i rv" style="--d:.08s"><span class="n">02</span><div class="ct"><p class="t">기업회원 홍보 패키지</p><p class="s">한 번 계약하면 매달 들어오는 고정 수익</p><p class="pr"><small>기업당 월 </small>30~100만원</p></div></div>
-    <div class="rv-i rv" style="--d:.16s"><span class="n">03</span><div class="ct"><p class="t">플랫폼 수익</p><p class="s">크몽·숨고에서 언론홍보 서비스를 판매</p><span style="height:2px"></span></div></div>
-  </div>
-  <button type="button" class="locked rv" data-open aria-label="나머지 수익 노하우는 합격 후 무료 공개 — 지원 신청하기">
-    <div class="bl" aria-hidden="true">
-      <div class="rv-i"><span class="n">04</span><div class="ct"><p class="t">합격 후 공개되는 수익</p><p class="s">지원 후 담당자 안내로 확인할 수 있어요</p><p class="pr"><small>1건당 </small>○○만원</p></div></div>
-      <div class="rv-i"><span class="n">05</span><div class="ct"><p class="t">합격자 전용 수익 노하우</p><p class="s">오리엔테이션에서 자세히 알려드려요 안내</p><p class="pr"><small>건당 </small>○○○~○,○○○만원</p></div></div>
-    </div>
-    <span class="veil"></span>
-    <span class="lockpill"><img src="img/lock-ico.svg" alt=""><span>나머지 수익 노하우는 <span class="r">합격 후 무료 공개!</span></span></span>
-  </button>
-  <p class="note">* 회사 안내 판매금액 기준이며, 실제 수익은<br>계약 및 판매 실적에 따라 달라질 수 있습니다.</p>
-</section>
-
-<!-- 03 홍보비 100% 내 수익 -->
-<section class="sec money">
-  <img class="th rv" src="img/think.png" alt="">
-  <p class="lead rv">고민은 수익을 늦출 뿐</p>
-  <h2 class="h2 rv">기업에게 받은 <span class="r">홍보비,</span><br>정말 <span class="r">100%</span> 내 수익인가요?</h2>
-  <p class="note rv">* 기자증·명함 발급 및 기사 송출비 등 별도 비용이 있습니다.</p>
-  <div class="mock" id="mock">
-    <div class="phone">
-      <span class="isl"></span>
-      <div class="bar"><span style="width:14px">‹</span><img src="img/logo-dark.png" alt=""><span>⋯</span></div>
-      <div class="art">
-        <span class="tg">기업 홍보기사</span>
-        <h4>지역 강소기업 ○○○,<br>신제품으로 시장 공략</h4>
-        <p class="mt">프리랜서 기자 홍길동 · 2026.10.28</p>
-        <img src="img/article.jpg" alt="">
-      </div>
-    </div>
-    <div class="fade"></div>
-    <div class="nt g2" data-step="1"></div>
-    <div class="nt g1" data-step="1"></div>
-    <div class="nt c" data-step="1"><img src="img/wallet.png" alt=""><div class="tx"><span class="m">오픈미디어 · 12분 전</span><span class="t">플랫폼 수익</span><span class="a">+ 180,000원</span></div></div>
-    <div class="nt b" data-step="2"><img src="img/n-red.png" alt=""><div class="tx"><span class="m">오픈미디어 · 3분 전</span><span class="t">기업회원 홍보 패키지 입금</span><span class="a">+ 150,000원</span></div></div>
-    <div class="nt a1" data-step="3"><img src="img/n-blue.png" alt=""><div class="tx"><span class="m">오픈미디어 · 방금 전</span><span class="t">기업 홍보기사 홍보비 입금</span><span class="a">+ 200,000원</span></div></div>
-    <div class="sum" data-step="4"><span>오늘 홍보비 입금 5건</span><b id="sumAmt">+710,000원</b></div>
-  </div>
-  <p class="yes rv">네, 물론이에요!<br><span class="r">받은 홍보비는 전액</span><br>기자님의 수익이에요.</p>
-</section>
-
-<!-- 06 0원 지원 -->
-<section class="sec free">
-  <img class="ico80 rv" src="img/gift.png" alt="">
-  <p class="lead rv">오픈미디어가 모두 지원해드려요!</p>
-  <h2 class="h2 rv"><span class="r">인턴기자 무료</span>로<br>투잡 시작해보세요!</h2>
-  <div class="sup">
-    <div class="sp rv"><span class="no">01</span><span class="t">기자 교육 매뉴얼</span><span class="s">ZERO 베이스로 시작해도 문제 없어요</span><img src="img/s-notebook.png" alt=""></div>
-    <div class="sp rv" style="--d:.06s"><span class="no">02</span><span class="t">기사 작성 · 취재 가이드</span><span class="s">처음 쓰는 기사도 가이드대로</span><img src="img/s-pencil.png" alt=""></div>
-    <div class="sp rv" style="--d:.12s"><span class="no">03</span><span class="t">기자증 발급 안내</span><span class="s">기자증 이미지 · 발급 절차까지</span><img src="img/s-card.png" alt=""></div>
-    <div class="sp rv" style="--d:.18s"><span class="no">04</span><span class="t">홈페이지 지원</span><span class="s">활동에 필요한 나만의 홈페이지</span><img src="img/s-monitor.png" alt=""></div>
-    <div class="sp rv" style="--d:.24s"><span class="no">05</span><span class="t">홍보상품 · 판매 가이드</span><span class="s">무엇을 얼마에 파는지 A부터 Z까지</span><img src="img/s-mega.png" alt=""></div>
-  </div>
-</section>
-
-<!-- 06-2 기자증 -->
-<section class="sec idc">
-  <p class="lead rv">진짜 기자처럼 활동할 수 있을까?</p>
-  <h2 class="h2 rv">오픈미디어<br><span class="r">정식 기자증</span>을 드려요</h2>
-  <div class="cards rv"><img src="img/idcards.jpg" alt="오픈미디어 기자증 앞면·뒷면 예시"></div>
-  <p class="note">실제 발급되는 기자증 예시</p>
-  <div class="bens">
-    <p class="ben rv"><img src="img/check-red.svg" alt=""><span>기업 미팅·취재 현장에서 <b>소속 증명</b></span></p>
-    <p class="ben rv" style="--d:.1s"><img src="img/check-red.svg" alt=""><span>기자증과 <b>명함까지 함께 발급</b></span></p>
-    <p class="ben rv" style="--d:.2s"><img src="img/check-red.svg" alt=""><span>인턴기자부터 <b>바로 발급 가능</b></span></p>
-  </div>
-  <span class="gap4"></span>
-</section>
-
-<!-- 07 활동 단계 -->
-<section class="sec steps">
-  <img class="ico80 rv" src="img/medal.png" alt="">
-  <p class="lead rv">프리랜서 기자? 어렵지 않을까요?</p>
-  <h2 class="h2 rv"><span class="r">간편하게</span><br>기자증 받고,<br><span class="r">투잡 + 평생 커리어</span> 얻으세요!</h2>
-  <div class="stc s1 rv">
-    <div class="in">
-      <span class="sb">STEP 1</span>
-      <p class="nm">프리랜서 인턴기자</p>
-      <p class="pr">10만원</p>
-      <div class="chips"><span>기자증 발급 등록비 + 명함 제작비</span><span>기사 송출 시 건당 1만원</span></div>
-    </div>
-    <img class="il" src="img/flag.png" alt="">
-  </div>
-  <div class="arw"><i><img src="img/arrow-down.svg" alt=""></i></div>
-  <div class="stc s2 rv">
-    <div class="in">
-      <span class="sb">STEP 2</span>
-      <p class="nm">프리랜서 공식기자</p>
-      <p class="pr">연 100만원  <small>1년 후 전액 환급</small></p>
-      <div class="chips"><span>공식기자증</span><span>명함</span><span>홈페이지</span><span>교육 매뉴얼</span><span>사무실</span><span>기사 송출비 면제</span></div>
-    </div>
-    <img class="il" src="img/crown.png" alt="">
-  </div>
-  <p class="warn">* 프리랜서 공식기자는 1년간 수익이 없으면 연회비를 전액 환급해 드립니다.</p>
-</section>
-
-<!-- 09 이런 분들은 꼭 + 선발 전형 -->
-<section class="sec who">
-  <div class="notebk">
-    <div class="red">
-      <div class="spring"><i style="left:93.65px"></i><i style="left:124.86px"></i><i style="left:156.07px"></i><i style="left:187.28px"></i><i style="left:218.49px"></i></div>
-      <div class="paper">
-        <h3 class="rv">이런 분들은<br><span class="r">꼭!</span> 지원하세요</h3>
-        <div class="rec rv"><i><img src="img/check-w.svg" alt=""></i><p>본업과 병행할 수 있는<br><b>부업</b>을 찾고 있다면?</p></div>
-        <div class="rec rv"><i><img src="img/check-w.svg" alt=""></i><p><b>재택</b>으로 자유롭게<br>활동하고 싶다면?</p></div>
-        <div class="rec rv"><i><img src="img/check-w.svg" alt=""></i><p><b>글쓰기와 인터뷰</b>에<br>관심이 있다면?</p></div>
-        <div class="rec rv"><i><img src="img/check-w.svg" alt=""></i><p><b>영업 경험</b>을 활용해<br>추가 수익을 만들고 싶다면?</p></div>
-        <div class="rec rv"><i><img src="img/check-w.svg" alt=""></i><p>언론·홍보·마케팅 분야에서<br><b>새로운 기회</b>를 찾고 있다면?</p></div>
-      </div>
-    </div>
-    <img class="st" src="img/star.png" alt="">
-    <img class="pc" src="img/pencil-big.png" alt="">
-  </div>
-  <div class="flow">
-    <div class="rv"><span class="c"><img src="img/i-mail.svg" alt=""></span><small>STEP 1</small><b>지원서<br>접수</b></div>
-    <div class="rv" style="--d:.1s"><span class="c"><img src="img/i-video.svg" alt=""></span><small>STEP 2</small><b>전화·화상<br>인터뷰</b></div>
-    <div class="rv" style="--d:.2s"><span class="c"><img src="img/i-edu.svg" alt=""></span><small>STEP 3</small><b>교육 및<br>오리엔테이션</b></div>
-    <div class="rv" style="--d:.3s"><span class="c go"><img src="img/i-start.svg" alt=""></span><small>STEP 4</small><b>활동<br>시작</b></div>
-  </div>
-</section>
-
-<!-- 10 마지막 CTA -->
-<section class="sec cta">
-  <div class="ill rv">
-    <img class="gl" src="img/cta-glow.svg" alt="">
-    <img class="wl" src="img/wallet.png" alt="">
-    <img class="s1" src="img/star.png" alt="">
-    <img class="s2" src="img/star.png" alt="">
-  </div>
-  <p class="bo rv">- 투잡의 블루오션 -</p>
-  <p class="h rv">두 번째 월급<span>의 기회</span></p>
-  <button type="button" class="btn" data-open>지금 프리랜서 기자 시작하기</button>
-</section>
-
-<footer>
-  <div class="ft">
-    <img src="img/logo-foot.png" alt="오픈미디어">
-    <p class="who-t">오픈미디어 프리랜서 기자 모집 담당자</p>
-    <p>채용 담당자 박세진   |  연락처 <a href="tel:01077001418">010-7700-1418</a></p>
-    <p class="cp">© openmedia All Rights Reserved.</p>
-  </div>
-  <div class="nt-box">
-    <h5>유의사항</h5>
-    <ul>
-      <li>표기된 금액은 회사 안내 판매금액 기준이며, 실제 수익은 계약 및 판매 실적에 따라 달라집니다. 일정한 수익이나 매출을 보장하지 않습니다.</li>
-      <li>페이지 속 기사와 입금 화면은 이해를 돕기 위한 예시입니다.</li>
-      <li>프리랜서 인턴기자는 등록비 10만원(기자증 발급·명함 제작)이 있으며, 기사 송출 시 건당 1만원의 송출비가 발생합니다.</li>
-      <li>프리랜서 공식기자는 연 100만원이며, 안내된 조건에 따라 1년 후 환급됩니다. 기사 송출비는 면제됩니다.</li>
-      <li>기사 게재 여부와 송출 조건은 각 언론사의 기준을 따릅니다.</li>
-      <li>크몽·숨고 등 외부 플랫폼에서 판매할 경우, 해당 플랫폼의 수수료와 판매 조건이 적용됩니다.</li>
-      <li>지원서 접수 후 인터뷰를 거쳐 활동 여부가 결정됩니다.</li>
-    </ul>
-  </div>
-  <div class="bt">
-    <img src="img/logo-white.svg" alt="오픈미디어">
-    <p>인터넷언론사 연합점 · 프리랜서 기자 및 영업팀 모집</p>
-  </div>
-</footer>
-</main>
-
-<div class="fix"><div><button type="button" class="fbtn" data-open>지금 프리랜서 기자 시작하기</button></div></div>
-
-<!-- 신청 바텀시트 -->
-<div class="layer" id="layer">
-  <div class="dim" data-leave></div>
-  <div class="sheet" role="dialog" aria-modal="true" aria-label="프리랜서 기자 지원 신청">
-    <div class="sh-hd">프리랜서 기자 지원 신청하기<button type="button" data-leave aria-label="닫기"><img src="img/x-sheet.svg" alt=""></button></div>
-    <form id="frm" novalidate>
-      <p class="ld">빠른 상담을 위해</p>
-      <h3>최소한의 정보만 받고 있어요</h3>
-      <label class="fld"><span>이름</span><input name="name" placeholder="예) 홍길동" autocomplete="name"></label>
-      <label class="fld"><span>휴대전화</span><input name="tel" inputmode="numeric" placeholder="숫자만 입력해 주세요" autocomplete="tel"></label>
-      <div class="fld"><span>지역 · 인터뷰 방식</span>
-        <div class="two">
-          <select name="sido" required aria-label="시/도"><option value="">시/도</option><option>서울</option><option>경기</option><option>인천</option><option>부산</option><option>대구</option><option>광주</option><option>대전</option><option>울산</option><option>세종</option><option>강원</option><option>충북</option><option>충남</option><option>전북</option><option>전남</option><option>경북</option><option>경남</option><option>제주</option></select>
-          <select name="how" required aria-label="인터뷰 방식"><option value="">인터뷰 방식</option><option>전화 인터뷰</option><option>화상 인터뷰</option></select>
+    <!-- 신청 바텀시트 -->
+    <div class="layer" id="layer">
+      <div class="dim" data-leave></div>
+      <div
+        class="sheet"
+        role="dialog"
+        aria-modal="true"
+        aria-label="프리랜서 기자 지원 신청"
+      >
+        <div class="sh-hd">
+          프리랜서 기자 지원 신청하기<button
+            type="button"
+            data-leave
+            aria-label="닫기"
+          >
+            <img src="img/x-sheet.svg" alt="" />
+          </button>
+        </div>
+        <form id="frm" novalidate>
+          <p class="ld">빠른 상담을 위해</p>
+          <h3>최소한의 정보만 받고 있어요</h3>
+          <label class="fld"
+            ><span>이름</span
+            ><input name="name" placeholder="예) 홍길동" autocomplete="name"
+          /></label>
+          <label class="fld"
+            ><span>휴대전화</span
+            ><input
+              name="tel"
+              inputmode="numeric"
+              placeholder="숫자만 입력해 주세요"
+              autocomplete="tel"
+          /></label>
+          <div class="fld">
+            <span>지역 · 인터뷰 방식</span>
+            <div class="two">
+              <select name="sido" required aria-label="시/도">
+                <option value="">시/도</option>
+                <option>서울</option>
+                <option>경기</option>
+                <option>인천</option>
+                <option>부산</option>
+                <option>대구</option>
+                <option>광주</option>
+                <option>대전</option>
+                <option>울산</option>
+                <option>세종</option>
+                <option>강원</option>
+                <option>충북</option>
+                <option>충남</option>
+                <option>전북</option>
+                <option>전남</option>
+                <option>경북</option>
+                <option>경남</option>
+                <option>제주</option>
+              </select>
+              <select name="how" required aria-label="인터뷰 방식">
+                <option value="">인터뷰 방식</option>
+                <option>전화 인터뷰</option>
+                <option>화상 인터뷰</option>
+              </select>
+            </div>
+          </div>
+          <div class="fld">
+            <span>희망 활동 유형</span>
+            <div class="opt">
+              <label
+                ><input
+                  type="radio"
+                  name="type"
+                  value="인턴기자"
+                  checked
+                /><span>인턴기자<small>등록비 10만원</small></span></label
+              >
+              <label
+                ><input type="radio" name="type" value="공식기자" /><span
+                  >공식기자<small>연 100만원 · 1년 후 환급</small></span
+                ></label
+              >
+            </div>
+          </div>
+          <label class="agree"
+            ><input type="checkbox" name="agree" />약관에 전체 동의합니다</label
+          >
+          <p class="terms">
+            [필수] 개인정보 수집·이용 동의 — 수집항목: 이름, 휴대전화, 지역 /
+            이용목적: 프리랜서 기자 지원 상담 / 보유기간: 상담 종료 후 1년.
+            동의를 거부할 수 있으나 거부 시 지원 접수가 제한됩니다.
+          </p>
+          <p class="fin">거의 완료되었어요!<br />신청 완료하면 투잡 준비 끝!</p>
+          <button type="submit" class="sbm" id="sbm">신청 완료</button>
+          <p class="msg" id="msg" role="alert"></p>
+        </form>
+        <div class="done" id="done">
+          <img src="img/tick.png" alt="" />
+          <h3>신청이 완료되었습니다</h3>
+          <p id="doneP">담당자가 확인 후 연락드리겠습니다.</p>
+          <button type="button" class="sbm" data-close>확인</button>
         </div>
       </div>
-      <div class="fld"><span>희망 활동 유형</span>
-        <div class="opt">
-          <label><input type="radio" name="type" value="인턴기자" checked><span>인턴기자<small>등록비 10만원</small></span></label>
-          <label><input type="radio" name="type" value="공식기자"><span>공식기자<small>연 100만원 · 1년 후 환급</small></span></label>
+    </div>
+
+    <!-- 리마인드 팝업 (신청창 닫을 때) -->
+    <div
+      class="blk"
+      id="blocker"
+      role="dialog"
+      aria-modal="true"
+      aria-label="지원 신청 리마인드"
+    >
+      <div class="pop">
+        <button type="button" class="x" data-close aria-label="닫기">
+          <img src="img/x-pop.svg" alt="" />
+        </button>
+        <span class="chip"
+          >오픈미디어 <span id="bkMonth">10</span>월 모집중</span
+        >
+        <p class="q">투잡, 이대로 포기하실 건가요?</p>
+        <p class="big">인턴기자<br />10만원으로 시작!</p>
+        <div class="gift">
+          <small>인턴기자 등록비</small>
+          <strong>100,000원</strong>
+          <em>기자증·명함 바로 발급</em>
+          <img class="st" src="img/star.png" alt="" />
         </div>
+        <button type="button" class="cont" id="bkCont">
+          <i></i>지원 신청 이어하기
+        </button>
+        <button type="button" class="later" data-close>다음에 할게요</button>
       </div>
-      <label class="agree"><input type="checkbox" name="agree">약관에 전체 동의합니다</label>
-      <p class="terms">[필수] 개인정보 수집·이용 동의 — 수집항목: 이름, 휴대전화, 지역 / 이용목적: 프리랜서 기자 지원 상담 / 보유기간: 상담 종료 후 1년. 동의를 거부할 수 있으나 거부 시 지원 접수가 제한됩니다.</p>
-      <p class="fin">거의 완료되었어요!<br>신청 완료하면 투잡 준비 끝!</p>
-      <button type="submit" class="sbm" id="sbm">신청 완료</button>
-      <p class="msg" id="msg" role="alert"></p>
-    </form>
-    <div class="done" id="done">
-      <img src="img/tick.png" alt="">
-      <h3>신청이 완료되었습니다</h3>
-      <p id="doneP">담당자가 확인 후 연락드리겠습니다.</p>
-      <button type="button" class="sbm" data-close>확인</button>
     </div>
-  </div>
-</div>
 
-<!-- 리마인드 팝업 (신청창 닫을 때) -->
-<div class="blk" id="blocker" role="dialog" aria-modal="true" aria-label="지원 신청 리마인드">
-  <div class="pop">
-    <button type="button" class="x" data-close aria-label="닫기"><img src="img/x-pop.svg" alt=""></button>
-    <span class="chip">오픈미디어 <span id="bkMonth">10</span>월 모집중</span>
-    <p class="q">투잡, 이대로 포기하실 건가요?</p>
-    <p class="big">인턴기자<br>10만원으로 시작!</p>
-    <div class="gift">
-      <small>인턴기자 등록비</small>
-      <strong>100,000원</strong>
-      <em>기자증·명함 바로 발급</em>
-      <img class="st" src="img/star.png" alt="">
-    </div>
-    <button type="button" class="cont" id="bkCont"><i></i>지원 신청 이어하기</button>
-    <button type="button" class="later" data-close>다음에 할게요</button>
-  </div>
-</div>
+    <script>
+      // 구글 시트 접수 주소: Apps Script 웹 앱 배포 URL (../SHEET-SETUP.md 참고)
+      const SHEET_URL =
+        "https://script.google.com/macros/s/AKfycby59C-WpopxZ3mjx2qt8Lkf1rlCG1TFtrXFUcm-Z_xK7WRwgO8_PL1edGN7V9oKAzs/exec";
 
-<script>
-// 구글 시트 접수 주소: Apps Script 웹 앱 배포 URL (../SHEET-SETUP.md 참고)
-const SHEET_URL='https://script.google.com/macros/s/AKfycbzwsA0dAm533PR2Z44N10SqzYY0bj54Ef1b27oa3k9m-V595rDSs6DFOw23SFkV5Wy1/exec';
+      const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+      // 히어로 등장
+      requestAnimationFrame(() =>
+        document.getElementById("hero").classList.add("on"),
+      );
 
-// 히어로 등장
-requestAnimationFrame(()=>document.getElementById('hero').classList.add('on'));
+      // 스크롤 등장 + 강조 박스
+      const io = new IntersectionObserver(
+        (es) =>
+          es.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("on");
+              io.unobserve(e.target);
+            }
+          }),
+        { threshold: 0.15, rootMargin: "0px 0px -6% 0px" },
+      );
+      document
+        .querySelectorAll(".rv,[data-on]")
+        .forEach((el) => io.observe(el));
 
-// 스크롤 등장 + 강조 박스
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.15,rootMargin:'0px 0px -6% 0px'});
-document.querySelectorAll('.rv,[data-on]').forEach(el=>io.observe(el));
+      // 숫자 카운트업
+      function count(el, to, fmt, ms) {
+        if (reduce) {
+          el.textContent = fmt(to);
+          return;
+        }
+        const t0 = performance.now();
+        (function f(t) {
+          const p = Math.min(1, (t - t0) / ms),
+            v = Math.round(to * (1 - Math.pow(1 - p, 3)));
+          el.textContent = fmt(v);
+          if (p < 1) requestAnimationFrame(f);
+        })(t0);
+      }
+      const n300 = document.getElementById("n300");
+      new IntersectionObserver(
+        (es, o) =>
+          es.forEach((e) => {
+            if (e.isIntersecting) {
+              count(n300, 300, (v) => v, 1300);
+              o.disconnect();
+            }
+          }),
+        { threshold: 0.6 },
+      ).observe(n300);
 
-// 숫자 카운트업
-function count(el,to,fmt,ms){if(reduce){el.textContent=fmt(to);return}
-  const t0=performance.now();(function f(t){const p=Math.min(1,(t-t0)/ms),v=Math.round(to*(1-Math.pow(1-p,3)));el.textContent=fmt(v);if(p<1)requestAnimationFrame(f)})(t0)}
-const n300=document.getElementById('n300');
-new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){count(n300,300,v=>v,1300);o.disconnect()}}),{threshold:.6}).observe(n300);
+      // 입금 알림: 플랫폼 수익 → 기업회원 패키지 → 기업 홍보기사 → 오늘 입금 합계
+      const mock = document.getElementById("mock"),
+        sumAmt = document.getElementById("sumAmt");
+      new IntersectionObserver(
+        (es, o) =>
+          es.forEach((e) => {
+            if (!e.isIntersecting) return;
+            o.disconnect();
+            [1, 2, 3, 4].forEach((s, i) =>
+              setTimeout(
+                () => {
+                  mock
+                    .querySelectorAll('[data-step="' + s + '"]')
+                    .forEach((el) => el.classList.add("on"));
+                  if (s === 4)
+                    count(
+                      sumAmt,
+                      710000,
+                      (v) => "+" + v.toLocaleString() + "원",
+                      900,
+                    );
+                },
+                reduce ? 0 : 250 + i * 800,
+              ),
+            );
+          }),
+        { threshold: 0.45 },
+      ).observe(mock);
 
-// 입금 알림: 플랫폼 수익 → 기업회원 패키지 → 기업 홍보기사 → 오늘 입금 합계
-const mock=document.getElementById('mock'),sumAmt=document.getElementById('sumAmt');
-new IntersectionObserver((es,o)=>es.forEach(e=>{if(!e.isIntersecting)return;o.disconnect();
-  [1,2,3,4].forEach((s,i)=>setTimeout(()=>{
-    mock.querySelectorAll('[data-step="'+s+'"]').forEach(el=>el.classList.add('on'));
-    if(s===4)count(sumAmt,710000,v=>'+'+v.toLocaleString()+'원',900);
-  },reduce?0:250+i*800))}),{threshold:.45}).observe(mock);
+      // 바텀시트 / 리마인드 팝업
+      const layer = document.getElementById("layer"),
+        blocker = document.getElementById("blocker"),
+        frm = document.getElementById("frm"),
+        done = document.getElementById("done"),
+        sbm = document.getElementById("sbm"),
+        msg = document.getElementById("msg");
+      document.getElementById("bkMonth").textContent =
+        new Date().getMonth() + 1;
+      const lock = (on) => (document.body.style.overflow = on ? "hidden" : "");
+      function closeAll() {
+        layer.classList.remove("open");
+        blocker.classList.remove("on");
+        lock(false);
+        setTimeout(() => {
+          frm.style.display = "";
+          done.classList.remove("on");
+        }, 420);
+      }
+      document.querySelectorAll("[data-open]").forEach((b) =>
+        b.addEventListener("click", () => {
+          layer.classList.add("open");
+          lock(true);
+        }),
+      );
+      document
+        .querySelectorAll("[data-close]")
+        .forEach((b) => b.addEventListener("click", closeAll));
+      // 작성 도중 닫으면 리마인드 팝업 (접수 완료 후에는 바로 닫힘)
+      document.querySelectorAll("[data-leave]").forEach((b) =>
+        b.addEventListener("click", () => {
+          if (done.classList.contains("on")) return closeAll();
+          blocker.classList.add("on");
+        }),
+      );
+      document.getElementById("bkCont").addEventListener("click", () => {
+        blocker.classList.remove("on");
+        setTimeout(() => frm.name.focus({ preventScroll: true }), 300);
+      });
+      addEventListener("keydown", (e) => {
+        if (e.key !== "Escape") return;
+        if (blocker.classList.contains("on")) closeAll();
+        else if (layer.classList.contains("open"))
+          document.querySelector(".sh-hd [data-leave]").click();
+      });
 
-// 바텀시트 / 리마인드 팝업
-const layer=document.getElementById('layer'),blocker=document.getElementById('blocker'),frm=document.getElementById('frm'),
-  done=document.getElementById('done'),sbm=document.getElementById('sbm'),msg=document.getElementById('msg');
-document.getElementById('bkMonth').textContent=new Date().getMonth()+1;
-const lock=on=>document.body.style.overflow=on?'hidden':'';
-function closeAll(){layer.classList.remove('open');blocker.classList.remove('on');lock(false);
-  setTimeout(()=>{frm.style.display='';done.classList.remove('on')},420)}
-document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',()=>{layer.classList.add('open');lock(true)}));
-document.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',closeAll));
-// 작성 도중 닫으면 리마인드 팝업 (접수 완료 후에는 바로 닫힘)
-document.querySelectorAll('[data-leave]').forEach(b=>b.addEventListener('click',()=>{
-  if(done.classList.contains('on'))return closeAll();
-  blocker.classList.add('on')}));
-document.getElementById('bkCont').addEventListener('click',()=>{blocker.classList.remove('on');setTimeout(()=>frm.name.focus({preventScroll:true}),300)});
-addEventListener('keydown',e=>{if(e.key!=='Escape')return;
-  if(blocker.classList.contains('on'))closeAll();else if(layer.classList.contains('open'))document.querySelector('.sh-hd [data-leave]').click()});
-
-frm.tel.addEventListener('input',()=>frm.tel.value=frm.tel.value.replace(/\D/g,'').slice(0,11));
-frm.addEventListener('input',()=>msg.textContent='');
-frm.addEventListener('submit',e=>{e.preventDefault();
-  if(!frm.name.value.trim())return msg.textContent='이름을 입력해 주세요.';
-  if(!/^01\d{8,9}$/.test(frm.tel.value))return msg.textContent='휴대전화 번호를 확인해 주세요.';
-  if(!frm.sido.value||!frm.how.value)return msg.textContent='지역과 인터뷰 방식을 선택해 주세요.';
-  if(!frm.agree.checked)return msg.textContent='약관에 동의해 주세요.';
-  if(!SHEET_URL)return msg.textContent='접수 주소가 아직 설정되지 않았습니다. 담당자에게 문의해 주세요.';
-  if(sbm.disabled)return;
-  const data=new URLSearchParams({name:frm.name.value.trim(),tel:frm.tel.value,sido:frm.sido.value,how:frm.how.value,
-    type:frm.type.value,agree:'Y',page:location.href});
-  const who=frm.name.value.trim(),how=frm.how.value;
-  sbm.disabled=true;sbm.textContent='접수 중...';
-  // Apps Script 웹 앱은 CORS 응답을 주지 않으므로 no-cors 전송 (네트워크 오류만 감지 가능)
-  fetch(SHEET_URL,{method:'POST',mode:'no-cors',body:data})
-    .then(()=>{
-      document.getElementById('doneP').textContent=who+'님, 담당자가 확인 후 '+how+' 일정을 안내해 드리겠습니다.';
-      frm.reset();frm.style.display='none';done.classList.add('on')})
-    .catch(()=>{msg.textContent='전송에 실패했습니다. 잠시 후 다시 시도해 주세요.'})
-    .finally(()=>{sbm.disabled=false;sbm.textContent='신청 완료'})});
-</script>
-</body>
+      frm.tel.addEventListener(
+        "input",
+        () => (frm.tel.value = frm.tel.value.replace(/\D/g, "").slice(0, 11)),
+      );
+      frm.addEventListener("input", () => (msg.textContent = ""));
+      frm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (!frm.name.value.trim())
+          return (msg.textContent = "이름을 입력해 주세요.");
+        if (!/^01\d{8,9}$/.test(frm.tel.value))
+          return (msg.textContent = "휴대전화 번호를 확인해 주세요.");
+        if (!frm.sido.value || !frm.how.value)
+          return (msg.textContent = "지역과 인터뷰 방식을 선택해 주세요.");
+        if (!frm.agree.checked)
+          return (msg.textContent = "약관에 동의해 주세요.");
+        if (!SHEET_URL)
+          return (msg.textContent =
+            "접수 주소가 아직 설정되지 않았습니다. 담당자에게 문의해 주세요.");
+        if (sbm.disabled) return;
+        const data = new URLSearchParams({
+          name: frm.name.value.trim(),
+          tel: frm.tel.value,
+          sido: frm.sido.value,
+          how: frm.how.value,
+          type: frm.type.value,
+          agree: "Y",
+          ref: REF,
+          page: location.href,
+        });
+        const who = frm.name.value.trim(),
+          how = frm.how.value;
+        sbm.disabled = true;
+        sbm.textContent = "접수 중...";
+        // Apps Script 웹 앱은 CORS 응답을 주지 않으므로 no-cors 전송 (네트워크 오류만 감지 가능)
+        fetch(SHEET_URL, { method: "POST", mode: "no-cors", body: data })
+          .then(() => {
+            document.getElementById("doneP").textContent =
+              who +
+              "님, 담당자가 확인 후 " +
+              how +
+              " 일정을 안내해 드리겠습니다.";
+            frm.reset();
+            frm.style.display = "none";
+            done.classList.add("on");
+          })
+          .catch(() => {
+            msg.textContent =
+              "전송에 실패했습니다. 잠시 후 다시 시도해 주세요.";
+          })
+          .finally(() => {
+            sbm.disabled = false;
+            sbm.textContent = "신청 완료";
+          });
+      });
+    </script>
+  </body>
 </html>
