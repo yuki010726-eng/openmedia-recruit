@@ -236,9 +236,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 /* 06-2 기자증 */
 .idc{background:var(--pk2)}
-.idc .cd{width:194.8px;height:283.5px;border-radius:6px;box-shadow:0 14px 30px rgba(0,0,0,.2)}
-.idc .back{left:169px;top:262px;width:177.5px;height:251.5px;rotate:5deg}
-.idc .front{left:66px;top:221px;rotate:-4deg}
+.idc .cd{border-radius:9px;box-shadow:0 14px 30px rgba(0,0,0,.2);object-fit:cover}
+/* 원본 비율(636:1014)을 그대로 유지 — 가로 190·세로 303 / 가로 172·세로 274 */
+.idc .back{left:172px;top:243px;width:172px;height:274px;rotate:5deg}
+.idc .front{left:68.5px;top:212px;width:190px;height:303px;rotate:-4deg}
 .ben{left:0;right:0;margin:auto;height:46px;display:flex;align-items:center;gap:10px;padding:0 22px 0 16px;background:#fff;border-radius:99px;box-shadow:0 6px 18px rgba(244,64,44,.1);font-size:15px;font-weight:500;line-height:18px;letter-spacing:-.3px;white-space:nowrap;width:max-content}
 .ben img{width:22px;height:22px}
 .ben b{color:var(--red);font-weight:500}
@@ -571,7 +572,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <section class="sc idc" style="--h:825px">
   <p class="t lead rv" style="top:72px">진짜 기자처럼 활동할 수 있을까?</p>
   <h2 class="t h2 rv" style="top:112px">오픈미디어<br><span class="r">정식 기자증</span>을 드려요</h2>
-  <img class="cd back rv" src="img/press-back.webp" alt="" style="height:251.5px">
+  <img class="cd back rv" src="img/press-back.webp" alt="">
   <img class="cd front rv" src="img/press-front.webp" alt="오픈미디어 기자증 예시">
   <p class="t note rv" style="top:530px">실제 발급되는 기자증 예시</p>
   <p class="ben rv" style="top:578px"><img src="img/check-pink.svg" alt=""><span>기업 미팅·취재 현장에서 <b class="r">소속 증명</b></span></p>
