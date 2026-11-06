@@ -180,7 +180,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .sum{left:41px;top:244px;display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:99px;background:var(--ink);box-shadow:0 4px 2px rgba(0,0,0,.25);white-space:nowrap;height:29px}
 .sum span{font-size:12px;font-weight:500;color:#fff}
 .sum b{font-size:12.5px;font-weight:900;color:#ff6b54;font-variant-numeric:tabular-nums}
-.js .mock [data-step]{opacity:0;transform:translateY(-16px) scale(.97);transition:opacity .5s ease,transform .6s cubic-bezier(.2,.9,.3,1.15)}
+.js .mock [data-step]{opacity:0;transform:translateY(-16px) scale(.97);transition:opacity .3s ease,transform .38s cubic-bezier(.2,.9,.3,1.15)}
 .mock [data-step].on{opacity:1;transform:none}
 .mock .nt.g1.on{opacity:.7}.mock .nt.g2.on{opacity:.45}
 .money .yes{font-size:26.7px;font-weight:700;line-height:45px;letter-spacing:-.8px}
@@ -746,8 +746,8 @@ const mock=document.getElementById('mock'),sumAmt=document.getElementById('sumAm
 new IntersectionObserver((es,o)=>es.forEach(e=>{if(!e.isIntersecting)return;o.disconnect();
   [1,2,3,4].forEach((s,i)=>setTimeout(()=>{
     mock.querySelectorAll('[data-step="'+s+'"]').forEach(el=>el.classList.add('on'));
-    if(s===4)count(sumAmt,710000,v=>'+'+v.toLocaleString()+'원',900);
-  },reduce?0:250+i*800))}),{threshold:.45}).observe(mock);
+    if(s===4)count(sumAmt,710000,v=>'+'+v.toLocaleString()+'원',600);
+  },reduce?0:120+i*420))}),{threshold:.45}).observe(mock);
 
 // 후기 캐러셀 (좌우 스와이프, 두 번째 카드가 가운데에서 시작) — zoom과 무관하도록 비율로 계산
 // 무한 순환: 앞뒤에 카드 2장씩 복제 → 마지막 다음에도 같은 방향으로 첫 카드가 이어지고,
