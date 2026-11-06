@@ -25,7 +25,7 @@ fit();addEventListener('resize',fit);
 </script>
 <style>
 @font-face{font-family:'Paperlogy';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2') format('woff2');font-weight:900;font-display:swap}
-:root{--z:1;--q:1px;--p:.609375px;--red:#f4402c;--ink:#1f2227;--sub:#555a63;--mute:#9a9ea6;--pk:#fff2f1;--pk2:#fff7f6}
+:root{--pk3:#ffeeeb;--z:1;--q:1px;--p:.609375px;--red:#f4402c;--ink:#1f2227;--sub:#555a63;--mute:#9a9ea6;--pk:#fff2f1;--pk2:#fff7f6}
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
 html,body{overflow-x:hidden}
@@ -96,7 +96,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .pill img{width:22px;height:22px}
 
 /* 03 오픈미디어 신뢰 */
-.trust{background:linear-gradient(to top,var(--pk),#fff);overflow:visible}
+.trust{background:linear-gradient(to top,var(--pk3),#fff);overflow:visible}
 .dots{left:192px;top:-25px;width:6px;height:50px;z-index:2}
 .dots i{position:absolute;left:0;width:6px;height:6px;border-radius:50%;background:var(--red);animation:blink 1.8s ease-in-out infinite}
 .dots i:nth-child(1){top:0;opacity:.85}.dots i:nth-child(2){top:22px;opacity:.5;animation-delay:.3s}.dots i:nth-child(3){top:44px;opacity:.15;animation-delay:.6s}
@@ -126,7 +126,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .aw2 .k{left:129px;top:15px}.aw2 .tt{left:129px;top:35px}.aw2 .s{left:129px;top:61px;width:207px}
 
 /* 04 후기 캐러셀 */
-.rvw{background:#ffe4df}
+.rvw{background:var(--pk3)}
 .car{left:0;top:153px;width:390px;height:468px;display:flex;gap:14px;padding:68px 75px 0;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .car::-webkit-scrollbar{display:none}
 .car{cursor:grab;user-select:none;-webkit-user-select:none}
@@ -235,7 +235,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .sp img{left:277px;top:17px;width:50px;height:50px}
 
 /* 06-2 기자증 */
-.idc{background:#ffe4df}
+.idc{background:var(--pk3)}
 .idc .cd{border-radius:9px;box-shadow:0 16px 34px rgba(190,45,32,.40),0 3px 10px rgba(190,45,32,.18);object-fit:cover}
 /* 원본 비율(636:1014)을 그대로 유지 — 가로 190·세로 303 / 가로 172·세로 274 */
 .idc .back{left:172px;top:243px;width:172px;height:274px;rotate:5deg}
