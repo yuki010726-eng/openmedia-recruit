@@ -479,7 +479,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   <div class="rev rv" style="top:291px;height:109px"><span class="n" style="top:32.5px">01</span><div class="ct"><p class="tt">기업 홍보기사 판매</p><p class="s">기업 소식·대표 인터뷰를 기사로 써서 판매</p><p class="pr"><small>건당 </small>3~20만원</p></div></div>
   <div class="rev rv" style="top:410px;height:109px;--d:.06s"><span class="n" style="top:32.5px">02</span><div class="ct"><p class="tt">기업회원 홍보 패키지</p><p class="s">한 번 계약하면 매달 들어오는 고정 수익</p><p class="pr"><small>기업당 월 </small>30~100만원</p></div></div>
   <div class="rev rv" style="top:529px;height:82px;--d:.12s"><span class="n" style="top:19px">03</span><div class="ct"><p class="tt">플랫폼 수익</p><p class="s">크몽·숨고에서 언론홍보 서비스를 판매</p></div></div>
-  <div class="rev rv" style="top:626px;height:109px;--d:.18s"><span class="n" style="top:32.5px">04</span><div class="ct"><p class="tt">브랜드어워드·기업 홍보사업</p><p class="s">포브스·KBSN·동아 어워드 및 홍보상품 영업</p><p class="pr"><small>건당 </small>60~200만원</p></div></div>
+  <div class="rev rv" style="top:626px;height:109px;--d:.18s"><span class="n" style="top:32.5px">04</span><div class="ct"><p class="tt">브랜드어워드·기업 홍보사업</p><p class="s">포브스·KBSN·동아일보 어워드 및 홍보상품 영업</p><p class="pr"><small>건당 </small>60~200만원</p></div></div>
 </section>
 
 <!-- 01 기업 홍보기사 판매 -->
@@ -547,7 +547,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   <p class="t note rv" style="top:309px">* 어워드 판매금액의 약 20%가 기자님 수익이에요</p>
   <div class="ac rv" style="top:348px"><span class="st"><svg viewBox="0 0 24 24"><path fill="#fff" d="M12 2.6l2.8 6 6.5.7-4.9 4.4 1.4 6.5L12 16.9l-5.8 3.3 1.4-6.5L2.7 9.3l6.5-.7z"/></svg></span><span class="nm">포브스 어워드</span><span class="ds">건당 수익</span><b class="am">140~200만원</b></div>
   <div class="ac rv" style="top:444px;--d:.08s"><span class="st"><svg viewBox="0 0 24 24"><path fill="#fff" d="M12 2.6l2.8 6 6.5.7-4.9 4.4 1.4 6.5L12 16.9l-5.8 3.3 1.4-6.5L2.7 9.3l6.5-.7z"/></svg></span><span class="nm">KBSN 어워드</span><span class="ds">건당 수익</span><b class="am">100만원</b></div>
-  <div class="ac rv" style="top:540px;--d:.16s"><span class="st"><svg viewBox="0 0 24 24"><path fill="#fff" d="M12 2.6l2.8 6 6.5.7-4.9 4.4 1.4 6.5L12 16.9l-5.8 3.3 1.4-6.5L2.7 9.3l6.5-.7z"/></svg></span><span class="nm">동아 어워드</span><span class="ds">건당 수익</span><b class="am">60~80만원</b></div>
+  <div class="ac rv" style="top:540px;--d:.16s"><span class="st"><svg viewBox="0 0 24 24"><path fill="#fff" d="M12 2.6l2.8 6 6.5.7-4.9 4.4 1.4 6.5L12 16.9l-5.8 3.3 1.4-6.5L2.7 9.3l6.5-.7z"/></svg></span><span class="nm">동아일보</span><span class="ds">건당 수익</span><b class="am">60~80만원</b></div>
   <p class="t h2 rv" style="top:659px;font-size:24px;line-height:32px;letter-spacing:-.72px">기업 한 곳만 연결해도<br><span class="r">수익이 쌓여요</span></p>
 </section>
 
@@ -801,7 +801,10 @@ const tH=document.getElementById('th'),tM=document.getElementById('tmn'),tS=docu
 function tick(){const n=new Date(),end=new Date(n);end.setHours(24,0,0,0);
   const s=Math.max(0,Math.floor((end-n)/1000));
   tH.textContent=p2(Math.floor(s/3600));tM.textContent=p2(Math.floor(s%3600/60));tS.textContent=p2(s%60)}
-tick();setInterval(tick,1000);document.addEventListener('visibilitychange',tick);
+// 초가 바뀌는 순간에 맞춰 다시 호출(setInterval은 지연이 쌓여 같은 초가 두 번 보이거나 건너뛸 수 있음)
+(function loop(){tick();const n=new Date(),end=new Date(n);end.setHours(24,0,0,0);
+  setTimeout(loop,(end-n)%1000+15)})();
+document.addEventListener('visibilitychange',tick);addEventListener('pageshow',tick);addEventListener('focus',tick);
 
 frm.tel.addEventListener('input',()=>frm.tel.value=frm.tel.value.replace(/\D/g,'').slice(0,11));
 frm.addEventListener('input',()=>msg.textContent='');
