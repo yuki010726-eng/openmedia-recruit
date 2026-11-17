@@ -7,8 +7,7 @@ const APPLY_TAB = "시트3"; // 기본 접수 탭 (루트 페이지 등 PAGE_TAB
 // 경로 이름 = 시트 탭 이름. /durepost 로 들어온 접수는 'durepost' 탭에 저장되고(없으면 자동 생성),
 // /durepost/admin 에서 그 탭 하나만 보인다. 경로를 늘리려면 여기에 탭 이름을 추가한다.
 const PAGE_TABS = ["durepost"];
-// admin 페이지는 비밀번호가 필요하다:
-//   Apps Script > 프로젝트 설정 > 스크립트 속성 > VIEW_KEY 를 추가하고 비밀번호를 넣는다.
+// /durepost/admin 은 비밀번호 없이 열린다 (주소를 아는 사람은 누구나 볼 수 있음).
 // 시트 화면 그대로 보여주려면: 시트 > 파일 > 공유 > 웹에 게시 > 해당 탭만 선택 > 웹페이지로 게시한 뒤
 //   나온 링크를 스크립트 속성 VIEW_URL_durepost 에 넣는다 (링크는 비밀번호를 넣은 사람에게만 전달됨).
 const HEADERS = [
@@ -70,11 +69,9 @@ function doPost(e) {
   return ContentService.createTextOutput("ok");
 }
 
-// 접수 목록 조회: ?action=list&tab={탭이름}&key={비밀번호} → PAGE_TABS 의 탭 하나만 JSON 으로 반환
+// 접수 목록 조회: ?action=list&tab={탭이름} → PAGE_TABS 의 탭 하나만 JSON 으로 반환
 function doGet(e) {
   const p = (e && e.parameter) || {};
-  const key = PropertiesService.getScriptProperties().getProperty("VIEW_KEY");
-  if (!key || p.key !== key) return json_({ ok: false, error: "auth" });
   if (p.action !== "list" || PAGE_TABS.indexOf(p.tab) < 0)
     return json_({ ok: false, error: "tab" });
   const sh = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(p.tab);
