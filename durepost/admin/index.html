@@ -90,6 +90,15 @@
   </head>
   <body>
     <h1 id="ttl">접수 목록</h1>
+    <form class="bar" id="f">
+      <input
+        id="key"
+        type="password"
+        placeholder="비밀번호"
+        autocomplete="current-password"
+      />
+      <button>열기</button>
+    </form>
     <div class="cnt" id="cnt"></div>
     <div id="msg"></div>
     <iframe class="frame" id="frm" title="시트" hidden></iframe>
@@ -123,16 +132,31 @@
         $("cnt").textContent = "총 " + Math.max(0, rows.length - 1) + "건";
         $("wrap").hidden = false;
       }
-      function load() {
+      // 배포된 Code.gs 는 목록을 POST(action=list, tab, pw)로만 준다 (GET 은 error:"method")
+      const ERR = {
+        auth: "비밀번호가 맞지 않습니다.",
+        config:
+          "관리자 비밀번호가 아직 설정되지 않았습니다. (스크립트 속성 ADMIN_PASSWORD)",
+        tab: "해당 이름의 시트 탭을 찾을 수 없습니다.",
+      };
+      function load(pw) {
         msg.textContent = "";
-        const q = new URLSearchParams({ action: "list", tab: TAB });
-        fetch(SHEET_URL + "?" + q)
+        const body = new URLSearchParams({ action: "list", tab: TAB, pw });
+        fetch(SHEET_URL, { method: "POST", body })
           .then((r) => r.json())
           .then((d) => {
             if (!d.ok) {
-              msg.textContent = "해당 이름의 시트 탭을 찾을 수 없습니다.";
+              try {
+                sessionStorage.removeItem("vkey");
+              } catch (e) {}
+              $("f").hidden = false;
+              msg.textContent = ERR[d.error] || "불러오지 못했습니다.";
               return;
             }
+            try {
+              sessionStorage.setItem("vkey", pw);
+            } catch (e) {}
+            $("f").hidden = true;
             if (d.url) {
               // 시트 화면 그대로 보여주기 (웹에 게시한 해당 탭 하나만)
               $("frm").src = d.url;
@@ -147,7 +171,14 @@
                 "불러오지 못했습니다. 잠시 후 다시 시도해 주세요."),
           );
       }
-      load();
+      $("f").addEventListener("submit", (e) => {
+        e.preventDefault();
+        load($("key").value);
+      });
+      try {
+        const k = sessionStorage.getItem("vkey");
+        if (k) load(k);
+      } catch (e) {}
     </script>
   </body>
 </html>
