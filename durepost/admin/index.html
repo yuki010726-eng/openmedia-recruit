@@ -54,6 +54,15 @@
         font-size: 14px;
         color: #6b7280;
       }
+      .frame {
+        display: block;
+        width: 100%;
+        height: calc(100vh - 80px);
+        border: 0;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      }
       .wrap {
         overflow-x: auto;
         background: #fff;
@@ -92,7 +101,8 @@
       <span class="cnt" id="cnt"></span>
     </form>
     <div id="msg"></div>
-    <div class="wrap" id="wrap" hidden><table id="tb"></table></div>
+    <iframe class="frame" id="frm" title="시트" hidden></iframe>
+<div class="wrap" id="wrap" hidden><table id="tb"></table></div>
     <script>
       // Code.gs 를 배포한 웹 앱 주소 (/durepost/ 접수 페이지와 같은 주소)
       const SHEET_URL =
@@ -131,6 +141,13 @@
               try {
                 sessionStorage.setItem("vkey", key);
               } catch (e) {}
+              $("f").hidden = true;
+              if (d.url) {
+                // 시트 화면 그대로 보여주기 (웹에 게시한 해당 탭 하나만)
+                $("frm").src = d.url;
+                $("frm").hidden = false;
+                return;
+              }
               return show(d.rows);
             }
             try {

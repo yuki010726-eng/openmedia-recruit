@@ -9,6 +9,8 @@ const APPLY_TAB = "시트3"; // 기본 접수 탭 (루트 페이지 등 PAGE_TAB
 const PAGE_TABS = ["durepost"];
 // admin 페이지는 비밀번호가 필요하다:
 //   Apps Script > 프로젝트 설정 > 스크립트 속성 > VIEW_KEY 를 추가하고 비밀번호를 넣는다.
+// 시트 화면 그대로 보여주려면: 시트 > 파일 > 공유 > 웹에 게시 > 해당 탭만 선택 > 웹페이지로 게시한 뒤
+//   나온 링크를 스크립트 속성 VIEW_URL_durepost 에 넣는다 (링크는 비밀번호를 넣은 사람에게만 전달됨).
 const HEADERS = [
   "접수일시",
   "영업자",
@@ -77,6 +79,11 @@ function doGet(e) {
     return json_({ ok: false, error: "tab" });
   const sh = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(p.tab);
   if (!sh) return json_({ ok: false, error: "tab" });
+  // 시트 화면으로 보여줄 주소 (스크립트 속성 VIEW_URL_{탭이름}). 없으면 표로 보여줄 데이터를 준다.
+  const url = PropertiesService.getScriptProperties().getProperty(
+    "VIEW_URL_" + p.tab
+  );
+  if (url) return json_({ ok: true, tab: p.tab, url: url });
   return json_({
     ok: true,
     tab: p.tab,
