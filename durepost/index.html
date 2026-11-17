@@ -737,6 +737,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 <script>
 // 구글 시트 접수 주소: v2와 같은 Apps Script 웹 앱 (같은 시트로 접수됨)
+// 접수가 저장될 시트 탭 이름 = 이 페이지의 경로 이름 (/durepost → 'durepost' 탭)
+const TAB='durepost';
 const SHEET_URL='https://script.google.com/macros/s/AKfycbzwsA0dAm533PR2Z44N10SqzYY0bj54Ef1b27oa3k9m-V595rDSs6DFOw23SFkV5Wy1/exec';
 
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -853,7 +855,7 @@ frm.addEventListener('submit',e=>{e.preventDefault();
   if(!SHEET_URL)return msg.textContent='접수 주소가 아직 설정되지 않았습니다. 담당자에게 문의해 주세요.';
   if(sbm.disabled)return;
   const data=new URLSearchParams({name:frm.name.value.trim(),tel:frm.tel.value,sido:frm.sido.value,how:frm.how.value,
-    type:frm.type.value,agree:'Y',page:location.href});
+    type:frm.type.value,agree:'Y',tab:TAB,page:location.href});
   const who=frm.name.value.trim(),how=frm.how.value;
   sbm.disabled=true;sbm.textContent='접수 중...';
   // Apps Script 웹 앱은 CORS 응답을 주지 않으므로 no-cors 전송 (네트워크 오류만 감지 가능)

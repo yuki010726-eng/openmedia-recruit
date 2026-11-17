@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>접수 목록</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:20px;font-family:'Noto Sans KR',system-ui,sans-serif;color:#1c1f26;background:#f5f6f8}
+h1{font-size:18px;margin:0 0 14px}
+.bar{display:flex;gap:8px;align-items:center;margin-bottom:14px;flex-wrap:wrap}
+input{height:38px;padding:0 12px;border:1px solid #cfd3da;border-radius:8px;font-size:15px}
+button{height:38px;padding:0 16px;border:0;border-radius:8px;background:#337eff;color:#fff;font-size:15px;font-weight:700;cursor:pointer}
+#msg{color:#d33;font-size:14px;margin:8px 0}
+.cnt{font-size:14px;color:#6b7280}
+.wrap{overflow-x:auto;background:#fff;border-radius:10px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+table{border-collapse:collapse;width:100%;font-size:14px;white-space:nowrap}
+th,td{padding:10px 12px;border-bottom:1px solid #eceef2;text-align:left}
+th{background:#fafbfc;position:sticky;top:0}
+</style>
+</head>
+<body>
+<h1 id="ttl">접수 목록</h1>
+<form class="bar" id="f">
+  <input id="key" type="password" placeholder="비밀번호" autocomplete="current-password">
+  <button>열기</button>
+  <span class="cnt" id="cnt"></span>
+</form>
+<div id="msg"></div>
+<div class="wrap" id="wrap" hidden><table id="tb"></table></div>
+<script>
+// Code.gs 를 배포한 웹 앱 주소 (/durepost/ 접수 페이지와 같은 주소)
+const SHEET_URL='https://script.google.com/macros/s/AKfycbzwsA0dAm533PR2Z44N10SqzYY0bj54Ef1b27oa3k9m-V595rDSs6DFOw23SFkV5Wy1/exec';
+
+// 경로 이름 = 시트 탭 이름 (/durepost/admin → 'durepost' 탭)
+const TAB='durepost';
+document.getElementById('ttl').textContent=TAB?TAB+' 접수 목록':'접수 목록';
+
+const $=id=>document.getElementById(id),msg=$('msg');
+function show(rows){
+  const tb=$('tb');tb.textContent='';
+  rows.forEach((r,i)=>{
+    const tr=tb.insertRow();
+    r.forEach(v=>{const c=document.createElement(i?'td':'th');c.textContent=v;tr.appendChild(c)})});
+  $('cnt').textContent='총 '+Math.max(0,rows.length-1)+'건';
+  $('wrap').hidden=false}
+function load(key){
+  msg.textContent='';
+  if(!TAB)return msg.textContent='탭 이름이 없습니다.';
+  const q=new URLSearchParams({action:'list',tab:TAB,key});
+  fetch(SHEET_URL+'?'+q).then(r=>r.json()).then(d=>{
+    if(d.ok){try{sessionStorage.setItem('vkey',key)}catch(e){}return show(d.rows)}
+    try{sessionStorage.removeItem('vkey')}catch(e){}
+    msg.textContent=d.error==='auth'?'비밀번호가 맞지 않습니다.':'해당 이름의 시트 탭을 찾을 수 없습니다.'})
+  .catch(()=>msg.textContent='불러오지 못했습니다. 잠시 후 다시 시도해 주세요.')}
+$('f').addEventListener('submit',e=>{e.preventDefault();load($('key').value)});
+try{const k=sessionStorage.getItem('vkey');if(k)load(k)}catch(e){}
+</script>
+</body>
+</html>
